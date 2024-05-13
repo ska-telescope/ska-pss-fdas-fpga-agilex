@@ -1,0 +1,47 @@
+variables:
+  GIT_STRATEGY: clone
+
+stages:
+  - vhdl-unit-tests
+  - build
+  - publish
+
+vhdl-unit-tests:
+  stage: vhdl-unit-tests
+  tags:
+    - ubuntu-22.04
+  script: # TODO
+
+shell:
+  stage: build
+  tags:
+    - ubuntu-22.04
+  script: # TODO
+
+synthesis:
+  stage: build
+  needs:
+    - shell
+  tags:
+    - ubuntu-22.04
+  script: # TODO
+
+fitting:
+  stage: build
+  needs: synthesis
+  tags:
+    - ubuntu-22.04
+  script: # TODO
+
+assemble:
+  stage: build
+  needs: fitting
+  tags:
+    - ubuntu-22.04
+  script: # TODO
+
+publish:
+  stage: publish
+  tags:
+    - ubuntu-22.04
+  script: # TODO
