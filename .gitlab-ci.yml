@@ -6,8 +6,13 @@ stages:
   - build
   - publish
 
+.common:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+
 vhdl-unit-tests:
   stage: vhdl-unit-tests
+  extends: .common
   tags:
     - ubuntu-22.04
   script:  
@@ -16,6 +21,7 @@ vhdl-unit-tests:
 
 shell:
   stage: build
+  extends: .common
   tags:
     - ubuntu-22.04
   script:
@@ -24,6 +30,7 @@ shell:
 
 synthesis:
   stage: build
+  extends: .common
   needs:
     - shell
   tags:
@@ -34,6 +41,7 @@ synthesis:
 
 fitting:
   stage: build
+  extends: .common
   needs:
     - synthesis
   tags:
@@ -44,6 +52,7 @@ fitting:
 
 assemble:
   stage: build
+  extends: .common
   needs:
     - fitting
   tags:
@@ -54,6 +63,7 @@ assemble:
 
 publish:
   stage: publish
+  extends: .common
   tags:
     - ubuntu-22.04
   script:
