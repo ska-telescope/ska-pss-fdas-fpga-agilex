@@ -1,0 +1,44 @@
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_TOOL_VERSION "22.2"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_TOOL_VENDOR_NAME "Intel Corporation"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_TOP_LEVEL_COMPONENT_NAME "altera_s10_user_rst_clkgate"
+set_global_assignment -library "ed_synth_ninit_done" -name SOPCINFO_FILE [file join $::quartus(qip_path) "ed_synth_ninit_done.sopcinfo"]
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name SLD_INFO "QSYS_NAME ed_synth_ninit_done HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "ed_synth_ninit_done" -name MISC_FILE [file join $::quartus(qip_path) "ed_synth_ninit_done.cmp"]
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_TARGETED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_GENERATED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "ed_synth_ninit_done" -name MISC_FILE [file join $::quartus(qip_path) "../ed_synth_ninit_done.ip"]
+
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_COMPONENT_NAME "YWx0ZXJhX3MxMF91c2VyX3JzdF9jbGtnYXRl"
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_COMPONENT_DISPLAY_NAME "UmVzZXQgUmVsZWFzZSBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_COMPONENT_VERSION "MTkuMy4y"
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_COMPONENT_DESCRIPTION "VGhpcyBJUCBvdXRwdXRzIG5JTklUX0RPTkUgYWZ0ZXIgZmluaXNoaW5nIGRldmljZSBpbml0YWxpemF0aW9uLiBVc2VyIG1vZGUgaW5pdGlhbGl6YXRpb24gY2FuIGJlZ2luIGFzIHNvb24gYXMgdGhlIG5JTklUX0RPTkUgc2lnbmFsIGFzc2VydHMu"
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_COMPONENT_PARAMETER "b3V0cHV0VHlwZQ==::UmVzZXQgSW50ZXJmYWNl::VHlwZSBvZiByZXNldCBvdXRwdXQgcG9ydA=="
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_COMPONENT_PARAMETER "REVWSUNFX0ZBTUlMWQ==::QWdpbGV4::RGV2aWNlIGZhbWlseQ=="
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_COMPONENT_GROUP "QmFzaWMgRnVuY3Rpb25zL0NvbmZpZ3VyYXRpb24gYW5kIFByb2dyYW1taW5n"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_COMPONENT_NAME "ZWRfc3ludGhfbmluaXRfZG9uZQ=="
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::QWdpbGV4::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::QUdGQjAxNFIyNEIyRTJW::QXV0byBERVZJQ0U="
+set_global_assignment -entity "ed_synth_ninit_done" -library "ed_synth_ninit_done" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Mg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+
+
+set_global_assignment -library "altera_s10_user_rst_clkgate_1932" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "altera_s10_user_rst_clkgate_1932/synth/altera_s10_user_rst_clkgate.sv"]
+set_global_assignment -library "ed_synth_ninit_done" -name VERILOG_FILE [file join $::quartus(qip_path) "synth/ed_synth_ninit_done.v"]
+
+
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_TOOL_NAME "altera_s10_user_rst_clkgate"
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_TOOL_VERSION "19.3.2"
+set_global_assignment -entity "altera_s10_user_rst_clkgate" -library "altera_s10_user_rst_clkgate_1932" -name IP_TOOL_ENV "QsysPrimePro"
+

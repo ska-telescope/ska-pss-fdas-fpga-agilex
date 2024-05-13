@@ -1,0 +1,108 @@
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_TOOL_VERSION "22.2"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_TOOL_VENDOR_NAME "Intel Corporation"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_TOP_LEVEL_COMPONENT_NAME "altera_emif_cal"
+set_global_assignment -library "ed_synth_emif_cal" -name SOPCINFO_FILE [file join $::quartus(qip_path) "ed_synth_emif_cal.sopcinfo"]
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name SLD_INFO "QSYS_NAME ed_synth_emif_cal HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "ed_synth_emif_cal" -name MISC_FILE [file join $::quartus(qip_path) "ed_synth_emif_cal.cmp"]
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_TARGETED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_GENERATED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "ed_synth_emif_cal" -name MISC_FILE [file join $::quartus(qip_path) "../ed_synth_emif_cal.ip"]
+
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_NAME "ZWRfc3ludGhfZW1pZl9jYWxfYWx0ZXJhX2VtaWZfY2FsX2lvc3NtXzI2MV9xbDZwYjNh"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_DISPLAY_NAME "RXh0ZXJuYWwgTWVtb3J5IEludGVyZmFjZXMgSW50ZWwgQ2FsaWJyYXRpb24gSVA="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_VERSION "Mi42LjE="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_DESCRIPTION "RXh0ZXJuYWwgTWVtb3J5IEludGVyZmFjZXMgSW50ZWwgQ2FsaWJyYXRpb24gSVA="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "TlVNX0NBTEJVU19JTlRFUkZBQ0U=::MQ==::TnVtYmVyIG9mIENhbGlicmF0aW9uIEludGVyZmFjZXM="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "RElBR19TSU1fQ0FMX01PREVfRU5VTQ==::U0lNX0NBTF9NT0RFX1NLSVA=::Q2FsaWJyYXRpb24gbW9kZSBmb3Igc2ltdWxhdGlvbg=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "RElBR19FWFBPUlRfU0VRX0FWQUxPTl9TTEFWRQ==::Q0FMX0RFQlVHX0VYUE9SVF9NT0RFX0RJU0FCTEVE::UXVhcnR1cyBQcmltZSBFTUlGIERlYnVnIFRvb2xraXQvT24tQ2hpcCBEZWJ1ZyBQb3J0"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "RElBR19TSU1fVkVSQk9TRQ==::ZmFsc2U=::U2hvdyB2ZXJib3NlIHNpbXVsYXRpb24gZGVidWcgbWVzc2FnZXM="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "TlVNX0NBTEJVU19VU0VE::MQ==::TlVNX0NBTEJVU19VU0VE"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "RElBR19TWU5USF9GT1JfU0lN::ZmFsc2U=::U3ludGhlc2l6ZSBmb3Igc2ltdWxhdGlvbg=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "RElBR19FWFBPUlRfVkpJ::ZmFsc2U=::RXhwb3J0IFZpcnR1YWwgSlRBRyBJbnRlcmZhY2UgKFZKSSk="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0hPUlRfUVNZU19JTlRFUkZBQ0VfTkFNRVM=::dHJ1ZQ==::VXNlIHNob3J0IFFzeXMgaW50ZXJmYWNlIG5hbWVz"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "RElBR19FTkFCTEVfSlRBR19VQVJU::ZmFsc2U=::RW5hYmxlIEpUQUcgVUFSVA=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "VVNFX1NZTlRIX0ZPUl9TSU0=::MA==::VVNFX1NZTlRIX0ZPUl9TSU0="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "VVNFX1NPRlRfTklPUw==::MA==::VVNFX1NPRlRfTklPUw=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "SU9TU01fU0lNX05JT1NfUEVSSU9EX1BT::ODAw::SU9TU01fU0lNX05JT1NfUEVSSU9EX1BT"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0VRX0dQVF9HTE9CQUxfUEFSX1ZFUg==::Mg==::U0VRX0dQVF9HTE9CQUxfUEFSX1ZFUg=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0VRX0dQVF9OSU9TX0NfVkVS::MQ==::U0VRX0dQVF9OSU9TX0NfVkVS"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0VRX0dQVF9DT0xVTU5fSUQ=::MQ==::U0VRX0dQVF9DT0xVTU5fSUQ="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0VRX0dQVF9OVU1fSU9QQUNLUw==::MTY=::U0VRX0dQVF9OVU1fSU9QQUNLUw=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0VRX0dQVF9OSU9TX0NMS19GUkVRX0tIWg==::MjUwMDAw::U0VRX0dQVF9OSU9TX0NMS19GUkVRX0tIWg=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0lNX1NFUV9HUFRfTklPU19DTEtfRlJFUV9LSFo=::MTI1MDAwMA==::U0lNX1NFUV9HUFRfTklPU19DTEtfRlJFUV9LSFo="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0VRX0dQVF9QQVJBTV9UQUJMRV9TSVpF::NjEy::U0VRX0dQVF9QQVJBTV9UQUJMRV9TSVpF"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0VRX0dQVF9HTE9CQUxfU0tJUF9TVEVQUw==::OA==::U0VRX0dQVF9HTE9CQUxfU0tJUF9TVEVQUw=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0lNX1NFUV9HUFRfR0xPQkFMX1NLSVBfU1RFUFM=::MTYzMQ==::U0lNX1NFUV9HUFRfR0xPQkFMX1NLSVBfU1RFUFM="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0VRX0dQVF9HTE9CQUxfQ0FMX0NPTkZJRw==::MA==::U0VRX0dQVF9HTE9CQUxfQ0FMX0NPTkZJRw=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "U0VRX0dQVF9TTEFWRV9DTEtfRElWSURFUg==::Mjg=::U0VRX0dQVF9TTEFWRV9DTEtfRElWSURFUg=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "UE9SVF9DQUxfREVCVUdfQUREUkVTU19XSURUSA==::Mjc=::UE9SVF9DQUxfREVCVUdfQUREUkVTU19XSURUSA=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "UE9SVF9DQUxfREVCVUdfUkRBVEFfV0lEVEg=::MzI=::UE9SVF9DQUxfREVCVUdfUkRBVEFfV0lEVEg="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "UE9SVF9DQUxfREVCVUdfV0RBVEFfV0lEVEg=::MzI=::UE9SVF9DQUxfREVCVUdfV0RBVEFfV0lEVEg="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "UE9SVF9DQUxfREVCVUdfQllURUVOX1dJRFRI::NA==::UE9SVF9DQUxfREVCVUdfQllURUVOX1dJRFRI"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "UE9SVF9DQUxCVVNfQUREUkVTU19XSURUSA==::MjA=::UE9SVF9DQUxCVVNfQUREUkVTU19XSURUSA=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "UE9SVF9DQUxCVVNfV0RBVEFfV0lEVEg=::MzI=::UE9SVF9DQUxCVVNfV0RBVEFfV0lEVEg="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "UE9SVF9DQUxCVVNfUkRBVEFfV0lEVEg=::MzI=::UE9SVF9DQUxCVVNfUkRBVEFfV0lEVEg="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "UE9SVF9DQUxCVVNfU0VRX1BBUkFNX1RCTF9XSURUSA==::NDA5Ng==::UE9SVF9DQUxCVVNfU0VRX1BBUkFNX1RCTF9XSURUSA=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "UE9SVF9WSklfSVJfSU5fV0lEVEg=::Mg==::UE9SVF9WSklfSVJfSU5fV0lEVEg="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_PARAMETER "UE9SVF9WSklfSVJfT1VUX1dJRFRI::Mg==::UE9SVF9WSklfSVJfT1VUX1dJRFRI"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_GROUP "TWVtb3J5IEludGVyZmFjZXMgYW5kIENvbnRyb2xsZXJz"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9zdXBwb3J0L2xpdGVyYXR1cmUvbGl0LWV4dGVybmFsLW1lbW9yeS1pbnRlcmZhY2UuaHRtbA=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_NAME "ZWRfc3ludGhfZW1pZl9jYWxfYWx0ZXJhX2VtaWZfY2FsXzI2MV9zbXRudWxx"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_DISPLAY_NAME "RXh0ZXJuYWwgTWVtb3J5IEludGVyZmFjZXMgSW50ZWwgQ2FsaWJyYXRpb24gSVA="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_VERSION "Mi42LjE="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_DESCRIPTION "RXh0ZXJuYWwgTWVtb3J5IEludGVyZmFjZXMgSW50ZWwgQ2FsaWJyYXRpb24gSVA="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "TlVNX0NBTEJVU19JTlRFUkZBQ0U=::MQ==::TnVtYmVyIG9mIENhbGlicmF0aW9uIEludGVyZmFjZXM="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "RElBR19TSU1fQ0FMX01PREVfRU5VTQ==::U0lNX0NBTF9NT0RFX1NLSVA=::Q2FsaWJyYXRpb24gbW9kZSBmb3Igc2ltdWxhdGlvbg=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "RElBR19FWFBPUlRfU0VRX0FWQUxPTl9TTEFWRQ==::Q0FMX0RFQlVHX0VYUE9SVF9NT0RFX0RJU0FCTEVE::UXVhcnR1cyBQcmltZSBFTUlGIERlYnVnIFRvb2xraXQvT24tQ2hpcCBEZWJ1ZyBQb3J0"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "RElBR19TSU1fVkVSQk9TRQ==::ZmFsc2U=::U2hvdyB2ZXJib3NlIHNpbXVsYXRpb24gZGVidWcgbWVzc2FnZXM="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "RElBR19TWU5USF9GT1JfU0lN::ZmFsc2U=::U3ludGhlc2l6ZSBmb3Igc2ltdWxhdGlvbg=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "RElBR19FWFBPUlRfVkpJ::ZmFsc2U=::RXhwb3J0IFZpcnR1YWwgSlRBRyBJbnRlcmZhY2UgKFZKSSk="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "U0hPUlRfUVNZU19JTlRFUkZBQ0VfTkFNRVM=::dHJ1ZQ==::VXNlIHNob3J0IFFzeXMgaW50ZXJmYWNlIG5hbWVz"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "RElBR19FTkFCTEVfSlRBR19VQVJU::ZmFsc2U=::RW5hYmxlIEpUQUcgVUFSVA=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::QWdpbGV4::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::QUdGQjAxNFIyNEIyRTJW::QXV0byBERVZJQ0U="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Mg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_GROUP "TWVtb3J5IEludGVyZmFjZXMgYW5kIENvbnRyb2xsZXJz"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9zdXBwb3J0L2xpdGVyYXR1cmUvbGl0LWV4dGVybmFsLW1lbW9yeS1pbnRlcmZhY2UuaHRtbA=="
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_COMPONENT_NAME "ZWRfc3ludGhfZW1pZl9jYWw="
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::QWdpbGV4::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::QUdGQjAxNFIyNEIyRTJW::QXV0byBERVZJQ0U="
+set_global_assignment -entity "ed_synth_emif_cal" -library "ed_synth_emif_cal" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Mg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+
+
+set_global_assignment -library "altera_emif_cal_iossm_261" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "altera_emif_cal_iossm_261/synth/altera_emif_cal_iossm.sv"]
+set_global_assignment -library "altera_emif_cal_iossm_261" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "altera_emif_cal_iossm_261/synth/altera_emif_f2c_gearbox.sv"]
+set_global_assignment -library "altera_emif_cal_iossm_261" -name SOURCE_FILE [file join $::quartus(qip_path) "altera_emif_cal_iossm_261/synth/ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a_code.hex"]
+set_global_assignment -library "altera_emif_cal_iossm_261" -name SOURCE_FILE [file join $::quartus(qip_path) "altera_emif_cal_iossm_261/synth/ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a_sim_global_param_tbl.hex"]
+set_global_assignment -library "altera_emif_cal_iossm_261" -name SOURCE_FILE [file join $::quartus(qip_path) "altera_emif_cal_iossm_261/synth/ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a_sim_global_param_tbl.txt"]
+set_global_assignment -library "altera_emif_cal_iossm_261" -name SOURCE_FILE [file join $::quartus(qip_path) "altera_emif_cal_iossm_261/synth/ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a_synth_global_param_tbl.hex"]
+set_global_assignment -library "altera_emif_cal_iossm_261" -name SOURCE_FILE [file join $::quartus(qip_path) "altera_emif_cal_iossm_261/synth/ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a_synth_global_param_tbl.txt"]
+set_global_assignment -library "altera_emif_cal_iossm_261" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "altera_emif_cal_iossm_261/synth/ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a_arch.sv"]
+set_global_assignment -library "altera_emif_cal_iossm_261" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "altera_emif_cal_iossm_261/synth/ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a.sv"]
+set_global_assignment -library "altera_emif_cal_261" -name VERILOG_FILE [file join $::quartus(qip_path) "altera_emif_cal_261/synth/ed_synth_emif_cal_altera_emif_cal_261_smtnulq.v"]
+set_global_assignment -library "ed_synth_emif_cal" -name VERILOG_FILE [file join $::quartus(qip_path) "synth/ed_synth_emif_cal.v"]
+
+
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_TOOL_NAME "altera_emif_cal"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_TOOL_VERSION "2.6.1"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_261_smtnulq" -library "altera_emif_cal_261" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_TOOL_NAME "altera_emif_cal_iossm"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_TOOL_VERSION "2.6.1"
+set_global_assignment -entity "ed_synth_emif_cal_altera_emif_cal_iossm_261_ql6pb3a" -library "altera_emif_cal_iossm_261" -name IP_TOOL_ENV "QsysPrimePro"
+

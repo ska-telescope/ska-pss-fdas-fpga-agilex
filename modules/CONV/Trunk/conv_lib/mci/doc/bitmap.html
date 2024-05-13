@@ -1,0 +1,758 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:w="urn:schemas-microsoft-com:office:word">
+<head>
+<title>Bitmap</title>
+<xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+</w:WordDocument>
+</xml>
+<style type="text/css">
+/*
+ * Default style rules for Bitmap document.
+ */
+body {
+  font-family: Arial;
+  font-size: 10pt;
+  color: black;
+  counter-reset: h1;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  word-wrap: break-word;
+}
+
+/* Headings 1 to 6, with auto-numbering. */
+h1:before {
+  counter-increment: h1;
+  content: counter(h1) ". ";
+}
+h1 {
+  font-size: 16pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.31em;
+  counter-reset: h2 h3 h4 h5 h6;
+}
+
+h2:before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) ". ";
+}
+h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.36em;
+  counter-reset: h3 h4 h5 h6;
+}
+
+h3:before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) ". ";
+}
+h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.38em;
+  counter-reset: h4 h5 h6;
+}
+
+h4:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". ";
+}
+h4 {
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+  counter-reset: h5 h6;
+}
+
+h5:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
+h5 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+  counter-reset: h6;
+}
+
+h6:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". ";
+}
+h6 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+
+/* Table defaults. */
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0px;
+  padding: 0px;
+  word-wrap: break-word;
+}
+
+th {
+  font-weight: normal;
+  background-color: #E0E0E0;
+  margin: 0px;
+  padding: 2px;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  text-align: center;
+  vertical-align: top;
+}
+
+td {
+  margin: 0px;
+  padding: 2px;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Div placed around each table to allow padding without affecting table widths. */
+div.table-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0.5em;
+}
+
+/* Instance memory-map table. */
+table.instances td {
+  padding-left:10px;
+  padding-right:10px;
+}
+table.instances th {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+/* Instance generic-map table. */
+table.generics td {
+  padding-left:10px;
+  padding-right:10px;
+}
+table.generics th {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+/* Bitmap register table. */
+table.bitmap {
+  width: 100%;
+  font-size: 9pt;
+  empty-cells: show;
+  word-break: break-all;
+  -ms-word-break: break-all;
+}
+
+/* Register table 'address' heading. */
+th.addr {
+  width: 10%;
+}
+
+/* Register table 'mode' heading. */
+th.mode {
+  width: 10%;
+}
+
+/* Register table bit-number heading. */
+th.bit {
+  width: 10%;
+}
+
+/* Register table 'address' cell. */
+td.addr {
+  width: 10%;
+}
+
+/* Register table 'mode' cell. */
+td.mode {
+  width: 10%;
+}
+
+/* Register table signal-name cell. */
+td.signame {
+  width: 10%;
+}
+
+/* Register table record-name cell. */
+td.recname {
+  width: 10%;
+}
+
+/* Register table empty cell. */
+td.empty {
+  width: 10%;
+  background-color: #C0C0C0;
+}
+
+/* Register table hidden cell. */
+td.hidden {
+  width: 10%;
+  border-style: none;
+}
+
+/* Array register table headings */
+/* Note: this must come before RAM table headings below to exclude arrays inside RAMs. */
+div.array-content table.bitmap th {
+  background-color: #FFFFC0;
+}
+
+/* RAM register table headings. */
+div.ram-content table.bitmap th {
+  background-color: #C0C0FF;
+}
+
+/* Alias register table headings. */
+div.alias-content table.bitmap th {
+  background-color: #C0FFC0;
+}
+
+/* Register address equations. */
+p.equation {
+  padding-left: 10px;
+}
+
+/* Div containing signal descriptions. */
+div.signals {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+/* Signal enum values table. */
+table.enums {
+  margin-left: 10px;
+}
+
+/* Record definition table. */
+table.recdef {
+  width: 20%;
+}
+
+table.recdef th.name {
+  width: 75%;
+}
+</style>
+</head>
+<body>
+<h1>Module CONV</h1>
+<p>Control Module MCI</p>
+<div class="ram-content">
+<div class="array-content">
+<h2>RAM: FILTER_COEFFICIENTS</h2>
+<p>Array, size 42x1024, indexed by 'filter' (0 to 41) and 'word' (0 to 1023). Address range 0x000000 to 0x053FFF.</p>
+<p>Register: FILTER_RE_COEFFICIENTS (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x000000*</td>
+<td class="mode" rowspan="7">RW</td>
+<td class="signame" colspan="8">FILTER_RE_COEFFICIENTS[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FILTER_RE_COEFFICIENTS[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FILTER_RE_COEFFICIENTS[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FILTER_RE_COEFFICIENTS[7:0]</td>
+</tr>
+</table></div>
+<p class="equation">*Address = 0x000000 + filter * 8192 + word * 8.</p>
+<p>Register: FILTER_IM_COEFFICIENTS (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x000004*</td>
+<td class="mode" rowspan="7">RW</td>
+<td class="signame" colspan="8">FILTER_IM_COEFFICIENTS[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FILTER_IM_COEFFICIENTS[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FILTER_IM_COEFFICIENTS[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FILTER_IM_COEFFICIENTS[7:0]</td>
+</tr>
+</table></div>
+<p class="equation">*Address = 0x000004 + filter * 8192 + word * 8.</p>
+<div class="signals">
+<p>FILTER_RE_COEFFICIENTS[31:0]: Real Coefficient. Default: 0.</p>
+<p>FILTER_IM_COEFFICIENTS[31:0]: Imaginary Coefficient. Default: 0.</p>
+</div>
+<p>Filter #N Coefficients<br>
+Base Address N*2048<br>
+Offset Address 0: 32-bit Real Part Element 0<br>
+Offset Address 1: 32-bit Imaginary Part Element 0<br>
+:<br>
+Offset Address 2046: 32-bit Real Part Element 1023<br>
+Offset Address 2047: 32-bit Imaginary Part Element 1023</p>
+</div>
+</div>
+<div class="ram-content">
+<div class="array-content">
+<h2>RAM: FFT_RESULTS</h2>
+<p>Array, size 1024, indexed by 'smpl' (0 to 1023). Address range 0x080000 to 0x081FFF.</p>
+<p>Register: FFT_RE</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x080000*</td>
+<td class="mode" rowspan="7">RO</td>
+<td class="signame" colspan="8">FFT_RE[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FFT_RE[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FFT_RE[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FFT_RE[7:0]</td>
+</tr>
+</table></div>
+<p class="equation">*Address = 0x080000 + smpl * 8.</p>
+<p>Register: FFT_IM</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x080004*</td>
+<td class="mode" rowspan="7">RO</td>
+<td class="signame" colspan="8">FFT_IM[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FFT_IM[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FFT_IM[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FFT_IM[7:0]</td>
+</tr>
+</table></div>
+<p class="equation">*Address = 0x080004 + smpl * 8.</p>
+<div class="signals">
+<p>FFT_RE[31:0]: Real Sample Data.</p>
+<p>FFT_IM[31:0]: Imaginary Sample Data.</p>
+</div>
+</div>
+</div>
+<h2>Row 0 Delay</h2>
+<p>Register: ROW0_DELAY (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">15</th>
+<th class="bit">14</th>
+<th class="bit">13</th>
+<th class="bit">12</th>
+<th class="bit">11</th>
+<th class="bit">10</th>
+<th class="bit">9</th>
+<th class="bit">8</th>
+</tr>
+<tr>
+<td class="addr" rowspan="3">0x0A0000</td>
+<td class="mode" rowspan="3">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame" colspan="2">ROW0_DELAY[9:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">ROW0_DELAY[7:0]</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>ROW0_DELAY[9:0]: Delay applied to Row 0 results Default: 0.</p>
+</div>
+<h2>ALARMS</h2>
+<p>Buffer Overflow Alarms</p>
+<p>Register: OVERFLOW_0</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x0C0000</td>
+<td class="mode" rowspan="7">RO</td>
+<td class="signame" colspan="8">OVERFLOW[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">OVERFLOW[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">OVERFLOW[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">OVERFLOW[7:0]</td>
+</tr>
+</table></div>
+<p>Register: OVERFLOW_1</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x0C0004</td>
+<td class="mode" rowspan="7">RO</td>
+<td class="signame" colspan="8">OVERFLOW[63:56]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">OVERFLOW[55:48]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">OVERFLOW[47:40]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">OVERFLOW[39:32]</td>
+</tr>
+</table></div>
+<p>Register: OVERFLOW_2</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">23</th>
+<th class="bit">22</th>
+<th class="bit">21</th>
+<th class="bit">20</th>
+<th class="bit">19</th>
+<th class="bit">18</th>
+<th class="bit">17</th>
+<th class="bit">16</th>
+</tr>
+<tr>
+<td class="addr" rowspan="5">0x0C0008</td>
+<td class="mode" rowspan="5">RO</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame" colspan="5">OVERFLOW[84:80]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">OVERFLOW[79:72]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">OVERFLOW[71:64]</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>OVERFLOW[84:0]: [No description].</p>
+</div>
+<p>'1' indicates overflow in the corresponding convolution result buffer<br>
+bit 0: p(0)<br>
+bit 1: p(1)<br>
+bit 2: p(-1)<br>
+:<br>
+bit 83: p(42)<br>
+bit 84: p(-42)<br>
+<br>
+Cleared when CONV module input signal CONV_TRIGGER='1'</p>
+</body>
+</html>

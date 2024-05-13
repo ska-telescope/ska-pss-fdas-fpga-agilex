@@ -1,0 +1,21 @@
+DESIGN reset_sync
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN reset_sync
+VIEW symbol.sb
+GRAPHIC 89,0 24 0 
+DESIGN reset_sync
+VIEW symbol.sb
+GRAPHIC 63,0 30 0 
+DESIGN reset_sync
+VIEW symbol.sb
+GRAPHIC 68,0 31 0 
+DESIGN reset_sync
+VIEW symbol.sb
+GRAPHIC 73,0 32 0 
+DESIGN reset_sync
+VIEW symbol.sb
+GRAPHIC 1,0 35 0 
+DESIGN reset_sync
+VIEW symbol.sb
+GRAPHIC 1,0 36 0 

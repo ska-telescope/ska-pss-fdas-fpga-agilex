@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Database version="1.2.598">
+    <Module name="HSUM" address-width="18" data-width="32" checksum="0x149E">
+        <doc>HARMONIC SUMMING MODULE</doc>
+        <Group name="FOP SELECTION CONFIGURATION">
+            <Ram name="HSEL" bits="7" words="49152" base-address="0x0">
+                <Table name="FOP ROW (FILTER &quot;P&quot;) SELECTION" vhdl-record="">
+                    <doc>Look up table for FOP rows to use in summing.</doc>
+                    <Array name="SUMMER_INSTANCE" size="3" address-step-calc="16384" vhdl-generic-size="summer_g"/>
+                    <Array name="ANALYSIS_RUN" size="2" address-step="8192" address-step-calc="8192"
+                            vhdl-generic-size=""/>
+                    <Array name="SEED_NUM" size="21" address-step="256" address-step-calc="256"/>
+                    <Array name="ACC_AMBIGUITY_NUM" size="11" address-step-calc="16"/>
+                    <Array name="HARMONIC" size="16" address-step-calc="1"/>
+                    <Signal name="HPSEL" location="0x0.6:0" mode="RW" reg-name="">
+                        <doc>The value programmed into the HPSEL register is the FOP Row Number using the encoding shown below.
+The special value 0x60 selects the user configurable value M[31:0] instead.
+(Note: FOP Row 1 is at the bottom and FOP Row 85 is at the top.)
+</doc>
+                        <label value="0x00" text="P[0]" description="FOP row 43(central)"/>
+                        <label value="0x01" text="P[-0]" description="FOP row 43(central)"/>
+                        <label value="0x02" text="P[1]" description="FOP row 44"/>
+                        <label value="0x03" text="P[-1]" description="FOP row 42"/>
+                        <label value="0x04" text="P[2]" description="FOP row 45"/>
+                        <label value="0x05" text="P[-2]" description="FOP row 41"/>
+                        <label value="0x06" text="P[3]" description="FOP row 46"/>
+                        <label value="0x07" text="P[-3]" description="FOP row 40"/>
+                        <label value="0x08" text="P[4]" description="FOP row 47"/>
+                        <label value="0x09" text="P[-4]" description="FOP row 39"/>
+                        <label value="0x0A" text="P[5]" description="FOP row 48"/>
+                        <label value="0x0B" text="P[-5]" description="FOP row 38"/>
+                        <label value="0x0C" text="P[6]" description="FOP row 49"/>
+                        <label value="0x0D" text="P[-6]" description="FOP row 37"/>
+                        <label value="0x0E" text="P[7]" description="FOP row 50"/>
+                        <label value="0x0F" text="P[-7]" description="FOP row 36"/>
+                        <label value="0x12" text="P[8]" description="FOP row 51"/>
+                        <label value="0x13" text="P[-8]" description="FOP row 35"/>
+                        <label value="0x14" text="P[9]" description="FOP row 52"/>
+                        <label value="0x15" text="P[-9]" description="FOP row 34"/>
+                        <label value="0x16" text="P[10]" description="FOP row 53"/>
+                        <label value="0x17" text="P[-10]" description="FOP row 33"/>
+                        <label value="0x18" text="P[11]" description="FOP row 54"/>
+                        <label value="0x19" text="P[-11]" description="FOP row 32"/>
+                        <label value="0x1A" text="P[12]" description="FOP row 55"/>
+                        <label value="0x1B" text="P[-12]" description="FOP row 31"/>
+                        <label value="0x1C" text="P[13]" description="FOP row 56"/>
+                        <label value="0x1D" text="P[-13]" description="FOP row 30"/>
+                        <label value="0x1E" text="P[14]" description="FOP row 57"/>
+                        <label value="0x1F" text="P[-14]" description="FOP row 29"/>
+                        <label value="0x22" text="P[15]" description="FOP row 58"/>
+                        <label value="0x23" text="P[-15]" description="FOP row 28"/>
+                        <label value="0x24" text="P[16]" description="FOP row 59"/>
+                        <label value="0x25" text="P[-16]" description="FOP row 27"/>
+                        <label value="0x26" text="P[17]" description="FOP row 60"/>
+                        <label value="0x27" text="P[-17]" description="FOP row 26"/>
+                        <label value="0x28" text="P[18]" description="FOP row 61"/>
+                        <label value="0x29" text="P[-18]" description="FOP row 25"/>
+                        <label value="0x2A" text="P[19]" description="FOP row 62"/>
+                        <label value="0x2B" text="P[-19]" description="FOP row 24"/>
+                        <label value="0x2C" text="P[20]" description="FOP row 63"/>
+                        <label value="0x2D" text="P[-20]" description="FOP row 23"/>
+                        <label value="0x2E" text="P[21]" description="FOP row 64"/>
+                        <label value="0x2F" text="P[-21]" description="FOP row 22"/>
+                        <label value="0x32" text="P[22]" description="FOP row 65"/>
+                        <label value="0x33" text="P[-22]" description="FOP row 21"/>
+                        <label value="0x34" text="P[23]" description="FOP row 66"/>
+                        <label value="0x35" text="P[-23]" description="FOP row 20"/>
+                        <label value="0x36" text="P[24]" description="FOP row 67"/>
+                        <label value="0x37" text="P[-24]" description="FOP row 19"/>
+                        <label value="0x38" text="P[25]" description="FOP row 68"/>
+                        <label value="0x39" text="P[-25]" description="FOP row 18"/>
+                        <label value="0x3A" text="P[26]" description="FOP row 69"/>
+                        <label value="0x3B" text="P[-26]" description="FOP row 17"/>
+                        <label value="0x3C" text="P[27]" description="FOP row 70"/>
+                        <label value="0x3D" text="P[-27]" description="FOP row 16"/>
+                        <label value="0x3E" text="P[28]" description="FOP row 71"/>
+                        <label value="0x3F" text="P[-28]" description="FOP row 15"/>
+                        <label value="0x42" text="P[29]" description="FOP row 72"/>
+                        <label value="0x43" text="P[-29]" description="FOP row 14"/>
+                        <label value="0x44" text="P[30]" description="FOP row 73"/>
+                        <label value="0x45" text="P[-30]" description="FOP row 13"/>
+                        <label value="0x46" text="P[31]" description="FOP row 74"/>
+                        <label value="0x47" text="P[-31]" description="FOP row 12"/>
+                        <label value="0x48" text="P[32]" description="FOP row 75"/>
+                        <label value="0x49" text="P[-32]" description="FOP row 11"/>
+                        <label value="0x4A" text="P[33]" description="FOP row 76"/>
+                        <label value="0x4B" text="P[-33]" description="FOP row 10"/>
+                        <label value="0x4C" text="P[34]" description="FOP row 77"/>
+                        <label value="0x4D" text="P[-34]" description="FOP row 9"/>
+                        <label value="0x4E" text="P[35]" description="FOP row 78"/>
+                        <label value="0x4F" text="P[-35]" description="FOP row 8"/>
+                        <label value="0x52" text="P[36]" description="FOP row 79"/>
+                        <label value="0x53" text="P[-36]" description="FOP row 7"/>
+                        <label value="0x54" text="P[37]" description="FOP row 80"/>
+                        <label value="0x55" text="P[-37]" description="FOP row 6"/>
+                        <label value="0x56" text="P[38]" description="FOP row 81"/>
+                        <label value="0x57" text="P[-38]" description="FOP row 5"/>
+                        <label value="0x58" text="P[39]" description="FOP row 82"/>
+                        <label value="0x59" text="P[-39]" description="FOP row 4"/>
+                        <label value="0x5A" text="P[40]" description="FOP row 83"/>
+                        <label value="0x5B" text="P[-40]" description="FOP row 3"/>
+                        <label value="0x5C" text="P[41]" description="FOP row 84"/>
+                        <label value="0x5D" text="P[-41]" description="FOP row 2"/>
+                        <label value="0x5E" text="P[42]" description="FOP row 85"/>
+                        <label value="0x5F" text="P[-42]" description="FOP row 1"/>
+                        <label value="0x60" text="M" description="User configurable value M[31:0] instead of a FOP Row"/>
+                    </Signal>
+                </Table>
+            </Ram>
+            <Ram name="TSEL" bits="32" words="3072" base-address="0xC000">
+                <Table name="THRESHOLD CONFIGURATION">
+                    <doc>Power threshold values for each summer instance for each harmonic and for each of 21 different seed_f0 row locations within a column of the FOP.
+There are two sets of Thresholds, one for low frequency Periodicity Candidates (T_SET = 0)  and one for high frequency Periodicity Candidates (T_SET = 1).</doc>
+                    <Array name="SUMMER_INSTANCE" size="3" address-step-calc="1024" vhdl-generic-size="summer_g"/>
+                    <Array name="T_SET" size="2" address-step="512" address-step-calc="512"/>
+                    <Array name="SEED_NUM" size="21" address-step-calc="16"/>
+                    <Array name="HARMONIC" size="16" address-step-calc="1"/>
+                    <Signal name="THRESHOLD" location="0x0.31:0" mode="RW">
+                        <doc>Power Level Threshold  at or above which the summed power at the associated location of the SUMMER &quot;summing tree&quot; indicates a potential existence of a Periodicity Candidate. The value is in IEEE 754 32-bit single precision format.
+</doc>
+                    </Signal>
+                </Table>
+            </Ram>
+        </Group>
+        <Group name="ANALYSIS RUN PARAMETERS">
+            <Table name="GLOBAL PARAMETERS" base-address="0xD000">
+                <doc>Parameters common to all SUMMERs.</doc>
+                <Signal name="B_START_1" location="0x0.21:0" mode="RW">
+                    <doc>The first FOP column containing a seed_f0 analysed in the first analysis run of the DM.</doc>
+                </Signal>
+                <Signal name="B_STOP_1" location="0x1.21:0" mode="RW">
+                    <doc>The last  FOP column containing a seed_f0 analysed in the first analysis run of the DM.</doc>
+                </Signal>
+                <Signal name="B_START_2" location="0x2.21:0" mode="RW" reg-name="">
+                    <doc>The first FOP column containing a seed_f0 analysed in the second analysis run of the DM.</doc>
+                </Signal>
+                <Signal name="B_STOP_2" location="0x3.21:0" mode="RW">
+                    <doc>The last FOP column containing a seed_f0 analysed in the second analysis run of the DM.</doc>
+                </Signal>
+                <Signal name="H_1" location="0x4.3:0" mode="RW">
+                    <doc>The number of harmonics analysed in the first analysis run of the DM. (&quot;0000&quot; = 1 harmonic analysed, &quot;1111&quot; = 16 harmonics analysed.)</doc>
+                </Signal>
+                <Signal name="H_2" location="0x4.11:8" mode="RW">
+                    <doc>The number of harmonics analysed in the second analysis run of the DM.</doc>
+                </Signal>
+                <Signal name="FOP_ROW_1" location="0x5.6:0" mode="RW" default="85">
+                    <doc>The number of FOP rows to read from DDR for each column for the first analysis run. Valid values are 1 to 85.</doc>
+                </Signal>
+                <Signal name="FOP_ROW_2" location="0x5.14:8" mode="RW">
+                    <doc>The number of FOP rows to read from DDR for each column for the second analysis run. Valid values are 1 to 85.</doc>
+                </Signal>
+                <Signal name="FOP_COL_OFFSET" location="0x6.8:0" mode="RW" default="210">
+                    <doc>First valid column of FOP data.</doc>
+                </Signal>
+                <Signal name="A_SET" location="0x8.0" mode="RW">
+                    <doc>The number of analysis runs performed on a DM. '0' = 1 analysis run performed, '1' = 2 analysis runs performed.</doc>
+                </Signal>
+                <Signal name="THRESH_SET" location="0x9.21:0" mode="RW">
+                    <doc>The FOP column number at which the power thresholds used in the harmonic summing change from the &quot;Low Periodicity Candidate Frequency&quot; set to the &quot;High Periodicity Candidate Frequency Set&quot;.</doc>
+                </Signal>
+                <Signal name="M" location="0xA.31:0" mode="RW">
+                    <doc>If the HPSEL value for a harmonic  is set to 0x60 then instead of  FOP location values being passed to the SUMMER sub-module, this value M[31:0] is passed instead.</doc>
+                </Signal>
+                <Signal name="T_FILTER_EN" location="0xC.0" mode="RW">
+                    <doc>If set to 1 then only the results from the highest harmonic are stored for a particular seed_f0 run.</doc>
+                </Signal>
+                <doc2>FOP Column Numbering:
+0x000000 = FOP Column 1
+0x000001 = FOP Column 2
+:
+0x3FFFFF = FOP Column 4,194,304
+
+</doc2>
+            </Table>
+            <Table name="PER SUMMER RUN PARAMETERS" vhdl-record="" base-address="0xD010">
+                <doc></doc>
+                <Array name="SUMMER_INSTANCE" size="3" address-step-calc="2" vhdl-generic-size="summer_g"/>
+                <Signal name="P_EN_1" location="0x0.4:0" mode="RW">
+                    <doc>
+The number of orbital accelerations (i.e. seed_f0s in a FOP column) analysed  in the first analysis run of the DM.
+</doc>
+                </Signal>
+                <Signal name="P_EN_2" location="0x0.12:8" mode="RW">
+                    <doc>
+The number of orbital accelerations (i.e. seed_f0s in a FOP column) analysed  in the second analysis run of the DM.
+&quot;00000&quot; = 1 orbital acceleration analysed
+&quot;00001&quot; = 2 orbital accelerations analysed
+:
+&quot;10100&quot; = 21 orbital accelerations analysed
+</doc>
+                </Signal>
+                <Signal name="A_1" location="0x1.3:0" mode="RW">
+                    <doc>
+The number of orbital acceleration ambiguity slopes analysed  in the first analysis run of the DM.
+</doc>
+                </Signal>
+                <Signal name="A_2" location="0x1.11:8" mode="RW">
+                    <doc>
+The number of orbital acceleration ambiguity slopes analysed  in the second analysis run of the DM.
+&quot;0000&quot; = 1 orbital acceleration ambiguity slope analysed
+&quot;0001&quot; = 2 orbital acceleration ambiguity slopes analysed
+:
+&quot;1010&quot; = 11 orbital acceleration ambiguity slopes analysed</doc>
+                </Signal>
+            </Table>
+            <Table name="DM COUNTER" vhdl-record="" base-address="0xD020">
+                <doc></doc>
+                <Signal name="DM_CNT" location="0x0.31:0" mode="RO">
+                    <doc>Free Running count of the DMs that have been processed by HSUM. 
+DM_CNT can be reset to zero by writing to DM_CNT_RESET ('0' to '1' transition).</doc>
+                </Signal>
+                <Signal name="DM_CNT_RESET" location="0x1.0" mode="RW">
+                    <doc>A 0 to 1 transition resets the free running DM Counter which can be used to identify which DM the Threshold Crossing results belong to.</doc>
+                </Signal>
+            </Table>
+        </Group>
+        <Group name="SUMMING RESULTS">
+            <doc></doc>
+            <Ram name="RESULTS" bits="32" words="65536" base-address="0x10000">
+                <Table name="HARMONIC THRESHOLD CROSSING RESULTS">
+                    <doc>Two pages of 25-off Results per harmonic per Analysis Run, each consisting of 4-off 32-bit words.
+The first page contains the static results from the previous run. The second page contains the results for the current run which will change as the run progresses, but may be accessed for debug purposes if the processing is paused.
+</doc>
+                    <Array name="PAGE" size="2" address-step-calc="4096"/>
+                    <Array name="ANALYSIS_RUN" size="2" address-step-calc="2048"/>
+                    <Array name="HARMONIC" size="16" address-step="128" address-step-calc="128"/>
+                    <Array name="HARMONIC_REPORT_NUM" size="25" address-step="4" address-step-calc="4"/>
+                    <Signal name="VALID" location="0x0.8" mode="RO">
+                        <doc>Indicates this result record is valid.
+Valid records will be first followed by invalid records. They will not be mixed.</doc>
+                        <label value="0" text="INVALID" description=""/>
+                        <label value="1" text="VALID" description=""/>
+                    </Signal>
+                    <Signal name="HARMONIC" location="0x0.3:0" mode="RO">
+                        <doc>Harmonic Number of the Threshold Crossing Location. (Note that the report address also inherently provides the harmonic).</doc>
+                    </Signal>
+                    <Signal name="FOPCOL" location="0x1.21:0" mode="RO">
+                        <doc>FOP Column [b] of the Threshold Crossing Location.</doc>
+                    </Signal>
+                    <Signal name="FOPROW" location="0x2.6:0" mode="RO">
+                        <doc>FOP Row [p] of the Threshold Crossing Point encoded with the same mapping as HPSEL.</doc>
+                    </Signal>
+                    <Signal name="PWR" location="0x3.31:0" mode="RO">
+                        <doc>The summed power at the Threshold Crossing point in IEEE 754 Format.</doc>
+                    </Signal>
+                    <doc2></doc2>
+                </Table>
+            </Ram>
+            <Ram name="EXC" bits="32" words="2048" base-address="0x20000">
+                <Table name="STORAGE EXCEEDED REPORTS" vhdl-record="">
+                    <doc>Information regarding threshold crossing reports that could not be stored. This information is presented on a per harmonic per analysis basis.
+There are two pages. The first page contains the static results from the previous run. The second page contains the results for the current run which will change as the run progresses, but may be accessed for debug purposes if the processing is paused.</doc>
+                    <Array name="PAGE" size="2" address-step-calc="128"/>
+                    <Array name="ANALYSIS_RUN" size="2" address-step-calc="64"/>
+                    <Array name="HARMONIC" size="16" address-step-calc="4"/>
+                    <Signal name="T_EXC" location="0x0.31:0" mode="RO">
+                        <doc>The number of threshold crossing results that could not be recorded.</doc>
+                    </Signal>
+                    <Signal name="S_EXC" location="0x1.21:0" mode="RO">
+                        <doc>FOP Column number of the seed_f0 for the first threshold crossing that could not be recorded.</doc>
+                    </Signal>
+                    <Signal name="P_EXC" location="0x2.6:0" mode="RO">
+                        <doc>FOP Row [p] for the first threshold crossing that could not be recorded, encoded using the same mapping as HPSEL.</doc>
+                    </Signal>
+                </Table>
+            </Ram>
+        </Group>
+    </Module>
+</Database>

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<node xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:altera="http://www.altera.com/XMLSchema/Qsys/SystemTree">
+  <instanceKey xsi:type="xs:string">ed_sim_local_reset_source</instanceKey>
+  <instanceData xsi:type="data">
+    <parameters></parameters>
+    <interconnectAssignments></interconnectAssignments>
+    <className>ed_sim_local_reset_source</className>
+    <version>1.0</version>
+    <name>ed_sim_local_reset_source</name>
+    <uniqueName>ed_sim_local_reset_source</uniqueName>
+    <nonce>0</nonce>
+    <incidentConnections></incidentConnections>
+  </instanceData>
+  <children>
+    <node>
+      <instanceKey xsi:type="xs:string">local_reset_source</instanceKey>
+      <instanceData xsi:type="data">
+        <parameters>
+          <parameter>
+            <name>SHORT_QSYS_INTERFACE_NAMES</name>
+            <value>true</value>
+          </parameter>
+        </parameters>
+        <interconnectAssignments></interconnectAssignments>
+        <className>altera_emif_local_reset_sim_source</className>
+        <version>19.1</version>
+        <name>local_reset_source</name>
+        <uniqueName>altera_emif_local_reset_sim_source</uniqueName>
+        <fixedName>altera_emif_local_reset_sim_source</fixedName>
+        <nonce>0</nonce>
+        <incidentConnections></incidentConnections>
+        <path>ed_sim_local_reset_source.local_reset_source</path>
+      </instanceData>
+      <children></children>
+    </node>
+  </children>
+</node>

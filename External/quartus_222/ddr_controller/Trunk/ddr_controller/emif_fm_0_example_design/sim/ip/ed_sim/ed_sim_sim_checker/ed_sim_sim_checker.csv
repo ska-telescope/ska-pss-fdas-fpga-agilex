@@ -1,0 +1,18 @@
+# system info ed_sim_sim_checker on 2022.08.01.12:08:51
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for ed_sim_sim_checker on 2022.08.01.12:08:51
+files:
+filepath,kind,attributes,module,is_top
+sim/ed_sim_sim_checker.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,ed_sim_sim_checker,true
+altera_emif_sim_checker_191/sim/altera_emif_sim_checker.sv,SYSTEM_VERILOG,,altera_emif_sim_checker,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+ed_sim_sim_checker.sim_checker,altera_emif_sim_checker

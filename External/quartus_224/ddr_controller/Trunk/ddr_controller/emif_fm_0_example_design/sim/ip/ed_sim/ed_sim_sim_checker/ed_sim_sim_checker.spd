@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_emif_sim_checker_191/sim/altera_emif_sim_checker.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_sim_checker_191" />
+ <file
+   path="sim/ed_sim_sim_checker.vhd"
+   type="VHDL"
+   library="ed_sim_sim_checker"
+   hasInlineConfiguration="true" />
+ <topLevel name="ed_sim_sim_checker.ed_sim_sim_checker" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

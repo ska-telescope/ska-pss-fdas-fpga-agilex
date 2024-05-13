@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_avalon_clock_source_191/sim/altera_avalon_clock_source.vhd"
+   type="VHDL"
+   library="altera_avalon_clock_source_191" />
+ <file
+   path="sim/ed_sim_pll_ref_clk_source.vhd"
+   type="VHDL"
+   library="ed_sim_pll_ref_clk_source"
+   hasInlineConfiguration="true" />
+ <topLevel name="ed_sim_pll_ref_clk_source.ed_sim_pll_ref_clk_source" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

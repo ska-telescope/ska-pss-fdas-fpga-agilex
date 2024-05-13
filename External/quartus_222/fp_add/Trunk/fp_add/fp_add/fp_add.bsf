@@ -1,0 +1,115 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 368 368)
+	(text "fp_add" (rect 165 0 193 12)(font "Arial" (font_size 11)))
+	(text "inst" (rect 8 352 20 364)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "fp32_adder_a[31..0]" (rect 0 0 80 12)(font "Arial" (font_size 8)))
+		(text "fp32_adder_a[31..0]" (rect 4 65 118 76)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "fp32_adder_b[31..0]" (rect 0 0 80 12)(font "Arial" (font_size 8)))
+		(text "fp32_adder_b[31..0]" (rect 4 115 118 126)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "clr0" (rect 0 0 14 12)(font "Arial" (font_size 8)))
+		(text "clr0" (rect 4 165 28 176)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 119 176)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "clr1" (rect 0 0 12 12)(font "Arial" (font_size 8)))
+		(text "clr1" (rect 4 215 28 226)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "Arial" (font_size 8)))
+		(text "clk" (rect 4 265 22 276)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 320)
+		(input)
+		(text "ena[2..0]" (rect 0 0 34 12)(font "Arial" (font_size 8)))
+		(text "ena[2..0]" (rect 4 315 58 326)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 368 72)
+		(output)
+		(text "fp32_result[31..0]" (rect 0 0 68 12)(font "Arial" (font_size 8)))
+		(text "fp32_result[31..0]" (rect 287 65 395 76)(font "Arial" (font_size 8)))
+	)
+	(drawing
+		(text "fp32_adder_a" (rect 38 46 148 105)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "fp32_adder_a" (rect 124 71 320 152)(font "Arial" (color 0 0 0)))
+		(text "fp32_adder_b" (rect 38 96 148 205)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "fp32_adder_b" (rect 124 121 320 252)(font "Arial" (color 0 0 0)))
+		(text "clr0" (rect 99 146 222 305)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset" (rect 124 171 278 352)(font "Arial" (color 0 0 0)))
+		(text "clr1" (rect 101 196 226 405)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset" (rect 124 221 278 452)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 104 246 226 505)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 124 271 266 552)(font "Arial" (color 0 0 0)))
+		(text "ena" (rect 99 296 216 605)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "ena" (rect 124 321 266 652)(font "Arial" (color 0 0 0)))
+		(text "fp32_result" (rect 256 46 578 105)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "fp32_result" (rect 203 71 472 152)(font "Arial" (color 0 0 0)))
+		(text " fp_add " (rect 341 351 730 712)(font "Arial" ))
+		(line (pt 119 34)(pt 255 34)(line_width 1))
+		(line (pt 255 34)(pt 255 351)(line_width 1))
+		(line (pt 119 351)(pt 255 351)(line_width 1))
+		(line (pt 119 34)(pt 119 351)(line_width 1))
+		(line (pt 0 76)(pt 119 76)(line_width 3))
+		(line (pt 120 55)(pt 120 80)(line_width 1))
+		(line (pt 121 55)(pt 121 80)(line_width 1))
+		(line (pt 0 126)(pt 119 126)(line_width 3))
+		(line (pt 120 105)(pt 120 130)(line_width 1))
+		(line (pt 121 105)(pt 121 130)(line_width 1))
+		(line (pt 120 155)(pt 120 180)(line_width 1))
+		(line (pt 121 155)(pt 121 180)(line_width 1))
+		(line (pt 0 226)(pt 119 226)(line_width 1))
+		(line (pt 120 205)(pt 120 230)(line_width 1))
+		(line (pt 121 205)(pt 121 230)(line_width 1))
+		(line (pt 0 276)(pt 119 276)(line_width 1))
+		(line (pt 120 255)(pt 120 280)(line_width 1))
+		(line (pt 121 255)(pt 121 280)(line_width 1))
+		(line (pt 0 326)(pt 119 326)(line_width 3))
+		(line (pt 120 305)(pt 120 330)(line_width 1))
+		(line (pt 121 305)(pt 121 330)(line_width 1))
+		(line (pt 374 76)(pt 255 76)(line_width 3))
+		(line (pt 254 55)(pt 254 80)(line_width 1))
+		(line (pt 253 55)(pt 253 80)(line_width 1))
+		(line (pt 0 0)(pt 374 0)(line_width 1))
+		(line (pt 374 0)(pt 374 368)(line_width 1))
+		(line (pt 0 368)(pt 374 368)(line_width 1))
+		(line (pt 0 0)(pt 0 368)(line_width 1))
+	)
+)

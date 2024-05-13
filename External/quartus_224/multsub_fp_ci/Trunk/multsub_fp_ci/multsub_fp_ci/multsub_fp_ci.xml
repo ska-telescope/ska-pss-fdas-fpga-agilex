@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2022.07.19.13:09:45"
+ outputDirectory="E:/FDAS2/Projects/SKA/altera/quartus/22.2/multsub_fp_ci/multsub_fp_ci/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="AGFB014R24B2E2V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="fp32_mult_a" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="fp32_mult_a" direction="input" role="fp32_mult_a" width="32" />
+  </interface>
+  <interface name="fp32_mult_b" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="fp32_mult_b" direction="input" role="fp32_mult_b" width="32" />
+  </interface>
+  <interface name="fp32_chainin" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="fp32_chainin" direction="input" role="fp32_chainin" width="32" />
+  </interface>
+  <interface name="clr0" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="clr0" direction="input" role="reset" width="1" />
+  </interface>
+  <interface name="clr1" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="clr1" direction="input" role="reset" width="1" />
+  </interface>
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="ena" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="ena" direction="input" role="ena" width="3" />
+  </interface>
+  <interface name="fp32_result" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="fp32_result" direction="output" role="fp32_result" width="32" />
+  </interface>
+ </perimeter>
+ <entity kind="multsub_fp_ci" version="1.0" name="multsub_fp_ci">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="AGFB014R24B2E2V" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <generatedFiles>
+   <file
+       path="E:\FDAS2\Projects\SKA\altera\quartus\22.2\multsub_fp_ci\multsub_fp_ci\synth\multsub_fp_ci.vhd"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="E:\FDAS2\Projects\SKA\altera\quartus\22.2\multsub_fp_ci\multsub_fp_ci\synth\multsub_fp_ci.vhd"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="E:/FDAS2/Projects/SKA/altera/quartus/22.2/multsub_fp_ci/multsub_fp_ci.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="E:/intelfpga_pro/22.2/ip/altera/native_mac/s20_native_fp/s20_fp_mac_native_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="multsub_fp_ci">"Generating: multsub_fp_ci"</message>
+   <message level="Info" culprit="multsub_fp_ci">"Generating: multsub_fp_ci_s20_native_floating_point_dsp_1910_xbnuxwa"</message>
+   <message level="Info" culprit="s20_native_floating_point_dsp_0">generating top-level entity multsub_fp_ci_s20_native_floating_point_dsp_1910_xbnuxwa</message>
+   <message level="Info" culprit="s20_native_floating_point_dsp_0">Uses both Clear signal</message>
+  </messages>
+ </entity>
+ <entity
+   kind="s20_native_floating_point_dsp"
+   version="19.1.0"
+   name="multsub_fp_ci_s20_native_floating_point_dsp_1910_xbnuxwa">
+  <parameter name="mult_2nd_pipeline_clken" value="0" />
+  <parameter name="fp16_input_width" value="16" />
+  <parameter name="fp32_adder_a_chainin_pl_clken" value="no_reg" />
+  <parameter name="accum_2nd_pipeline_clken" value="no_reg" />
+  <parameter name="fp32_adder_a_chainin_2nd_pl_clken" value="no_reg" />
+  <parameter name="adder_pl_clken" value="no_reg" />
+  <parameter name="output_clken" value="0" />
+  <parameter name="accum_adder_clken" value="no_reg" />
+  <parameter name="enable_chainout" value="false" />
+  <parameter name="accumulate_clken" value="no_reg" />
+  <parameter name="fp32_adder_b_clken" value="no_reg" />
+  <parameter name="mult_pipeline_clken" value="no_reg" />
+  <parameter name="fp16_mode" value="flushed" />
+  <parameter name="enable_exception_flag" value="false" />
+  <parameter name="fp32_adder_subtract" value="true" />
+  <parameter name="fp16_mult_input_clken" value="no_reg" />
+  <parameter name="operation_mode" value="fp32_mult_add" />
+  <parameter name="enable_clr1" value="true" />
+  <parameter name="fp32_adder_a_clken" value="no_reg" />
+  <parameter name="enable_clr0" value="true" />
+  <parameter name="fp32_mult_a_clken" value="0" />
+  <parameter name="use_chainin" value="true" />
+  <parameter name="fp32_mult_b_clken" value="0" />
+  <parameter name="fp16_adder_subtract" value="false" />
+  <parameter name="adder_input_clken" value="0" />
+  <parameter name="accum_pipeline_clken" value="no_reg" />
+  <parameter name="clear_type" value="sclr" />
+  <generatedFiles>
+   <file
+       path="E:\FDAS2\Projects\SKA\altera\quartus\22.2\multsub_fp_ci\multsub_fp_ci\s20_native_floating_point_dsp_1910\synth\multsub_fp_ci_s20_native_floating_point_dsp_1910_xbnuxwa.v"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="E:\FDAS2\Projects\SKA\altera\quartus\22.2\multsub_fp_ci\multsub_fp_ci\s20_native_floating_point_dsp_1910\synth\multsub_fp_ci_s20_native_floating_point_dsp_1910_xbnuxwa.v"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="E:/intelfpga_pro/22.2/ip/altera/native_mac/s20_native_fp/s20_fp_mac_native_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="multsub_fp_ci" as="s20_native_floating_point_dsp_0" />
+  <messages>
+   <message level="Info" culprit="multsub_fp_ci">"Generating: multsub_fp_ci_s20_native_floating_point_dsp_1910_xbnuxwa"</message>
+   <message level="Info" culprit="s20_native_floating_point_dsp_0">generating top-level entity multsub_fp_ci_s20_native_floating_point_dsp_1910_xbnuxwa</message>
+   <message level="Info" culprit="s20_native_floating_point_dsp_0">Uses both Clear signal</message>
+  </messages>
+ </entity>
+</deploy>

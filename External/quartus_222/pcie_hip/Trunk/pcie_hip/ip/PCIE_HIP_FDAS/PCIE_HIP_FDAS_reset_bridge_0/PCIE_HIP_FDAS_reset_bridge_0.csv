@@ -1,0 +1,16 @@
+# system info PCIE_HIP_FDAS_reset_bridge_0 on 2023.01.24.09:25:53
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for PCIE_HIP_FDAS_reset_bridge_0 on 2023.01.24.09:25:53
+files:
+filepath,kind,attributes,module,is_top
+sim/PCIE_HIP_FDAS_reset_bridge_0.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,PCIE_HIP_FDAS_reset_bridge_0,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module

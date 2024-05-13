@@ -1,0 +1,18 @@
+# system info mult_fp_co on 2022.07.19.12:53:12
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for mult_fp_co on 2022.07.19.12:53:12
+files:
+filepath,kind,attributes,module,is_top
+sim/mult_fp_co.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,mult_fp_co,true
+s20_native_floating_point_dsp_1910/sim/mult_fp_co_s20_native_floating_point_dsp_1910_nhmydci.vhd,VHDL,,mult_fp_co_s20_native_floating_point_dsp_1910_nhmydci,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+mult_fp_co.s20_native_floating_point_dsp_0,mult_fp_co_s20_native_floating_point_dsp_1910_nhmydci

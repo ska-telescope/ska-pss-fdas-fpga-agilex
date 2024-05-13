@@ -1,0 +1,2 @@
+DEFAULT_ARCHITECTURE atom scm
+DEFAULT_FILE atom core_reconf/scm.bd

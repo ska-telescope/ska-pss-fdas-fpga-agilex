@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_std_synchronizer_nocut.v"
+   type="VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_defs.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_top.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_avl_mm_if.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_avl_mm_srw_if.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_block_rw_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_burst_boundary_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_byteenable_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_driver_sim_mem_validate.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_driver_simple.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_driver.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_driver_fsm.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_lfsr.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_lfsr_wrapper.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_rand_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_rand_burstcount_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_rand_num_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_rand_seq_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_read_compare.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_scfifo_wrapper.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_seq_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_single_rw_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_template_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_template_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="altera_emif_tg_avl_191/sim/altera_emif_avl_tg_amm_1x_bridge.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_tg_avl_191" />
+ <file
+   path="sim/ed_sim_tg.vhd"
+   type="VHDL"
+   library="ed_sim_tg"
+   hasInlineConfiguration="true" />
+ <topLevel name="ed_sim_tg.ed_sim_tg" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

@@ -1,0 +1,19 @@
+# system info PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0 on 2023.01.24.09:28:29
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0 on 2023.01.24.09:28:29
+files:
+filepath,kind,attributes,module,is_top
+sim/PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0,true
+mm_transparent_no_burst_pio_10/sim/mm_transparent_no_burst_pio.vhd,VHDL,,mm_transparent_no_burst_pio,false
+mm_transparent_no_burst_pio_10/sim/mm_transparent_no_burst_pio_synth.vhd,VHDL,,mm_transparent_no_burst_pio,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0.mm_transparent_no_burst_pio_0,mm_transparent_no_burst_pio

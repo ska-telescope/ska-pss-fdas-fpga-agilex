@@ -1,0 +1,242 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 440 464)
+	(text "PCIE_HIP_FDAS_mm_transparent_pio_0" (rect 81 0 258 12)(font "Arial" (font_size 11)))
+	(text "inst" (rect 8 448 20 460)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "Arial" (font_size 8)))
+		(text "clk" (rect 4 65 22 76)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "reset" (rect 0 0 20 12)(font "Arial" (font_size 8)))
+		(text "reset" (rect 4 115 34 126)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 296)
+		(input)
+		(text "s0_burstcount" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "s0_burstcount" (rect 4 290 82 301)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 320)
+		(input)
+		(text "s0_writedata[63..0]" (rect 0 0 74 12)(font "Arial" (font_size 8)))
+		(text "s0_writedata[63..0]" (rect 4 315 118 326)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 344)
+		(input)
+		(text "s0_address[21..0]" (rect 0 0 70 12)(font "Arial" (font_size 8)))
+		(text "s0_address[21..0]" (rect 4 340 106 351)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 376)
+		(input)
+		(text "s0_write" (rect 0 0 33 12)(font "Arial" (font_size 8)))
+		(text "s0_write" (rect 4 365 52 376)(font "Arial" (font_size 8)))
+		(line (pt 0 376)(pt 119 376)(line_width 1))
+	)
+	(port
+		(pt 0 400)
+		(input)
+		(text "s0_read" (rect 0 0 33 12)(font "Arial" (font_size 8)))
+		(text "s0_read" (rect 4 390 46 401)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 424)
+		(input)
+		(text "s0_byteenable[7..0]" (rect 0 0 77 12)(font "Arial" (font_size 8)))
+		(text "s0_byteenable[7..0]" (rect 4 415 118 426)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 72)
+		(input)
+		(text "m0_waitrequest" (rect 0 0 62 12)(font "Arial" (font_size 8)))
+		(text "m0_waitrequest" (rect 361 65 445 76)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 96)
+		(input)
+		(text "m0_readdata[63..0]" (rect 0 0 77 12)(font "Arial" (font_size 8)))
+		(text "m0_readdata[63..0]" (rect 346 90 454 101)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 120)
+		(input)
+		(text "m0_readdatavalid" (rect 0 0 70 12)(font "Arial" (font_size 8)))
+		(text "m0_readdatavalid" (rect 354 115 450 126)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 144)
+		(input)
+		(text "m0_writeresponsevalid" (rect 0 0 90 12)(font "Arial" (font_size 8)))
+		(text "m0_writeresponsevalid" (rect 326 140 452 151)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 176)
+		(input)
+		(text "m0_response[1..0]" (rect 0 0 74 12)(font "Arial" (font_size 8)))
+		(text "m0_response[1..0]" (rect 351 165 453 176)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 176)
+		(output)
+		(text "s0_waitrequest" (rect 0 0 59 12)(font "Arial" (font_size 8)))
+		(text "s0_waitrequest" (rect 4 165 88 176)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 119 176)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(output)
+		(text "s0_readdata[63..0]" (rect 0 0 74 12)(font "Arial" (font_size 8)))
+		(text "s0_readdata[63..0]" (rect 4 190 112 201)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 224)
+		(output)
+		(text "s0_readdatavalid" (rect 0 0 67 12)(font "Arial" (font_size 8)))
+		(text "s0_readdatavalid" (rect 4 215 100 226)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 248)
+		(output)
+		(text "s0_writeresponsevalid" (rect 0 0 87 12)(font "Arial" (font_size 8)))
+		(text "s0_writeresponsevalid" (rect 4 240 130 251)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 0 272)
+		(output)
+		(text "s0_response[1..0]" (rect 0 0 70 12)(font "Arial" (font_size 8)))
+		(text "s0_response[1..0]" (rect 4 265 106 276)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 200)
+		(output)
+		(text "m0_burstcount" (rect 0 0 60 12)(font "Arial" (font_size 8)))
+		(text "m0_burstcount" (rect 367 190 445 201)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 224)
+		(output)
+		(text "m0_writedata[63..0]" (rect 0 0 77 12)(font "Arial" (font_size 8)))
+		(text "m0_writedata[63..0]" (rect 343 215 457 226)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 248)
+		(output)
+		(text "m0_address[21..0]" (rect 0 0 74 12)(font "Arial" (font_size 8)))
+		(text "m0_address[21..0]" (rect 351 240 453 251)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 272)
+		(output)
+		(text "m0_write" (rect 0 0 36 12)(font "Arial" (font_size 8)))
+		(text "m0_write" (rect 394 265 442 276)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 296)
+		(output)
+		(text "m0_read" (rect 0 0 36 12)(font "Arial" (font_size 8)))
+		(text "m0_read" (rect 397 290 439 301)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 440 320)
+		(output)
+		(text "m0_byteenable[7..0]" (rect 0 0 81 12)(font "Arial" (font_size 8)))
+		(text "m0_byteenable[7..0]" (rect 342 315 456 326)(font "Arial" (font_size 8)))
+	)
+	(drawing
+		(text "clock" (rect 91 46 212 105)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 124 71 266 152)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 90 96 210 205)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset" (rect 124 121 278 252)(font "Arial" (color 0 0 0)))
+		(text "s0" (rect 106 146 224 305)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "waitrequest" (rect 124 171 314 352)(font "Arial" (color 0 0 0)))
+		(text "readdata" (rect 124 196 296 402)(font "Arial" (color 0 0 0)))
+		(text "readdatavalid" (rect 124 221 326 452)(font "Arial" (color 0 0 0)))
+		(text "writeresponsevalid" (rect 124 246 356 502)(font "Arial" (color 0 0 0)))
+		(text "response" (rect 124 271 296 552)(font "Arial" (color 0 0 0)))
+		(text "burstcount" (rect 124 296 308 602)(font "Arial" (color 0 0 0)))
+		(text "writedata" (rect 124 321 302 652)(font "Arial" (color 0 0 0)))
+		(text "address" (rect 124 346 290 702)(font "Arial" (color 0 0 0)))
+		(text "write" (rect 124 371 278 752)(font "Arial" (color 0 0 0)))
+		(text "read" (rect 124 396 272 802)(font "Arial" (color 0 0 0)))
+		(text "byteenable" (rect 124 421 308 852)(font "Arial" (color 0 0 0)))
+		(text "m0" (rect 307 46 626 105)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "waitrequest" (rect 255 71 576 152)(font "Arial" (color 0 0 0)))
+		(text "readdata" (rect 266 96 580 202)(font "Arial" (color 0 0 0)))
+		(text "readdatavalid" (rect 246 121 570 252)(font "Arial" (color 0 0 0)))
+		(text "writeresponsevalid" (rect 224 146 556 302)(font "Arial" (color 0 0 0)))
+		(text "response" (rect 264 171 576 352)(font "Arial" (color 0 0 0)))
+		(text "burstcount" (rect 258 196 576 402)(font "Arial" (color 0 0 0)))
+		(text "writedata" (rect 265 221 584 452)(font "Arial" (color 0 0 0)))
+		(text "address" (rect 269 246 580 502)(font "Arial" (color 0 0 0)))
+		(text "write" (rect 283 271 596 552)(font "Arial" (color 0 0 0)))
+		(text "read" (rect 284 296 592 602)(font "Arial" (color 0 0 0)))
+		(text "byteenable" (rect 257 321 574 652)(font "Arial" (color 0 0 0)))
+		(text " PCIE_HIP_FDAS_mm_transparent_pio_0 " (rect 255 451 726 912)(font "Arial" ))
+		(line (pt 119 34)(pt 306 34)(line_width 1))
+		(line (pt 306 34)(pt 306 451)(line_width 1))
+		(line (pt 119 451)(pt 306 451)(line_width 1))
+		(line (pt 119 34)(pt 119 451)(line_width 1))
+		(line (pt 0 76)(pt 119 76)(line_width 1))
+		(line (pt 120 55)(pt 120 80)(line_width 1))
+		(line (pt 121 55)(pt 121 80)(line_width 1))
+		(line (pt 0 126)(pt 119 126)(line_width 1))
+		(line (pt 120 105)(pt 120 130)(line_width 1))
+		(line (pt 121 105)(pt 121 130)(line_width 1))
+		(line (pt 0 201)(pt 119 201)(line_width 3))
+		(line (pt 0 226)(pt 119 226)(line_width 1))
+		(line (pt 0 251)(pt 119 251)(line_width 1))
+		(line (pt 0 276)(pt 119 276)(line_width 3))
+		(line (pt 0 301)(pt 119 301)(line_width 1))
+		(line (pt 0 326)(pt 119 326)(line_width 3))
+		(line (pt 0 351)(pt 119 351)(line_width 3))
+		(line (pt 0 401)(pt 119 401)(line_width 1))
+		(line (pt 0 426)(pt 119 426)(line_width 3))
+		(line (pt 120 155)(pt 120 430)(line_width 1))
+		(line (pt 121 155)(pt 121 430)(line_width 1))
+		(line (pt 442 76)(pt 306 76)(line_width 1))
+		(line (pt 442 101)(pt 306 101)(line_width 3))
+		(line (pt 442 126)(pt 306 126)(line_width 1))
+		(line (pt 442 151)(pt 306 151)(line_width 1))
+		(line (pt 442 176)(pt 306 176)(line_width 3))
+		(line (pt 442 201)(pt 306 201)(line_width 1))
+		(line (pt 442 226)(pt 306 226)(line_width 3))
+		(line (pt 442 251)(pt 306 251)(line_width 3))
+		(line (pt 442 276)(pt 306 276)(line_width 1))
+		(line (pt 442 301)(pt 306 301)(line_width 1))
+		(line (pt 442 326)(pt 306 326)(line_width 3))
+		(line (pt 305 55)(pt 305 330)(line_width 1))
+		(line (pt 304 55)(pt 304 330)(line_width 1))
+		(line (pt 0 0)(pt 442 0)(line_width 1))
+		(line (pt 442 0)(pt 442 468)(line_width 1))
+		(line (pt 0 468)(pt 442 468)(line_width 1))
+		(line (pt 0 0)(pt 0 468)(line_width 1))
+	)
+)

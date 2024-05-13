@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="sim/PCIE_HIP_FDAS_reset_bridge_0.vhd"
+   type="VHDL"
+   library="PCIE_HIP_FDAS_reset_bridge_0"
+   hasInlineConfiguration="true" />
+ <topLevel name="PCIE_HIP_FDAS_reset_bridge_0.PCIE_HIP_FDAS_reset_bridge_0" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pinplan
+ variation_name="intel_FPGA_unified_fft_0"
+ megafunction_name="INTEL_FPGA_UNIFIED_FFT"
+ intended_family="Agilex"
+ specifies="all_ports">
+ <global>
+  <pin name="clk" direction="input" scope="external" />
+  <pin name="rst" direction="input" scope="external" />
+  <pin name="validIn" direction="input" scope="external" />
+  <pin name="channelIn[7..0]" direction="input" scope="external" />
+  <pin name="d[63..0]" direction="input" scope="external" />
+  <pin name="validOut" direction="output" scope="external" />
+  <pin name="channelOut[7..0]" direction="output" scope="external" />
+  <pin name="q[63..0]" direction="output" scope="external" />
+ </global>
+</pinplan>

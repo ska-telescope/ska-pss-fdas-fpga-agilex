@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Database version="1.2.598">
+    <Module name="MSIX" data-width="32" address-width="4" checksum="0x93F2">
+        <doc>MSIX Module MCI</doc>
+        <Table name="CLD MSI-X Interrupt Configuration">
+            <doc>CLD MSI-X Data and Enable</doc>
+            <Signal name="CLD_MSIX_DATA" location="0x0.15:0" mode="RW">
+                <doc>Data for the CLD MSI-X Interrupt Vector Table Access:-
+Bits[15:12] : rsvd[3:0]
+Bit[11] : msix_queue_dir (1 = Host to Device, 0 = Device to Host)
+Bits[10:0]: msix_queue_num[10:0] (DMA Channel number or &quot;queue number)</doc>
+            </Signal>
+            <Signal name="CLD_MSIX_EN" location="0x0.16" mode="RW">
+                <doc>1 = CLD MSI-X Interrupts Enabled</doc>
+            </Signal>
+        </Table>
+        <Table name="CONV MSI-X Interrupt Configuration" base-address="0x4">
+            <doc>CONV MSI-X Data and Enable</doc>
+            <Signal name="CONV_MSIX_DATA" location="0x0.15:0" mode="RW">
+                <doc>Data for the CONV MSI-X Interrupt Vector Table Access:-
+Bits[15:12] : rsvd[3:0]
+Bit[11] : msix_queue_dir (1 = Host to Device, 0 = Device to Host)
+Bits[10:0]: msix_queue_num[10:0] (DMA Channel number or &quot;queue number)</doc>
+            </Signal>
+            <Signal name="CONV_MSIX_EN" location="0x0.16" mode="RW">
+                <doc>1 = CONV MSI-X Interrupts Enabled</doc>
+            </Signal>
+        </Table>
+        <Table name="HSUM MSI-X Interrupt Configuration" base-address="0x8">
+            <doc>HSUM MSI-X Data and Enable</doc>
+            <Signal name="HSUM_MSIX_DATA" location="0x0.15:0" mode="RW">
+                <doc>Data for the HSUM MSI-X Interrupt Vector Table Access:-
+Bits[15:12] : rsvd[3:0]
+Bit[11] : msix_queue_dir (1 = Host to Device, 0 = Device to Host)
+Bits[10:0]: msix_queue_num[10:0] (DMA Channel number or &quot;queue number)</doc>
+            </Signal>
+            <Signal name="HSUM_MSIX_EN" location="0x0.16" mode="RW">
+                <doc>1 =HSUM MSI-X Interrupts Enabled</doc>
+            </Signal>
+        </Table>
+    </Module>
+</Database>

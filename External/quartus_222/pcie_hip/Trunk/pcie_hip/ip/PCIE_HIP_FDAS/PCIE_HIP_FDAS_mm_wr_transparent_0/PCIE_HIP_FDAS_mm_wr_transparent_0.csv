@@ -1,0 +1,19 @@
+# system info PCIE_HIP_FDAS_mm_wr_transparent_0 on 2023.01.24.09:28:27
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for PCIE_HIP_FDAS_mm_wr_transparent_0 on 2023.01.24.09:28:27
+files:
+filepath,kind,attributes,module,is_top
+sim/PCIE_HIP_FDAS_mm_wr_transparent_0.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,PCIE_HIP_FDAS_mm_wr_transparent_0,true
+mm_wr_transparent_10/sim/mm_wr_transparent.vhd,VHDL,,mm_wr_transparent,false
+mm_wr_transparent_10/sim/mm_wr_transparent_synth.vhd,VHDL,,mm_wr_transparent,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+PCIE_HIP_FDAS_mm_wr_transparent_0.mm_wr_transparent_0,mm_wr_transparent

@@ -1,0 +1,2 @@
+DEFAULT_FILE atom ctrl_func_synth.vhd
+DEFAULT_ARCHITECTURE atom synth

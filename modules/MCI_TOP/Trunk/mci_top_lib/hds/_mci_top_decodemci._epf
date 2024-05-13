@@ -1,0 +1,2 @@
+DEFAULT_ARCHITECTURE atom synth
+DEFAULT_FILE atom mci_top_decodemci_synth.vhd

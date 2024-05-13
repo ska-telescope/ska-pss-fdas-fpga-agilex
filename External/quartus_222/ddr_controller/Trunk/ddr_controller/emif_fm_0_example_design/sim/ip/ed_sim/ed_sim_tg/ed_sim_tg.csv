@@ -1,0 +1,43 @@
+# system info ed_sim_tg on 2022.08.01.12:08:57
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for ed_sim_tg on 2022.08.01.12:08:57
+files:
+filepath,kind,attributes,module,is_top
+sim/ed_sim_tg.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,ed_sim_tg,true
+altera_emif_tg_avl_191/sim/altera_std_synchronizer_nocut.v,VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_defs.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_top.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_addr_gen.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_avl_mm_if.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_avl_mm_srw_if.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_block_rw_stage.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_burst_boundary_addr_gen.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_byteenable_stage.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_driver_sim_mem_validate.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_driver_simple.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_driver.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_driver_fsm.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_lfsr.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_lfsr_wrapper.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_rand_addr_gen.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_rand_burstcount_gen.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_rand_num_gen.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_rand_seq_addr_gen.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_read_compare.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_scfifo_wrapper.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_seq_addr_gen.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_single_rw_stage.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_template_addr_gen.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_template_stage.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+altera_emif_tg_avl_191/sim/altera_emif_avl_tg_amm_1x_bridge.sv,SYSTEM_VERILOG,,altera_emif_avl_tg_top,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+ed_sim_tg.tg,altera_emif_avl_tg_top

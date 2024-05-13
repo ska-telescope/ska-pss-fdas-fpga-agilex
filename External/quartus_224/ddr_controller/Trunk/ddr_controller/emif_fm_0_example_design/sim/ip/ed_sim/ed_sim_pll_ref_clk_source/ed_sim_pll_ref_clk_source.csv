@@ -1,0 +1,18 @@
+# system info ed_sim_pll_ref_clk_source on 2022.08.01.12:08:48
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for ed_sim_pll_ref_clk_source on 2022.08.01.12:08:48
+files:
+filepath,kind,attributes,module,is_top
+sim/ed_sim_pll_ref_clk_source.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,ed_sim_pll_ref_clk_source,true
+altera_avalon_clock_source_191/sim/altera_avalon_clock_source.vhd,VHDL,,altera_avalon_clock_source,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+ed_sim_pll_ref_clk_source.pll_ref_clk_source,altera_avalon_clock_source

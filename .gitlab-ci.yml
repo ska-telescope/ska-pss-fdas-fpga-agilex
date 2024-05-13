@@ -1,0 +1,71 @@
+variables:
+  GIT_STRATEGY: clone
+
+stages:
+  - vhdl-unit-tests
+  - build
+  - publish
+
+.common:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "api" || $CI_PIPELINE_SOURCE == 'merge_request_event'
+
+vhdl-unit-tests:
+  stage: vhdl-unit-tests
+  extends: .common
+  tags:
+    - ubuntu-22.04
+  script:  
+    - echo "vhdl-unit-tests"
+    # TODO
+
+shell:
+  stage: build
+  extends: .common
+  tags:
+    - ubuntu-22.04
+  script:
+    - echo "shell"
+    # TODO
+
+synthesis:
+  stage: build
+  extends: .common
+  needs:
+    - shell
+  tags:
+    - ubuntu-22.04
+  script:
+    - echo "synthesis"
+    # TODO
+
+fitting:
+  stage: build
+  extends: .common
+  needs:
+    - synthesis
+  tags:
+    - ubuntu-22.04
+  script:
+    - echo "fitting"
+    # TODO
+
+assemble:
+  stage: build
+  extends: .common
+  needs:
+    - fitting
+  tags:
+    - ubuntu-22.04
+  script:
+    - echo "assemble"
+    # TODO
+
+publish:
+  stage: publish
+  extends: .common
+  tags:
+    - ubuntu-22.04
+  script:
+   - echo "publish"
+   # TODO

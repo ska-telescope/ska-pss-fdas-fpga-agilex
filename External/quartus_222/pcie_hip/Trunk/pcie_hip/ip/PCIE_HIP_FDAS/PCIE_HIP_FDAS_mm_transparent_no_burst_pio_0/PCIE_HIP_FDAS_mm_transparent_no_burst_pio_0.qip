@@ -1,0 +1,43 @@
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_TOOL_VERSION "22.2"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_TOOL_VENDOR_NAME "Altera Corporation"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_TOP_LEVEL_COMPONENT_NAME "mm_transparent_no_burst_pio"
+set_global_assignment -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name SOPCINFO_FILE [file join $::quartus(qip_path) "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0.sopcinfo"]
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name SLD_INFO "QSYS_NAME PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0 HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name MISC_FILE [file join $::quartus(qip_path) "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0.cmp"]
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_TARGETED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_GENERATED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name MISC_FILE [file join $::quartus(qip_path) "../PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0.ip"]
+
+set_global_assignment -entity "mm_transparent_no_burst_pio" -library "mm_transparent_no_burst_pio_10" -name IP_COMPONENT_NAME "bW1fdHJhbnNwYXJlbnRfbm9fYnVyc3RfcGlv"
+set_global_assignment -entity "mm_transparent_no_burst_pio" -library "mm_transparent_no_burst_pio_10" -name IP_COMPONENT_DISPLAY_NAME "bW1fdHJhbnNwYXJlbnRfbm9fYnVyc3RfcGlv"
+set_global_assignment -entity "mm_transparent_no_burst_pio" -library "mm_transparent_no_burst_pio_10" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "mm_transparent_no_burst_pio" -library "mm_transparent_no_burst_pio_10" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "mm_transparent_no_burst_pio" -library "mm_transparent_no_burst_pio_10" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "mm_transparent_no_burst_pio" -library "mm_transparent_no_burst_pio_10" -name IP_COMPONENT_PARAMETER "REFUQV9XSURUSA==::NjQ=::REFUQV9XSURUSA=="
+set_global_assignment -entity "mm_transparent_no_burst_pio" -library "mm_transparent_no_burst_pio_10" -name IP_COMPONENT_PARAMETER "QllURV9TSVpF::OA==::QllURV9TSVpF"
+set_global_assignment -entity "mm_transparent_no_burst_pio" -library "mm_transparent_no_burst_pio_10" -name IP_COMPONENT_PARAMETER "QUREUkVTU19XSURUSA==::MjI=::QUREUkVTU19XSURUSA=="
+set_global_assignment -entity "mm_transparent_no_burst_pio" -library "mm_transparent_no_burst_pio_10" -name IP_COMPONENT_PARAMETER "UkVTUE9OU0VfV0lEVEg=::Mg==::UkVTUE9OU0VfV0lEVEg="
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_NAME "UENJRV9ISVBfRkRBU19tbV90cmFuc3BhcmVudF9ub19idXJzdF9waW9fMA=="
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::QWdpbGV4::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::QUdGQjAxNFIyNEIyRTJW::QXV0byBERVZJQ0U="
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Mg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19DTE9DS19SQVRF::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19DTE9DS19ET01BSU4=::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19SRVNFVF9ET01BSU4=::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name IP_COMPONENT_PARAMETER "QVVUT19NMF9BRERSRVNTX1dJRFRI::LTE=::QXV0byBBRERSRVNTX1dJRFRI"
+
+
+set_global_assignment -library "mm_transparent_no_burst_pio_10" -name VHDL_FILE [file join $::quartus(qip_path) "mm_transparent_no_burst_pio_10/synth/mm_transparent_no_burst_pio.vhd"]
+set_global_assignment -library "mm_transparent_no_burst_pio_10" -name VHDL_FILE [file join $::quartus(qip_path) "mm_transparent_no_burst_pio_10/synth/mm_transparent_no_burst_pio_synth.vhd"]
+set_global_assignment -library "PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" -name VHDL_FILE [file join $::quartus(qip_path) "synth/PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0.vhd"]
+

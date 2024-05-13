@@ -1,0 +1,2 @@
+DEFAULT_ARCHITECTURE atom synth
+DEFAULT_FILE atom msixtxint_synth.vhd

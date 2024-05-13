@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="mm_transparent_no_burst_pio_10/sim/mm_transparent_no_burst_pio.vhd"
+   type="VHDL"
+   library="mm_transparent_no_burst_pio_10" />
+ <file
+   path="mm_transparent_no_burst_pio_10/sim/mm_transparent_no_burst_pio_synth.vhd"
+   type="VHDL"
+   library="mm_transparent_no_burst_pio_10" />
+ <file
+   path="sim/PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0.vhd"
+   type="VHDL"
+   library="PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0"
+   hasInlineConfiguration="true" />
+ <topLevel
+   name="PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0.PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

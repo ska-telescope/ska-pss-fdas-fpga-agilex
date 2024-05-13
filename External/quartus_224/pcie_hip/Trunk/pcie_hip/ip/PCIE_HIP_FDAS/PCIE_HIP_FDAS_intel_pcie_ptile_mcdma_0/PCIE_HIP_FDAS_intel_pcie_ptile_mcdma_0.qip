@@ -1,0 +1,396 @@
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_TOOL_VERSION "22.4"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_TOOL_VENDOR_NAME "Intel Corporation"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_TOP_LEVEL_COMPONENT_NAME "intel_pcie_ptile_mcdma"
+set_global_assignment -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name SOPCINFO_FILE [file join $::quartus(qip_path) "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0.sopcinfo"]
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name SLD_INFO "QSYS_NAME PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0 HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name MISC_FILE [file join $::quartus(qip_path) "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0.cmp"]
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_TARGETED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_TARGETED_PART_TRAIT "BASE_DEVICE::FM6REVB"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_TARGETED_PART_TRAIT "DEVICE::AGFB014R24B2E2V"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_TARGETED_PART_TRAIT "DEVICE_SPEEDGRADE::2"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_TARGETED_PART_TRAIT "part.DEVICE_IOBANK_REVISION::IO96A_REVB2"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_GENERATED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name MISC_FILE [file join $::quartus(qip_path) "../PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0.ip"]
+
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_NAME "UENJRV9ISVBfRkRBU19pbnRlbF9wY2llX3B0aWxlX21jZG1hXzBfYWx0ZXJhX2lvcGxsXzE5MzFfMm93YzM3eQ=="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_DISPLAY_NAME "SU9QTEwgSW50ZWwgRlBHQSBJUA=="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_VERSION "MTkuMy4x"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_DESCRIPTION "SW50ZWwgRlBHQSBQaGFzZS1Mb2NrZWQgTG9vcCAoSU9QTEwgSW50ZWwgRlBHQSBJUCk="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_GROUP "QmFzaWMgRnVuY3Rpb25zL0Nsb2NrczsgUExMcyBhbmQgUmVzZXRzL1BMTA=="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzI4NS8="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzI4NS8="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzE5NS8="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4Mzc2MS8="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzE2Ni8="
+set_global_assignment -entity "intel_ptile_io_pll_250" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_NAME "aW50ZWxfcHRpbGVfaW9fcGxsXzI1MA=="
+set_global_assignment -entity "intel_ptile_io_pll_250" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_DISPLAY_NAME "aW50ZWxfcHRpbGVfaW9fcGxsXzI1MA=="
+set_global_assignment -entity "intel_ptile_io_pll_250" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "intel_ptile_io_pll_250" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "intel_ptile_io_pll_250" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "intel_ptile_io_pll_250" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_VERSION "OS4wLjA="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_NAME "UENJRV9ISVBfRkRBU19pbnRlbF9wY2llX3B0aWxlX21jZG1hXzBfaW50ZWxfcGNpZV9wdGlsZV9hc3RfOTAwXzNxbWN0cnk="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_DISPLAY_NAME "UC1UaWxlIEF2YWxvbiBTdHJlYW1pbmcgSW50ZWwgRlBHQSBJUCBmb3IgUENJIEV4cHJlc3M="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_VERSION "OS4wLjA="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_DESCRIPTION "UC1UaWxlIEF2YWxvbiBTdHJlYW1pbmcgSW50ZWwgRlBHQSBJUCBmb3IgUENJIEV4cHJlc3M="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9QQ0kgRXhwcmVzcw=="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzA1OS8="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzUwOC8="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzAzOC8="
+set_global_assignment -entity "intel_pcie_ptile_ast_hip" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_NAME "aW50ZWxfcGNpZV9wdGlsZV9hc3RfaGlw"
+set_global_assignment -entity "intel_pcie_ptile_ast_hip" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_DISPLAY_NAME "aW50ZWxfcGNpZV9wdGlsZV9hc3RfaGlw"
+set_global_assignment -entity "intel_pcie_ptile_ast_hip" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "intel_pcie_ptile_ast_hip" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "intel_pcie_ptile_ast_hip" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "intel_pcie_ptile_ast_hip" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_VERSION "NS4wLjA="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_NAME "UENJRV9ISVBfRkRBU19pbnRlbF9wY2llX3B0aWxlX21jZG1hXzBfaW50ZWxfcGNpZV9wdGlsZV9tY2RtYV81MDBfNXJ1M3ZsYQ=="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_DISPLAY_NAME "UC1UaWxlIE11bHRpY2hhbm5lbCBETUEgSW50ZWwgRlBHQSBJUCBmb3IgUENJIEV4cHJlc3M="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_VERSION "NS4wLjA="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_DESCRIPTION "SW50ZWwgUC1UaWxlIE1DRE1BIGZvciBQQ0kgRXhwcmVzcw=="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9QQ0kgRXhwcmVzcw=="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzgyMS5odG1s"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzUxNy5odG1s"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4Mzc5MS5odG1s"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_COMPONENT_NAME "UENJRV9ISVBfRkRBU19pbnRlbF9wY2llX3B0aWxlX21jZG1hXzA="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name IP_COMPONENT_VERSION "MS4w"
+
+
+set_global_assignment -library "altera_iopll_1931" -name VERILOG_FILE [file join $::quartus(qip_path) "altera_iopll_1931/synth/PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y.v"]
+set_instance_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name TCL_ENTITY_FILE [file join $::quartus(qip_path) "altera_iopll_1931/synth/PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y_all_ip_params.tcl"]
+set_instance_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name TCL_ENTITY_FILE [file join $::quartus(qip_path) "altera_iopll_1931/synth/PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y_parameters.tcl"]
+set_instance_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name SDC_ENTITY_FILE [file join $::quartus(qip_path) "altera_iopll_1931/synth/PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y.sdc"] -no_sdc_promotion  -no_auto_inst_discovery 
+set_instance_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name TCL_ENTITY_FILE [file join $::quartus(qip_path) "altera_iopll_1931/synth/PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y_pin_map.tcl"]
+set_global_assignment -library "altera_iopll_1931" -name SOURCE_FILE [file join $::quartus(qip_path) "altera_iopll_1931/synth/agilex_iobank_pll.ipxact"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name VHDL_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/intel_ptile_io_pll_250.vhd"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logic_interfaces.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/pcie_wrapper.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/pcie_adapter_wrapper.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/altera_std_synchronizer_nocut.v"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/pcie_cii_ari_decode.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/pcie_cii_10bit_tag.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/pcie_cii_workaround.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/phy_user_avmm_arb.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/ptile_rst_seq.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/ptile_pcie_soft_glue.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/ptile_pcie_user_avmm_adapter.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/ptile_prs_soft_logic.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/whr_rx_deskew.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/whr_tx_deskew.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/wrlib_rx_aib_deskew.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/wrlib_rx_aib_deskew_datapipe.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/wrlib_rx_aib_deskew_sm.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/wrlib_ecc_dec_c78_d70.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/whr_ecc_chk_deskew_top.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/whr_ecc_gen_top.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/wrlib_ecc_enc_d70_c78.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/gf_clkmux.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/soft_logics/pcie_decremental_cdt_wa.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_single_segment/intel_pcie_adapter_rx_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_single_segment/intel_pcie_adapter_tx_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_single_segment/intel_pcie_adapter_stos.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_adapter.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_cfg_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_cii_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_credit_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_dcfifo.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_error_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_flr_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_gpx3.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_hard_ip_status_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_hot_plug_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_int_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_pm_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_prs_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_rx_st_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_sync_bit.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_sync_pulse.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_sync_vec.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_tx_st_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8/intel_pcie_whr_gen4x8_vferr_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_adapter.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_cfg_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_cii_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_credit_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_dcfifo.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_error_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_flr_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_gpx3.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_hard_ip_status_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_hot_plug_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_int_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_pm_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_prs_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_rx_st_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_sync_bit.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_sync_pulse.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_sync_vec.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_gen4x8_avmm/intel_pcie_whr_gen4x8_avmm_tx_st_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/adapters/adapter_common/alt_mlab.v"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/virtio/intel_pcie_virtio_addrdc.v"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/virtio/intel_pcie_virtio_rdwr_ctrl.v"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/virtio/intel_pcie_virtio_cfgmnt.v"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/virtio/intel_pcie_virtio_cap_pfvfreg.v"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/virtio/intel_pcie_virtio_cfg_access_cap.v"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/virtio/intel_pcie_virtio_dataflow.v"]
+set_global_assignment -library "intel_pcie_ptile_ast_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/virtio/intel_pcie_virtio_top.v"]
+set_instance_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name SDC_ENTITY_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_ast_900/synth/intel_ptile_pcie.sdc"] -no_sdc_promotion 
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name VHDL_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/intel_pcie_ptile_ast_hip.vhd"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/intel_pcie_mcdma_ptile_wrapper.sv"]
+set_instance_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name SDC_ENTITY_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/intel_pcie_ptile_mcdma.sdc"] -no_sdc_promotion 
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_32b_counter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_basic_shift_register.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_rr_scheduler.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_rr_scheduler_avst.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_rr_scheduler_packet.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_lut_ram.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_forwarding_ram.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_ram.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_scfifo.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_scfifo_32.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_schd_order.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_schd_piped_empty_calc.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_schd_scfifo.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_set_clr_rd.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/mqdma_pkg.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/mqdma_dm_pkg.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_config_extractor.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_config_extractor_cii.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_config_extractor_cii_func.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_config_extractor_pf.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_config_extractor_proc.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_htile_tl_cfg.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_htile_tl_cfg_func.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_ptile_tl_cfg.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_ptile_tl_cfg_func.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_qid2f_map.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_qdma_wrr_arb.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_pc_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_pc_arbiter_mcdma.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_pc_arbiter_bridge.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_np_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_np_arbiter_mcdma.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_np_arbiter_bridge.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_ready_skid.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_hip_reconfig_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_hip_reconfig_cdc.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/intel_pcie_hip_reconfig_rr_scheduler.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_debug_logger_files/intel_qdma_debug_lut_ram.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_debug_logger_files/intel_qdma_debug_shift_register.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_debug_logger_files/intel_qdma_debug_shift_register_n_deep.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_debug_logger_files/intel_qdma_debug_logger_state.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_debug_logger_files/intel_qdma_debug_logger.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_hip_intf_files/intel_pcie_221_pkt_wrapper.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_hip_intf_files/intel_pcie_rxpkt_221.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_hip_intf_files/intel_pcie_rx_schd_lite.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_hip_intf_files/intel_pcie_tx_p_cpl_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_hip_intf_files/intel_pcie_tx_pc_np_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_hip_intf_files/intel_pcie_tx_schd_lite.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/altera_syncram_sim_only.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/intel_qdma_cntl_reg.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/intel_qdma_hip_cfg.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/intel_qdma_msix_mem.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/intel_qdma_pba_mem.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/intel_qdma_qcsr_mem.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/intel_qdma_reg_dec.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/intel_qdma_rr_arb.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/intel_qdma_dyn_chn_aloc.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/intel_qdma_ram.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_control_reg_files/intel_qdma_byteena_ram.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cmplto_files/intel_qdma_tag_outstanding_det.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cmplto_files/intel_qdma_cmplto_ptile_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cmplto_files/intel_qdma_cmplto_dw_tracker.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cmplto_files/intel_qdma_cmplto_det.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cmplto_files/intel_qdma_cmplto_proc.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cmplto_files/intel_qdma_cmplto_det_missing.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cmplto_files/intel_qdma_cmplto_error_handling.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cmplto_files/intel_qdma_cmplto_checker.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cmplto_files/intel_qdma_cmplto_app_err_if.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_60bit_adder.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_62bit_adder.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_avmm_translator_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_avst_translator_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_pipelined_57_6_adder.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_sclkfifo.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_shallow_fifo.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_wdm_avmm_sm_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_wdm_data_aligner.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_wdm_destn_address_generator.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_wdm_input_stage_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_wdm_packet_generator_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_wdm_imm_generator_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_write_data_mover_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_csr_rr_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_msi_wb_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_prefetch_desc_fifo_core.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_prefetch_desc_fifo.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_prefetch_desc_rd_ctrl.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_prefetch_desc_wr_ctrl.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_prefetch_qid2segnum.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_prefetch_device_desc_mngr.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_prefetch_didf_seg_flush.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_prefetch_seg_desc_fifo.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_prefetch_oh2b.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_d2hdm_files/intel_pcie_prefetch_qrst_hndlr.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_desc_fetch_files/intel_qdma_desc_fetch.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_desc_fetch_files/intel_qdma_fetch_sm.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_desc_fetch_files/intel_qdma_aqid_buf_ctl.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_desc_fetch_files/intel_qdma_aqid_buf_filter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_desc_fetch_files/intel_qdma_reg_acc.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_h2ddm_desc_preproc.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_h2ddm_header_gen.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_mqdma_h2ddm.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_split_desc.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_h2ddm_instr_handle.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_rddm_avmm_data_aligner.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_rddm_avmm_cpl.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_rddm_avst_byte_aligner.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_rddm_avst_data_aligner.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_rddm_avst_metadata.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_rddm_avst_cpl_noaligner.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_rddm_avst_cpl_aligner.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_rddm_avst_cpl_framer.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_rddm_avst_cpl_packer.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_rddm_avst_cpl.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_h2ddm_files/intel_pcie_h2ddm_cpl_dec_def.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_reordering_files/intel_pcie_order.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_reordering_files/intel_pcie_order_buffer.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_reordering_files/intel_pcie_order_header.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_reordering_files/intel_pcie_order_read.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_reordering_files/intel_pcie_order_write.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_reordering_files/intel_pcie_order_rifo.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_reordering_files/intel_pcie_order_v2.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_reordering_files/intel_pcie_order_v2_read.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/test_rom_sim_only.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intel_pcie_mqdma_test_rom.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intel_pcie_mqdma_pfvf_map.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intel_qdma_qreset_controller.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intel_qdma_flr_qreset_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intel_qdma_flr_pf_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intel_qdma_flr_pfvf_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intel_qdma_flr_ch_mapper.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intel_qdma_flr_dc_mapper.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intel_qdma_flr_controller.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intel_pcie_mqdma_pfvf_dc_map.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_msix_wb_ctrl_files/intel_qdma_msix_package.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_msix_wb_ctrl_files/intel_qdma_msix_st_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_msix_wb_ctrl_files/intel_qdma_msix_pba_block.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_msix_wb_ctrl_files/intel_qdma_msix_irq_arbiter.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_msix_wb_ctrl_files/intel_qdma_msix_irq_processor.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_msix_wb_ctrl_files/intel_qdma_msix_tlp_gen.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_msix_wb_ctrl_files/intel_qdma_h2d_status_queue.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_msix_wb_ctrl_files/intel_qdma_d2h_status_queue.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_msix_wb_ctrl_files/intel_qdma_status_controller.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/intel_pcie_mcdma.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/intel_pcie_mcdma_dm.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_rq_files/intel_pcie_bam_avmm_intf.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_rq_files/intel_pcie_bam_cpl.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_rq_files/intel_pcie_bam_fifos.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_rq_files/intel_pcie_bam_rw.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_rq_files/intel_pcie_bam_sch_intf.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_rq_files/intel_pcie_bam_rx_pio.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_rq_files/intel_pcie_lite_master.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_rq_files/intel_pcie_mqdma_csr_avmm_intf.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_rq_files/intel_pcie_mqdma_reg_rw.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_rq_files/intel_pcie_mqdma_rx_rq.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_mqdma_rx.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_mqdma_rx_dm.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_mqdma_rx_parser.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_mqdma_rx_tlp_decoder.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_schd_rx_bam_cdt_checker.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_schd_rx_cdt_handler.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_schd_rx_delay.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_schd_rx_ibuf.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_schd_rx_ibuf_order_mngr.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_schd_rx_ibuf_rd_dns.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_schd_rx_obuf.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_schd_rx_obuf_order_mngr.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_schd_rx_p_np_arb.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_rx_tlp_files/intel_pcie_schd_rx_stream.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_cdt_checker.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_invalidator.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_np_obuf.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_np_order_mngr.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_np_packer.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_pc_ibuf.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_pc_np_arb.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_pc_obuf.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_pc_order_mngr.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_pc_order_mngr_rd.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_pc_order_mngr_wr.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_pc_packer.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_seg_packer_4_to_2.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_top.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_tx_tlp_files/intel_pcie_mqdma_tx_dm.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bam_files/intel_pcie_mcdma_bam_wrapper.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bam_files/intel_pcie_mcdma_bam.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bam_files/intel_pcie_mcdma_bam_sch_intf.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bam_files/intel_pcie_mcdma_bam_rw.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bam_files/intel_pcie_mcdma_bam_cpl.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bam_files/intel_pcie_mcdma_bam_avmm_intf.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bam_files/intel_pcie_mcdma_bam_cmd_prepoc.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bas_files/intel_pcie_mcdma_bas_wrapper.v"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bas_files/intel_pcie_mcdma_bas.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bas_files/intel_pcie_bas_msi.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_bas_files/intel_pcie_lite_bas.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cs_files/intel_pcie_cs.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cs_files/intel_pcie_cs_parser.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_cs_files/intel_pcie_cs_base_reg_bank.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_ram.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_scfifo.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_desc_preproc.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_desc_queue.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_data_aligner.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_avst_cpl.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_avst.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_avmm_cpl.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_avmm.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_top.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_rddm_files/intel_pcie_ext_rddm_header_gen.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_avmm_translator_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_60bit_adder.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_pipelined_57_6_adder.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_write_data_mover_top.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_write_data_mover_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_wdm_input_stage_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_wdm_destn_address_generator.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_wdm_avmm_sm_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_wdm_imm_generator_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_wdm_packet_generator_512.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_62bit_adder.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_ext_wrdm_files/intel_pcie_ext_wdm_data_aligner.sv"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SOURCE_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/pf2intf_init.mif"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SOURCE_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intf2dchan_init_pf.mif"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SOURCE_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_flr_ctrl_files/intf2dchan_init_vf.mif"]
+set_global_assignment -library "intel_pcie_ptile_mcdma_500" -name SOURCE_FILE [file join $::quartus(qip_path) "intel_pcie_ptile_mcdma_500/synth/mcdma_common_files/tx_qid2pfvf_init.mif"]
+set_global_assignment -library "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0" -name VHDL_FILE [file join $::quartus(qip_path) "synth/PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0.vhd"]
+
+
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_TOOL_NAME "intel_pcie_ptile_mcdma"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_TOOL_VERSION "5.0.0"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_mcdma_500_5ru3vla" -library "intel_pcie_ptile_mcdma_500" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_TOOL_NAME "intel_pcie_ptile_ast"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_TOOL_VERSION "9.0.0"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_intel_pcie_ptile_ast_900_3qmctry" -library "intel_pcie_ptile_ast_900" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_TOOL_NAME "altera_iopll"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_TOOL_VERSION "19.3.1"
+set_global_assignment -entity "PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0_altera_iopll_1931_2owc37y" -library "altera_iopll_1931" -name IP_TOOL_ENV "QsysPrimePro"
+

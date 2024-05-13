@@ -1,0 +1,453 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:w="urn:schemas-microsoft-com:office:word">
+<head>
+<title>Bitmap</title>
+<xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+</w:WordDocument>
+</xml>
+<style type="text/css">
+/*
+ * Default style rules for Bitmap document.
+ */
+body {
+  font-family: Arial;
+  font-size: 10pt;
+  color: black;
+  counter-reset: h1;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  word-wrap: break-word;
+}
+
+/* Headings 1 to 6, with auto-numbering. */
+h1:before {
+  counter-increment: h1;
+  content: counter(h1) ". ";
+}
+h1 {
+  font-size: 16pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.31em;
+  counter-reset: h2 h3 h4 h5 h6;
+}
+
+h2:before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) ". ";
+}
+h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.36em;
+  counter-reset: h3 h4 h5 h6;
+}
+
+h3:before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) ". ";
+}
+h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.38em;
+  counter-reset: h4 h5 h6;
+}
+
+h4:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". ";
+}
+h4 {
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+  counter-reset: h5 h6;
+}
+
+h5:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
+h5 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+  counter-reset: h6;
+}
+
+h6:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". ";
+}
+h6 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+
+/* Table defaults. */
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0px;
+  padding: 0px;
+  word-wrap: break-word;
+}
+
+th {
+  font-weight: normal;
+  background-color: #E0E0E0;
+  margin: 0px;
+  padding: 2px;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  text-align: center;
+  vertical-align: top;
+}
+
+td {
+  margin: 0px;
+  padding: 2px;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Div placed around each table to allow padding without affecting table widths. */
+div.table-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0.5em;
+}
+
+/* Instance memory-map table. */
+table.instances td {
+  padding-left:10px;
+  padding-right:10px;
+}
+table.instances th {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+/* Instance generic-map table. */
+table.generics td {
+  padding-left:10px;
+  padding-right:10px;
+}
+table.generics th {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+/* Bitmap register table. */
+table.bitmap {
+  width: 100%;
+  font-size: 9pt;
+  empty-cells: show;
+  word-break: break-all;
+  -ms-word-break: break-all;
+}
+
+/* Register table 'address' heading. */
+th.addr {
+  width: 10%;
+}
+
+/* Register table 'mode' heading. */
+th.mode {
+  width: 10%;
+}
+
+/* Register table bit-number heading. */
+th.bit {
+  width: 10%;
+}
+
+/* Register table 'address' cell. */
+td.addr {
+  width: 10%;
+}
+
+/* Register table 'mode' cell. */
+td.mode {
+  width: 10%;
+}
+
+/* Register table signal-name cell. */
+td.signame {
+  width: 10%;
+}
+
+/* Register table record-name cell. */
+td.recname {
+  width: 10%;
+}
+
+/* Register table empty cell. */
+td.empty {
+  width: 10%;
+  background-color: #C0C0C0;
+}
+
+/* Register table hidden cell. */
+td.hidden {
+  width: 10%;
+  border-style: none;
+}
+
+/* Array register table headings */
+/* Note: this must come before RAM table headings below to exclude arrays inside RAMs. */
+div.array-content table.bitmap th {
+  background-color: #FFFFC0;
+}
+
+/* RAM register table headings. */
+div.ram-content table.bitmap th {
+  background-color: #C0C0FF;
+}
+
+/* Alias register table headings. */
+div.alias-content table.bitmap th {
+  background-color: #C0FFC0;
+}
+
+/* Register address equations. */
+p.equation {
+  padding-left: 10px;
+}
+
+/* Div containing signal descriptions. */
+div.signals {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+/* Signal enum values table. */
+table.enums {
+  margin-left: 10px;
+}
+
+/* Record definition table. */
+table.recdef {
+  width: 20%;
+}
+
+table.recdef th.name {
+  width: 75%;
+}
+</style>
+</head>
+<body>
+<h1>Module MSIX</h1>
+<p>MSIX Module MCI</p>
+<h2>CLD MSI-X Interrupt Configuration</h2>
+<p>CLD MSI-X Data and Enable</p>
+<p>Register: CLD_MSIX_DATA (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">23</th>
+<th class="bit">22</th>
+<th class="bit">21</th>
+<th class="bit">20</th>
+<th class="bit">19</th>
+<th class="bit">18</th>
+<th class="bit">17</th>
+<th class="bit">16</th>
+</tr>
+<tr>
+<td class="addr" rowspan="5">0x00</td>
+<td class="mode" rowspan="5">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">CLD_MSIX_EN</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CLD_MSIX_DATA[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CLD_MSIX_DATA[7:0]</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>CLD_MSIX_DATA[15:0]: Data for the CLD MSI-X Interrupt Vector Table Access:-<br>
+Bits[15:12] : rsvd[3:0]<br>
+Bit[11] : msix_queue_dir (1 = Host to Device, 0 = Device to Host)<br>
+Bits[10:0]: msix_queue_num[10:0] (DMA Channel number or &quot;queue number) Default: 0.</p>
+<p>CLD_MSIX_EN: 1 = CLD MSI-X Interrupts Enabled Default: 0.</p>
+</div>
+<h2>CONV MSI-X Interrupt Configuration</h2>
+<p>CONV MSI-X Data and Enable</p>
+<p>Register: CONV_MSIX_DATA (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">23</th>
+<th class="bit">22</th>
+<th class="bit">21</th>
+<th class="bit">20</th>
+<th class="bit">19</th>
+<th class="bit">18</th>
+<th class="bit">17</th>
+<th class="bit">16</th>
+</tr>
+<tr>
+<td class="addr" rowspan="5">0x10</td>
+<td class="mode" rowspan="5">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">CONV_MSIX_EN</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CONV_MSIX_DATA[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CONV_MSIX_DATA[7:0]</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>CONV_MSIX_DATA[15:0]: Data for the CONV MSI-X Interrupt Vector Table Access:-<br>
+Bits[15:12] : rsvd[3:0]<br>
+Bit[11] : msix_queue_dir (1 = Host to Device, 0 = Device to Host)<br>
+Bits[10:0]: msix_queue_num[10:0] (DMA Channel number or &quot;queue number) Default: 0.</p>
+<p>CONV_MSIX_EN: 1 = CONV MSI-X Interrupts Enabled Default: 0.</p>
+</div>
+<h2>HSUM MSI-X Interrupt Configuration</h2>
+<p>HSUM MSI-X Data and Enable</p>
+<p>Register: HSUM_MSIX_DATA (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">23</th>
+<th class="bit">22</th>
+<th class="bit">21</th>
+<th class="bit">20</th>
+<th class="bit">19</th>
+<th class="bit">18</th>
+<th class="bit">17</th>
+<th class="bit">16</th>
+</tr>
+<tr>
+<td class="addr" rowspan="5">0x20</td>
+<td class="mode" rowspan="5">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">HSUM_MSIX_EN</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_MSIX_DATA[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_MSIX_DATA[7:0]</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>HSUM_MSIX_DATA[15:0]: Data for the HSUM MSI-X Interrupt Vector Table Access:-<br>
+Bits[15:12] : rsvd[3:0]<br>
+Bit[11] : msix_queue_dir (1 = Host to Device, 0 = Device to Host)<br>
+Bits[10:0]: msix_queue_num[10:0] (DMA Channel number or &quot;queue number) Default: 0.</p>
+<p>HSUM_MSIX_EN: 1 =HSUM MSI-X Interrupts Enabled Default: 0.</p>
+</div>
+</body>
+</html>

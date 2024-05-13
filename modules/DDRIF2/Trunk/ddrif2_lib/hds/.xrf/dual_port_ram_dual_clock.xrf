@@ -1,0 +1,36 @@
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 50,0 24 0 
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 13,0 29 1 
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 180,0 34 0 
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 185,0 35 0 
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 190,0 36 0 
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 195,0 37 0 
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 200,0 38 0 
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 205,0 39 0 
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 210,0 40 0 
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 1,0 43 0 
+DESIGN dual_port_ram_dual_clock
+VIEW symbol.sb
+GRAPHIC 1,0 44 0 

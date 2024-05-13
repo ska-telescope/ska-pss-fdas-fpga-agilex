@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="intel_FPGA_unified_fft_104/sim/ifft1024_intel_FPGA_unified_fft_104_caefqgq_fft_fftLight_FFTPipe_TwiddleBlock_1_twiddleRom_dualMem_x.hex"
+   type="HEX"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/dspba_library_package.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/dspba_library.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/dspba_sim_library_package.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_addBlock_typeSFloatIEEE_23_8_typ00000c2463a0044c2abw_atb.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_addBlock_typeSFloatIEEE_23_8_typ00000c2463a0044c2abw_stm.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_addBlock_typeSFloatIEEE_23_8_typ0000463b0c2463a0044c2abw.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_castBlock_typeSFloatIEEE_23_8_ty00000uq0dp0iuq0cp0ju5o0u.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_castBlock_typeSFloatIEEE_23_8_ty0000dp0iuq0cp0ju5o0u_atb.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_castBlock_typeSFloatIEEE_23_8_ty0000dp0iuq0cp0ju5o0u_stm.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_negateBlock_typeSFloatIEEE_23_8_00006c00uq0dp0iuq0cp1jzi.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_negateBlock_typeSFloatIEEE_23_8_0000uq0dp0iuq0cp1jzi_atb.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_negateBlock_typeSFloatIEEE_23_8_0000uq0dp0iuq0cp1jzi_stm.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_scalarProductBlock_typeSFloatIEE0000p0mvq0cd06o30qcz_atb.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_scalarProductBlock_typeSFloatIEE0000p0mvq0cd06o30qcz_stm.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_scalarProductBlock_typeSFloatIEE0000uq0dp0mvq0cd06o30qcz.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_scalarProductBlock_typeSFloatIEE0001p0mvq0cd06o30qcz_atb.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_scalarProductBlock_typeSFloatIEE0001p0mvq0cd06o30qcz_stm.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_scalarProductBlock_typeSFloatIEE0001uq0dp0mvq0cd06o30qcz.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/ifft1024_intel_FPGA_unified_fft_104_caefqgq.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/ifft1024_intel_FPGA_unified_fft_104_caefqgq_atb.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/ifft1024_intel_FPGA_unified_fft_104_caefqgq_stm.vhd"
+   type="VHDL"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="intel_FPGA_unified_fft_104/sim/ifft1024_intel_FPGA_unified_fft_104_caefqgq_chanIn_cunroll_x.stm"
+   type="HEX"
+   library="intel_FPGA_unified_fft_104" />
+ <file
+   path="sim/ifft1024.vhd"
+   type="VHDL"
+   library="ifft1024"
+   hasInlineConfiguration="true" />
+ <topLevel name="ifft1024.ifft1024" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>
