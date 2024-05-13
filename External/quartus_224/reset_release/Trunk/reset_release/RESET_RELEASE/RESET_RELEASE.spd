@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_s10_user_rst_clkgate_1932/sim/altera_s10_user_rst_clkgate.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_s10_user_rst_clkgate_1932" />
+ <file
+   path="sim/RESET_RELEASE.vhd"
+   type="VHDL"
+   library="RESET_RELEASE"
+   hasInlineConfiguration="true" />
+ <topLevel name="RESET_RELEASE.RESET_RELEASE" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

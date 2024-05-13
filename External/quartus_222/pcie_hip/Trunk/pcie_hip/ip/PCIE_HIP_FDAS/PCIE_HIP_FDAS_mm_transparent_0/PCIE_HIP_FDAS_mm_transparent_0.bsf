@@ -1,0 +1,210 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 416 464)
+	(text "PCIE_HIP_FDAS_mm_transparent_0" (rect 73 -1 233 11)(font "Dialog" (font_size 12)))
+	(text "inst" (rect 8 448 20 460)(font "Arial" ))
+	(port
+		(pt 0 80)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "Dialog" (font_size 9)))
+		(text "clk" (rect 4 72 22 85)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 0 136)
+		(input)
+		(text "reset" (rect 0 0 20 12)(font "Dialog" (font_size 9)))
+		(text "reset" (rect 4 128 34 141)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 0 280)
+		(input)
+		(text "s0_burstcount" (rect 0 0 56 12)(font "Dialog" (font_size 9)))
+		(text "s0_burstcount" (rect 4 268 82 281)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 0 304)
+		(input)
+		(text "s0_writedata[63..0]" (rect 0 0 74 12)(font "Dialog" (font_size 9)))
+		(text "s0_writedata[63..0]" (rect 4 296 118 309)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 0 336)
+		(input)
+		(text "s0_address[21..0]" (rect 0 0 70 12)(font "Dialog" (font_size 9)))
+		(text "s0_address[21..0]" (rect 4 324 106 337)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 0 360)
+		(input)
+		(text "s0_write" (rect 0 0 33 12)(font "Dialog" (font_size 9)))
+		(text "s0_write" (rect 4 352 52 365)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 0 392)
+		(input)
+		(text "s0_read" (rect 0 0 33 12)(font "Dialog" (font_size 9)))
+		(text "s0_read" (rect 4 380 46 393)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 0 416)
+		(input)
+		(text "s0_byteenable[7..0]" (rect 0 0 77 12)(font "Dialog" (font_size 9)))
+		(text "s0_byteenable[7..0]" (rect 4 408 118 421)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 416 80)
+		(input)
+		(text "m0_waitrequest" (rect 0 0 62 12)(font "Dialog" (font_size 9)))
+		(text "m0_waitrequest" (rect 322 72 406 85)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 416 112)
+		(input)
+		(text "m0_readdata[63..0]" (rect 0 0 77 12)(font "Dialog" (font_size 9)))
+		(text "m0_readdata[63..0]" (rect 305 100 413 113)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 416 136)
+		(input)
+		(text "m0_readdatavalid" (rect 0 0 70 12)(font "Dialog" (font_size 9)))
+		(text "m0_readdatavalid" (rect 313 128 409 141)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 0 192)
+		(output)
+		(text "s0_waitrequest" (rect 0 0 59 12)(font "Dialog" (font_size 9)))
+		(text "s0_waitrequest" (rect 4 184 88 197)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 0 224)
+		(output)
+		(text "s0_readdata[63..0]" (rect 0 0 74 12)(font "Dialog" (font_size 9)))
+		(text "s0_readdata[63..0]" (rect 4 212 112 225)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 0 248)
+		(output)
+		(text "s0_readdatavalid" (rect 0 0 67 12)(font "Dialog" (font_size 9)))
+		(text "s0_readdatavalid" (rect 4 240 100 253)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 416 168)
+		(output)
+		(text "m0_burstcount" (rect 0 0 60 12)(font "Dialog" (font_size 9)))
+		(text "m0_burstcount" (rect 329 156 407 169)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 416 192)
+		(output)
+		(text "m0_writedata[63..0]" (rect 0 0 77 12)(font "Dialog" (font_size 9)))
+		(text "m0_writedata[63..0]" (rect 302 184 416 197)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 416 224)
+		(output)
+		(text "m0_address[21..0]" (rect 0 0 74 12)(font "Dialog" (font_size 9)))
+		(text "m0_address[21..0]" (rect 311 212 413 225)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 416 248)
+		(output)
+		(text "m0_write" (rect 0 0 36 12)(font "Dialog" (font_size 9)))
+		(text "m0_write" (rect 361 240 409 253)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 416 280)
+		(output)
+		(text "m0_read" (rect 0 0 36 12)(font "Dialog" (font_size 9)))
+		(text "m0_read" (rect 364 268 406 281)(font "Dialog" (font_size 9)))
+	)
+	(port
+		(pt 416 304)
+		(output)
+		(text "m0_byteenable[7..0]" (rect 0 0 81 12)(font "Dialog" (font_size 9)))
+		(text "m0_byteenable[7..0]" (rect 301 296 415 309)(font "Dialog" (font_size 9)))
+	)
+	(drawing
+		(text "clock" (rect 103 52 236 118)(font "Dialog" (color 128 0 0)(font_size 10)))
+		(text "clk" (rect 138 80 294 171)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "reset" (rect 104 108 238 230)(font "Dialog" (color 128 0 0)(font_size 10)))
+		(text "reset" (rect 138 136 306 283)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "s0" (rect 120 164 252 342)(font "Dialog" (color 128 0 0)(font_size 10)))
+		(text "waitrequest" (rect 138 192 342 395)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "readdata" (rect 138 220 324 451)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "readdatavalid" (rect 138 248 354 507)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "burstcount" (rect 138 276 336 563)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "writedata" (rect 138 304 330 619)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "address" (rect 138 332 318 675)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "write" (rect 138 360 306 731)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "read" (rect 138 388 300 787)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "byteenable" (rect 138 416 336 843)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "m0" (rect 286 52 584 118)(font "Dialog" (color 128 0 0)(font_size 10)))
+		(text "waitrequest" (rect 224 80 514 171)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "readdata" (rect 239 108 526 227)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "readdatavalid" (rect 217 136 512 283)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "burstcount" (rect 230 164 520 339)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "writedata" (rect 236 192 526 395)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "address" (rect 242 220 526 451)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "write" (rect 257 248 544 507)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "read" (rect 260 276 544 563)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text "byteenable" (rect 229 304 518 619)(font "Dialog" (color 0 0 0)(font_size 8)))
+		(text " PCIE_HIP_FDAS_mm_transparent_0 " (rect 238 450 668 911)(font "Dialog" (font_size 8)))
+		(line (pt 133 38)(pt 285 38)(line_width 1))
+		(line (pt 285 38)(pt 285 449)(line_width 1))
+		(line (pt 133 449)(pt 285 449)(line_width 1))
+		(line (pt 133 38)(pt 133 449)(line_width 1))
+		(line (pt 0 85)(pt 133 85)(line_width 1))
+		(line (pt 134 62)(pt 134 89)(line_width 1))
+		(line (pt 135 62)(pt 135 89)(line_width 1))
+		(line (pt 0 141)(pt 133 141)(line_width 1))
+		(line (pt 134 118)(pt 134 145)(line_width 1))
+		(line (pt 135 118)(pt 135 145)(line_width 1))
+		(line (pt 0 197)(pt 133 197)(line_width 1))
+		(line (pt 0 225)(pt 133 225)(line_width 3))
+		(line (pt 0 253)(pt 133 253)(line_width 1))
+		(line (pt 0 281)(pt 133 281)(line_width 1))
+		(line (pt 0 309)(pt 133 309)(line_width 3))
+		(line (pt 0 337)(pt 133 337)(line_width 3))
+		(line (pt 0 365)(pt 133 365)(line_width 1))
+		(line (pt 0 393)(pt 133 393)(line_width 1))
+		(line (pt 0 421)(pt 133 421)(line_width 3))
+		(line (pt 134 174)(pt 134 425)(line_width 1))
+		(line (pt 135 174)(pt 135 425)(line_width 1))
+		(line (pt 418 85)(pt 285 85)(line_width 1))
+		(line (pt 418 113)(pt 285 113)(line_width 3))
+		(line (pt 418 141)(pt 285 141)(line_width 1))
+		(line (pt 418 169)(pt 285 169)(line_width 1))
+		(line (pt 418 197)(pt 285 197)(line_width 3))
+		(line (pt 418 225)(pt 285 225)(line_width 3))
+		(line (pt 418 253)(pt 285 253)(line_width 1))
+		(line (pt 418 281)(pt 285 281)(line_width 1))
+		(line (pt 418 309)(pt 285 309)(line_width 3))
+		(line (pt 284 62)(pt 284 313)(line_width 1))
+		(line (pt 283 62)(pt 283 313)(line_width 1))
+		(line (pt 0 0)(pt 418 0)(line_width 1))
+		(line (pt 418 0)(pt 418 468)(line_width 1))
+		(line (pt 0 468)(pt 418 468)(line_width 1))
+		(line (pt 0 0)(pt 0 468)(line_width 1))
+	)
+)

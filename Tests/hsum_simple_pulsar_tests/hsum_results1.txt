@@ -1,0 +1,161 @@
+HSUM_SIMPLE_PULSAR_TEST_HARM_0_0_0_0_0_0_0_0
+
+HARMONIC  FOPCOL    FOPROW     POWER
+=========================================
+   0           20      4     100	0x42C80000 correct
+   1           40      8     190	0x433E0000 correct
+   2           60     12     270	0x43870000 correct
+   3           80     18     340	0x43AA0000 correct
+   4          100     22     400	0x43C80000 correct
+   5          120     26     450	0x43E10000 correct
+   6          140     30     490	0x43F50000 correct
+   7          160     36     520	0x44020000 correct
+
+
+HSUM_SIMPLE_PULSAR_TEST_HARM_0_+1_+1_+1_+1_+1_+1_+1
+
+HARMONIC  FOPCOL    FOPROW     POWER
+=========================================
+   0           20      4     100.1	0x42C83333 correct
+   1           41      8     190.2	0x433E3333 correct
+   2           61     12     270.3	0x43872666 correct
+   3           81     18     340.4	0x43AA3333 correct
+   4          101     22     400.5	0x43C84000 correct
+
+
+HSUM_SIMPLE_PULSAR_TEST_HARM_0_-1_-1_-1_-1_-1_-1_-1
+
+HARMONIC  FOPCOL    FOPROW     POWER
+=========================================
+   0           20      4     100.5	0x42C90000 correct
+   1           39      8     191	0x433F0000 correct
+   2           59     12     271.5	0x4387C000 correct
+   3           79     18     342	0x43AB0000 correct
+   4           99     22     402.5	0x43C94000 correct
+
+
+HSUM_SIMPLE_PULSAR_TEST_HARM_0_+1_+1_+2_+2_+2_+2_+2
+
+HARMONIC  FOPCOL    FOPROW     POWER
+=========================================
+   0           20      4     100.2	0x42C86666 correct
+   1           41      8     190.4	0x433E6666 correct
+   2           61     12     270.6	0x43874CCC correct
+   3           82     18     340.8	0x43AA6666 correct
+   4          102     22     401	0x43C88000 correct
+   5          122     26     451.2	0x43E1999A correct
+
+
+HSUM_SIMPLE_PULSAR_TEST_HARM_0_-1_-1_-2_-2_-2_-2_-2
+
+HARMONIC  FOPCOL    FOPROW     POWER
+=========================================
+   0           20      4     100.6	0x42C93333 correct
+   1           39      8     191.2	0x433F3333 correct
+   2           59     12     271.8	0x4387E666 correct
+   3           78     18     342.4	0x43AB3333 correct
+   4           98     22     403	0x43C98000 correct
+   5          118     26     453.6	0x43E2CCCD correct
+
+
+HSUM_SIMPLE_PULSAR_TEST_HARM_0_+1_+1_+2_+2_+3_+3_+3
+
+HARMONIC  FOPCOL    FOPROW     POWER
+=========================================
+   0           20      4     100.3	0x42C8999A correct
+   1           41      8     190.6	0x433E999A correct
+   2           61     12     270.9	0x43877334 correct
+   3           82     18     341.2	0x43AA999A correct
+   4          102     22     401.5	0x43C8C000 correct
+   5          123     26     451.8	0x43E1E666 correct
+   6          143     30     492.1	0x43F60CCC correct
+   7          163     36     522.4	0x44029999 correct
+
+
+HSUM_SIMPLE_PULSAR_TEST_HARM_0_-1_-1_-2_-2_-3_-3_-3
+
+HARMONIC  FOPCOL    FOPROW     POWER
+=========================================
+   0           20      4     100.7	0x42C96666 correct
+   1           39      8     191.4	0x433F6666 correct
+   2           59     12     272.1	0x43880CCC correct
+   3           78     18     342.8	0x43AB6666 correct
+   4           98     22     403.5	0x43C9C000 correct
+   5          117     26     454.2	0x43E3199A correct
+   6          137     30     494.9	0x43F77334 correct
+   7          157     36     525.6	0x44036667 correct
+
+
+HSUM_SIMPLE_PULSAR_TEST_HARM_0_+1_+1_+2_+2_+3_+3_+4
+
+HARMONIC  FOPCOL    FOPROW     POWER
+=========================================
+   0           20      4     100.4	0x42C8CCCD correct
+   1           41      8     190.8	0x433ECCCD correct
+   2           61     12     271.2	0x4387999A correct
+   3           82     18     341.6	0x43AACCCD correct
+   4          102     22     402	0x43C90000 correct
+   5          123     26     452.4	0x43E23333 correct
+   6          143     30     492.8	0x43F66666 correct
+   7          164     36     523.2	0x4402CCCD correct
+
+
+HSUM_SIMPLE_PULSAR_TEST_HARM_0_-1_-1_-2_-2_-3_-3_-4
+
+HARMONIC  FOPCOL    FOPROW     POWER
+=========================================
+   0           20      4     100.8	0x42C9999A correct
+   1           39      8     191.6	0x433F999A correct
+   2           59     12     272.4	0x43883334 correct
+   3           78     18     343.2	0x43AB999A correct
+   4           98     22     404	0x43CA0000 correct
+   5          117     26     454.8	0x43E36666 correct
+   6          137     30     495.6	0x43F7CCCC correct
+   7          156     36     526.4	0x44039999 correct
+
+
+HSUM_SIMPLE_PULSAR_TEST_HARM_ALL
+
+HARMONIC  FOPCOL    FOPROW     POWER
+=========================================
+   0           20      4     100	0x42C80000 correct
+   1           39      8     190.1	0x433E199A correct
+   1           40      8     190	0x433E0000 correct
+   1           41      8     190.2	0x433E3333 correct
+   2           59     12     270.2	0x4387199A correct
+   2           60     12     270	0x43870000 correct
+   2           61     12     270.4	0x43873333 correct
+   3           78     18     340.3	0x43AA2667 correct
+   3           79     18     340.4	0x43AA3334 correct
+   3           80     18     340	0x43AA0000 correct
+   3           81     18     340.7	0x43AA599A correct
+   3           82     18     340.8	0x43AA6666 correct
+   4           98     22     400.5	0x43C84001 correct
+   4           99     22     400.6	0x43C84CCE correct
+   4          100     22     400	0x43C80000 correct
+   4          101     22     401	0x43C88000 correct
+   4          102     22     401.2	0x43C89999 correct
+   5          117     26     450.5	0x43E14001 correct
+   5          118     26     450.8	0x43E16668 correct
+   5          119     26     450.8	0x43E16666 correct
+   5          120     26     450	0x43E10000 correct
+   5          121     26     451.2	0x43E19999 correct
+   5          122     26     451.7	0x43E1D999 correct
+   5          123     26     451.8	0x43E1E666 correct
+   6          137     30     490.8	0x43F56668 correct
+   6          138     30     491	0x43F58002 correct
+   6          139     30     491.1	0x43F58CCC correct
+   6          140     30     490	0x43F50000 correct
+   6          141     30     491.6	0x43F5CCCC correct
+   6          142     30     492.1	0x43F60CCD correct
+   6          143     30     492.4	0x43F63333 correct
+   7          156     36     520.7	0x44022CCD correct
+   7          157     36     521.1	0x44024667 correct
+   7          158     36     521.4	0x44025999 correct
+   7          159     36     521.5	0x44026000 correct
+   7          160     36     520	0x44020000 correct
+   7          161     36     522.1	0x44028666 correct
+   7          162     36     522.7	0x4402ACCD correct
+   7          163     36     523.1	0x4402C666 correct
+   7          164     36     523.2	0x4402CCCD correct
+

@@ -1,0 +1,10 @@
+	component ed_sim is
+		port (
+			sim_checker_traffic_gen_pass         : out std_logic;  -- traffic_gen_pass
+			sim_checker_traffic_gen_fail         : out std_logic;  -- traffic_gen_fail
+			sim_checker_traffic_gen_timeout      : out std_logic;  -- traffic_gen_timeout
+			cal_status_checker_local_cal_success : out std_logic;  -- local_cal_success
+			cal_status_checker_local_cal_fail    : out std_logic   -- local_cal_fail
+		);
+	end component ed_sim;
+

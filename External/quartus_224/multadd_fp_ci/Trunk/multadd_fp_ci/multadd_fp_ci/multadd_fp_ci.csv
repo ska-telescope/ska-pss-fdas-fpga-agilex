@@ -1,0 +1,18 @@
+# system info multadd_fp_ci on 2022.07.19.13:00:28
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for multadd_fp_ci on 2022.07.19.13:00:28
+files:
+filepath,kind,attributes,module,is_top
+sim/multadd_fp_ci.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,multadd_fp_ci,true
+s20_native_floating_point_dsp_1910/sim/multadd_fp_ci_s20_native_floating_point_dsp_1910_sklxkaa.vhd,VHDL,,multadd_fp_ci_s20_native_floating_point_dsp_1910_sklxkaa,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+multadd_fp_ci.s20_native_floating_point_dsp_0,multadd_fp_ci_s20_native_floating_point_dsp_1910_sklxkaa

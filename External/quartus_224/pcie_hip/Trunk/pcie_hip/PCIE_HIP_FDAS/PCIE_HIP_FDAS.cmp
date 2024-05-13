@@ -1,0 +1,140 @@
+	component PCIE_HIP_FDAS is
+		port (
+			clk_out_clk                                    : out std_logic;                                         -- clk
+			rd_dma_0_waitrequest                           : in  std_logic                      := 'X';             -- waitrequest
+			rd_dma_0_burstcount                            : out std_logic_vector(3 downto 0);                      -- burstcount
+			rd_dma_0_writedata                             : out std_logic_vector(511 downto 0);                    -- writedata
+			rd_dma_0_address                               : out std_logic_vector(25 downto 0);                     -- address
+			rd_dma_0_write                                 : out std_logic;                                         -- write
+			rd_dma_0_byteenable                            : out std_logic_vector(63 downto 0);                     -- byteenable
+			rd_dma_1_waitrequest                           : in  std_logic                      := 'X';             -- waitrequest
+			rd_dma_1_burstcount                            : out std_logic_vector(3 downto 0);                      -- burstcount
+			rd_dma_1_writedata                             : out std_logic_vector(511 downto 0);                    -- writedata
+			rd_dma_1_address                               : out std_logic_vector(25 downto 0);                     -- address
+			rd_dma_1_write                                 : out std_logic;                                         -- write
+			rd_dma_1_byteenable                            : out std_logic_vector(63 downto 0);                     -- byteenable
+			rd_dma_2_waitrequest                           : in  std_logic                      := 'X';             -- waitrequest
+			rd_dma_2_burstcount                            : out std_logic_vector(3 downto 0);                      -- burstcount
+			rd_dma_2_writedata                             : out std_logic_vector(511 downto 0);                    -- writedata
+			rd_dma_2_address                               : out std_logic_vector(25 downto 0);                     -- address
+			rd_dma_2_write                                 : out std_logic;                                         -- write
+			rd_dma_2_byteenable                            : out std_logic_vector(63 downto 0);                     -- byteenable
+			rd_dma_3_waitrequest                           : in  std_logic                      := 'X';             -- waitrequest
+			rd_dma_3_burstcount                            : out std_logic_vector(3 downto 0);                      -- burstcount
+			rd_dma_3_writedata                             : out std_logic_vector(511 downto 0);                    -- writedata
+			rd_dma_3_address                               : out std_logic_vector(25 downto 0);                     -- address
+			rd_dma_3_write                                 : out std_logic;                                         -- write
+			rd_dma_3_byteenable                            : out std_logic_vector(63 downto 0);                     -- byteenable
+			wr_dma_0_waitrequest                           : in  std_logic                      := 'X';             -- waitrequest
+			wr_dma_0_readdata                              : in  std_logic_vector(511 downto 0) := (others => 'X'); -- readdata
+			wr_dma_0_readdatavalid                         : in  std_logic                      := 'X';             -- readdatavalid
+			wr_dma_0_response                              : in  std_logic_vector(1 downto 0)   := (others => 'X'); -- response
+			wr_dma_0_burstcount                            : out std_logic_vector(3 downto 0);                      -- burstcount
+			wr_dma_0_address                               : out std_logic_vector(25 downto 0);                     -- address
+			wr_dma_0_read                                  : out std_logic;                                         -- read
+			wr_dma_1_waitrequest                           : in  std_logic                      := 'X';             -- waitrequest
+			wr_dma_1_readdata                              : in  std_logic_vector(511 downto 0) := (others => 'X'); -- readdata
+			wr_dma_1_readdatavalid                         : in  std_logic                      := 'X';             -- readdatavalid
+			wr_dma_1_response                              : in  std_logic_vector(1 downto 0)   := (others => 'X'); -- response
+			wr_dma_1_burstcount                            : out std_logic_vector(3 downto 0);                      -- burstcount
+			wr_dma_1_address                               : out std_logic_vector(25 downto 0);                     -- address
+			wr_dma_1_read                                  : out std_logic;                                         -- read
+			wr_dma_2_waitrequest                           : in  std_logic                      := 'X';             -- waitrequest
+			wr_dma_2_readdata                              : in  std_logic_vector(511 downto 0) := (others => 'X'); -- readdata
+			wr_dma_2_readdatavalid                         : in  std_logic                      := 'X';             -- readdatavalid
+			wr_dma_2_response                              : in  std_logic_vector(1 downto 0)   := (others => 'X'); -- response
+			wr_dma_2_burstcount                            : out std_logic_vector(3 downto 0);                      -- burstcount
+			wr_dma_2_address                               : out std_logic_vector(25 downto 0);                     -- address
+			wr_dma_2_read                                  : out std_logic;                                         -- read
+			wr_dma_3_waitrequest                           : in  std_logic                      := 'X';             -- waitrequest
+			wr_dma_3_readdata                              : in  std_logic_vector(511 downto 0) := (others => 'X'); -- readdata
+			wr_dma_3_readdatavalid                         : in  std_logic                      := 'X';             -- readdatavalid
+			wr_dma_3_response                              : in  std_logic_vector(1 downto 0)   := (others => 'X'); -- response
+			wr_dma_3_burstcount                            : out std_logic_vector(3 downto 0);                      -- burstcount
+			wr_dma_3_address                               : out std_logic_vector(25 downto 0);                     -- address
+			wr_dma_3_read                                  : out std_logic;                                         -- read
+			intel_pcie_ptile_mcdma_0_p0_usr_msix_valid     : in  std_logic                      := 'X';             -- valid
+			intel_pcie_ptile_mcdma_0_p0_usr_msix_ready     : out std_logic;                                         -- ready
+			intel_pcie_ptile_mcdma_0_p0_usr_msix_data      : in  std_logic_vector(15 downto 0)  := (others => 'X'); -- data
+			intel_pcie_ptile_mcdma_0_refclk0_clk           : in  std_logic                      := 'X';             -- clk
+			intel_pcie_ptile_mcdma_0_refclk1_clk           : in  std_logic                      := 'X';             -- clk
+			intel_pcie_ptile_mcdma_0_ninit_done_reset      : in  std_logic                      := 'X';             -- reset
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in0   : in  std_logic                      := 'X';             -- rx_n_in0
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in1   : in  std_logic                      := 'X';             -- rx_n_in1
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in2   : in  std_logic                      := 'X';             -- rx_n_in2
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in3   : in  std_logic                      := 'X';             -- rx_n_in3
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in4   : in  std_logic                      := 'X';             -- rx_n_in4
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in5   : in  std_logic                      := 'X';             -- rx_n_in5
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in6   : in  std_logic                      := 'X';             -- rx_n_in6
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in7   : in  std_logic                      := 'X';             -- rx_n_in7
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in8   : in  std_logic                      := 'X';             -- rx_n_in8
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in9   : in  std_logic                      := 'X';             -- rx_n_in9
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in10  : in  std_logic                      := 'X';             -- rx_n_in10
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in11  : in  std_logic                      := 'X';             -- rx_n_in11
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in12  : in  std_logic                      := 'X';             -- rx_n_in12
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in13  : in  std_logic                      := 'X';             -- rx_n_in13
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in14  : in  std_logic                      := 'X';             -- rx_n_in14
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_n_in15  : in  std_logic                      := 'X';             -- rx_n_in15
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in0   : in  std_logic                      := 'X';             -- rx_p_in0
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in1   : in  std_logic                      := 'X';             -- rx_p_in1
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in2   : in  std_logic                      := 'X';             -- rx_p_in2
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in3   : in  std_logic                      := 'X';             -- rx_p_in3
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in4   : in  std_logic                      := 'X';             -- rx_p_in4
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in5   : in  std_logic                      := 'X';             -- rx_p_in5
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in6   : in  std_logic                      := 'X';             -- rx_p_in6
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in7   : in  std_logic                      := 'X';             -- rx_p_in7
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in8   : in  std_logic                      := 'X';             -- rx_p_in8
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in9   : in  std_logic                      := 'X';             -- rx_p_in9
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in10  : in  std_logic                      := 'X';             -- rx_p_in10
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in11  : in  std_logic                      := 'X';             -- rx_p_in11
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in12  : in  std_logic                      := 'X';             -- rx_p_in12
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in13  : in  std_logic                      := 'X';             -- rx_p_in13
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in14  : in  std_logic                      := 'X';             -- rx_p_in14
+			intel_pcie_ptile_mcdma_0_hip_serial_rx_p_in15  : in  std_logic                      := 'X';             -- rx_p_in15
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out0  : out std_logic;                                         -- tx_n_out0
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out1  : out std_logic;                                         -- tx_n_out1
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out2  : out std_logic;                                         -- tx_n_out2
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out3  : out std_logic;                                         -- tx_n_out3
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out4  : out std_logic;                                         -- tx_n_out4
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out5  : out std_logic;                                         -- tx_n_out5
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out6  : out std_logic;                                         -- tx_n_out6
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out7  : out std_logic;                                         -- tx_n_out7
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out8  : out std_logic;                                         -- tx_n_out8
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out9  : out std_logic;                                         -- tx_n_out9
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out10 : out std_logic;                                         -- tx_n_out10
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out11 : out std_logic;                                         -- tx_n_out11
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out12 : out std_logic;                                         -- tx_n_out12
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out13 : out std_logic;                                         -- tx_n_out13
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out14 : out std_logic;                                         -- tx_n_out14
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_n_out15 : out std_logic;                                         -- tx_n_out15
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out0  : out std_logic;                                         -- tx_p_out0
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out1  : out std_logic;                                         -- tx_p_out1
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out2  : out std_logic;                                         -- tx_p_out2
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out3  : out std_logic;                                         -- tx_p_out3
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out4  : out std_logic;                                         -- tx_p_out4
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out5  : out std_logic;                                         -- tx_p_out5
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out6  : out std_logic;                                         -- tx_p_out6
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out7  : out std_logic;                                         -- tx_p_out7
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out8  : out std_logic;                                         -- tx_p_out8
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out9  : out std_logic;                                         -- tx_p_out9
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out10 : out std_logic;                                         -- tx_p_out10
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out11 : out std_logic;                                         -- tx_p_out11
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out12 : out std_logic;                                         -- tx_p_out12
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out13 : out std_logic;                                         -- tx_p_out13
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out14 : out std_logic;                                         -- tx_p_out14
+			intel_pcie_ptile_mcdma_0_hip_serial_tx_p_out15 : out std_logic;                                         -- tx_p_out15
+			intel_pcie_ptile_mcdma_0_pin_perst_reset_n     : in  std_logic                      := 'X';             -- reset_n
+			reset_out_reset_n                              : out std_logic;                                         -- reset_n
+			rxm_bar2_0_m0_waitrequest                      : in  std_logic                      := 'X';             -- waitrequest
+			rxm_bar2_0_m0_readdata                         : in  std_logic_vector(63 downto 0)  := (others => 'X'); -- readdata
+			rxm_bar2_0_m0_readdatavalid                    : in  std_logic                      := 'X';             -- readdatavalid
+			rxm_bar2_0_m0_writeresponsevalid               : in  std_logic                      := 'X';             -- writeresponsevalid
+			rxm_bar2_0_m0_response                         : in  std_logic_vector(1 downto 0)   := (others => 'X'); -- response
+			rxm_bar2_0_m0_writedata                        : out std_logic_vector(63 downto 0);                     -- writedata
+			rxm_bar2_0_m0_address                          : out std_logic_vector(21 downto 0);                     -- address
+			rxm_bar2_0_m0_write                            : out std_logic;                                         -- write
+			rxm_bar2_0_m0_read                             : out std_logic;                                         -- read
+			rxm_bar2_0_m0_byteenable                       : out std_logic_vector(7 downto 0)                       -- byteenable
+		);
+	end component PCIE_HIP_FDAS;
+

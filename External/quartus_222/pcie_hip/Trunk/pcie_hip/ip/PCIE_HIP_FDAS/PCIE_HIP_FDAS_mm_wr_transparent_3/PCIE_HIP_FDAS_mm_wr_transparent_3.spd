@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="mm_wr_transparent_10/sim/mm_wr_transparent.vhd"
+   type="VHDL"
+   library="mm_wr_transparent_10" />
+ <file
+   path="mm_wr_transparent_10/sim/mm_wr_transparent_synth.vhd"
+   type="VHDL"
+   library="mm_wr_transparent_10" />
+ <file
+   path="sim/PCIE_HIP_FDAS_mm_wr_transparent_3.vhd"
+   type="VHDL"
+   library="PCIE_HIP_FDAS_mm_wr_transparent_3"
+   hasInlineConfiguration="true" />
+ <topLevel
+   name="PCIE_HIP_FDAS_mm_wr_transparent_3.PCIE_HIP_FDAS_mm_wr_transparent_3" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

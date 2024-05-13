@@ -1,0 +1,27 @@
+DESIGN ddrif2_combine
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN ddrif2_combine
+VIEW symbol.sb
+GRAPHIC 50,0 24 0 
+DESIGN ddrif2_combine
+VIEW symbol.sb
+GRAPHIC 136,0 30 0 
+DESIGN ddrif2_combine
+VIEW symbol.sb
+GRAPHIC 141,0 31 0 
+DESIGN ddrif2_combine
+VIEW symbol.sb
+GRAPHIC 203,0 32 0 
+DESIGN ddrif2_combine
+VIEW symbol.sb
+GRAPHIC 198,0 33 0 
+DESIGN ddrif2_combine
+VIEW symbol.sb
+GRAPHIC 131,0 34 0 
+DESIGN ddrif2_combine
+VIEW symbol.sb
+GRAPHIC 1,0 37 0 
+DESIGN ddrif2_combine
+VIEW symbol.sb
+GRAPHIC 1,0 38 0 

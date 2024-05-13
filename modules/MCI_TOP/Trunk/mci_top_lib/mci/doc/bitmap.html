@@ -1,0 +1,665 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:w="urn:schemas-microsoft-com:office:word">
+<head>
+<title>Bitmap</title>
+<xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+</w:WordDocument>
+</xml>
+<style type="text/css">
+/*
+ * Default style rules for Bitmap document.
+ */
+body {
+  font-family: Arial;
+  font-size: 10pt;
+  color: black;
+  counter-reset: h1;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  word-wrap: break-word;
+}
+
+/* Headings 1 to 6, with auto-numbering. */
+h1:before {
+  counter-increment: h1;
+  content: counter(h1) ". ";
+}
+h1 {
+  font-size: 16pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.31em;
+  counter-reset: h2 h3 h4 h5 h6;
+}
+
+h2:before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) ". ";
+}
+h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.36em;
+  counter-reset: h3 h4 h5 h6;
+}
+
+h3:before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) ". ";
+}
+h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.38em;
+  counter-reset: h4 h5 h6;
+}
+
+h4:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". ";
+}
+h4 {
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+  counter-reset: h5 h6;
+}
+
+h5:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
+h5 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+  counter-reset: h6;
+}
+
+h6:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". ";
+}
+h6 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+
+/* Table defaults. */
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0px;
+  padding: 0px;
+  word-wrap: break-word;
+}
+
+th {
+  font-weight: normal;
+  background-color: #E0E0E0;
+  margin: 0px;
+  padding: 2px;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  text-align: center;
+  vertical-align: top;
+}
+
+td {
+  margin: 0px;
+  padding: 2px;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Div placed around each table to allow padding without affecting table widths. */
+div.table-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0.5em;
+}
+
+/* Instance memory-map table. */
+table.instances td {
+  padding-left:10px;
+  padding-right:10px;
+}
+table.instances th {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+/* Instance generic-map table. */
+table.generics td {
+  padding-left:10px;
+  padding-right:10px;
+}
+table.generics th {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+/* Bitmap register table. */
+table.bitmap {
+  width: 100%;
+  font-size: 9pt;
+  empty-cells: show;
+  word-break: break-all;
+  -ms-word-break: break-all;
+}
+
+/* Register table 'address' heading. */
+th.addr {
+  width: 10%;
+}
+
+/* Register table 'mode' heading. */
+th.mode {
+  width: 10%;
+}
+
+/* Register table bit-number heading. */
+th.bit {
+  width: 10%;
+}
+
+/* Register table 'address' cell. */
+td.addr {
+  width: 10%;
+}
+
+/* Register table 'mode' cell. */
+td.mode {
+  width: 10%;
+}
+
+/* Register table signal-name cell. */
+td.signame {
+  width: 10%;
+}
+
+/* Register table record-name cell. */
+td.recname {
+  width: 10%;
+}
+
+/* Register table empty cell. */
+td.empty {
+  width: 10%;
+  background-color: #C0C0C0;
+}
+
+/* Register table hidden cell. */
+td.hidden {
+  width: 10%;
+  border-style: none;
+}
+
+/* Array register table headings */
+/* Note: this must come before RAM table headings below to exclude arrays inside RAMs. */
+div.array-content table.bitmap th {
+  background-color: #FFFFC0;
+}
+
+/* RAM register table headings. */
+div.ram-content table.bitmap th {
+  background-color: #C0C0FF;
+}
+
+/* Alias register table headings. */
+div.alias-content table.bitmap th {
+  background-color: #C0FFC0;
+}
+
+/* Register address equations. */
+p.equation {
+  padding-left: 10px;
+}
+
+/* Div containing signal descriptions. */
+div.signals {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+/* Signal enum values table. */
+table.enums {
+  margin-left: 10px;
+}
+
+/* Record definition table. */
+table.recdef {
+  width: 20%;
+}
+
+table.recdef th.name {
+  width: 75%;
+}
+</style>
+</head>
+<body>
+<h1>Asic MCI_TOP_DECODE</h1>
+<p>FDAS Address Decode</p>
+<h2>Memory map</h2>
+<div class="table-wrapper instances"><table class="instances">
+<tr>
+<th>Instance</th>
+<th>Module</th>
+<th>Size</th>
+<th>Base Address</th>
+<th>End Address</th>
+<th>Mapped To</th>
+</tr>
+<tr>
+<td>TOPMCI_1</td>
+<td>MCI_TOP</td>
+<td>0x400000</td>
+<td>0x000000</td>
+<td>0x3FFFFF</td>
+<td></td>
+</tr>
+<tr>
+<td>CTRL_1</td>
+<td>CTRL</td>
+<td>0x200000</td>
+<td>0x400000</td>
+<td>0x5FFFFF</td>
+<td></td>
+</tr>
+<tr>
+<td>MSIX_1</td>
+<td>MSIX</td>
+<td>0x000040</td>
+<td>0x600000</td>
+<td>0x60003F</td>
+<td></td>
+</tr>
+<tr>
+<td>CONV_1</td>
+<td>CONV</td>
+<td>0x400000</td>
+<td>0x800000</td>
+<td>0xBFFFFF</td>
+<td></td>
+</tr>
+<tr>
+<td>HSUM_1</td>
+<td>HSUM</td>
+<td>0x100000</td>
+<td>0xC00000</td>
+<td>0xCFFFFF</td>
+<td></td>
+</tr>
+</table></div>
+<h2>Generic values</h2>
+<div class="table-wrapper generics"><table class="generics">
+<tr>
+<th>Instance</th>
+<th>Generic</th>
+<th>Value</th>
+<th>Default</th>
+</tr>
+<tr>
+<td>HSUM_1</td>
+<td>summer_g</td>
+<td>1</td>
+<td>?</td>
+</tr>
+</table></div>
+<p>FDAS Address Decode</p>
+<h1>Module MCI_TOP</h1>
+<p>Top Level MCI</p>
+<h2>Inventory</h2>
+<p>Register: PRODUCT_ID</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">15</th>
+<th class="bit">14</th>
+<th class="bit">13</th>
+<th class="bit">12</th>
+<th class="bit">11</th>
+<th class="bit">10</th>
+<th class="bit">9</th>
+<th class="bit">8</th>
+</tr>
+<tr>
+<td class="addr" rowspan="3">0x000000</td>
+<td class="mode" rowspan="3">RO</td>
+<td class="signame" colspan="8">PRODUCT_ID[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">PRODUCT_ID[7:0]</td>
+</tr>
+</table></div>
+<p>Register: CORE_VERSION</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">15</th>
+<th class="bit">14</th>
+<th class="bit">13</th>
+<th class="bit">12</th>
+<th class="bit">11</th>
+<th class="bit">10</th>
+<th class="bit">9</th>
+<th class="bit">8</th>
+</tr>
+<tr>
+<td class="addr" rowspan="3">0x000004</td>
+<td class="mode" rowspan="3">RO</td>
+<td class="signame" colspan="8">CORE_VERSION[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CORE_VERSION[7:0]</td>
+</tr>
+</table></div>
+<p>Register: CORE_REVISION</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">15</th>
+<th class="bit">14</th>
+<th class="bit">13</th>
+<th class="bit">12</th>
+<th class="bit">11</th>
+<th class="bit">10</th>
+<th class="bit">9</th>
+<th class="bit">8</th>
+</tr>
+<tr>
+<td class="addr" rowspan="3">0x000008</td>
+<td class="mode" rowspan="3">RO</td>
+<td class="signame" colspan="8">CORE_REVISION[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CORE_REVISION[7:0]</td>
+</tr>
+</table></div>
+<p>Register: TOP_VERSION</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">15</th>
+<th class="bit">14</th>
+<th class="bit">13</th>
+<th class="bit">12</th>
+<th class="bit">11</th>
+<th class="bit">10</th>
+<th class="bit">9</th>
+<th class="bit">8</th>
+</tr>
+<tr>
+<td class="addr" rowspan="3">0x00000C</td>
+<td class="mode" rowspan="3">RO</td>
+<td class="signame" colspan="8">TOP_VERSION[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">TOP_VERSION[7:0]</td>
+</tr>
+</table></div>
+<p>Register: TOP_REVISION</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">15</th>
+<th class="bit">14</th>
+<th class="bit">13</th>
+<th class="bit">12</th>
+<th class="bit">11</th>
+<th class="bit">10</th>
+<th class="bit">9</th>
+<th class="bit">8</th>
+</tr>
+<tr>
+<td class="addr" rowspan="3">0x000010</td>
+<td class="mode" rowspan="3">RO</td>
+<td class="signame" colspan="8">TOP_REVISION[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">TOP_REVISION[7:0]</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>PRODUCT_ID[15:0]: FDAS FPGA Product Number. Hard Coded Value.</p>
+<p>CORE_VERSION[15:0]: FDAS FPGA Core level version number. Hard Coded Value.</p>
+<p>CORE_REVISION[15:0]: FDAS FPGA Core level revision number. Hard Coded Value.</p>
+<p>TOP_VERSION[15:0]: FDAS FPGA Top level version number. Hard Coded Value.</p>
+<p>TOP_REVISION[15:0]: FDAS FPGA Top level revision number. Hard Coded Value.</p>
+</div>
+<p></p>
+<h2>Monitor and Reset Control</h2>
+<p>Register: CTRL_RESET (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">15</th>
+<th class="bit">14</th>
+<th class="bit">13</th>
+<th class="bit">12</th>
+<th class="bit">11</th>
+<th class="bit">10</th>
+<th class="bit">9</th>
+<th class="bit">8</th>
+</tr>
+<tr>
+<td class="addr" rowspan="3">0x000040</td>
+<td class="mode" rowspan="3">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">MSIX_RESET</td>
+<td class="signame">DDR_3_RESET</td>
+<td class="signame">DDR_2_RESET</td>
+<td class="signame">DDR_1_RESET</td>
+<td class="signame">DDR_0_RESET</td>
+<td class="signame">DDRIF_PCIE_RESET</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame">DDRIF_3_RESET</td>
+<td class="signame">DDRIF_2_RESET</td>
+<td class="signame">DDRIF_1_RESET</td>
+<td class="signame">DDRIF_0_RESET</td>
+<td class="signame">HSUM_RESET</td>
+<td class="signame">CONV_RESET</td>
+<td class="signame">CLD_RESET</td>
+<td class="signame">CTRL_RESET</td>
+</tr>
+</table></div>
+<p>Register: DDR_0_CAL_FAIL</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">15</th>
+<th class="bit">14</th>
+<th class="bit">13</th>
+<th class="bit">12</th>
+<th class="bit">11</th>
+<th class="bit">10</th>
+<th class="bit">9</th>
+<th class="bit">8</th>
+</tr>
+<tr>
+<td class="addr" rowspan="3">0x000044</td>
+<td class="mode" rowspan="3">RO</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">DDR_3_RESET_DONE</td>
+<td class="signame">DDR_2_RESET_DONE</td>
+<td class="signame">DDR_1_RESET_DONE</td>
+<td class="signame">DDR_0_RESET_DONE</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame">DDR_3_CAL_PASS</td>
+<td class="signame">DDR_3_CAL_FAIL</td>
+<td class="signame">DDR_2_CAL_PASS</td>
+<td class="signame">DDR_2_CAL_FAIL</td>
+<td class="signame">DDR_1_CAL_PASS</td>
+<td class="signame">DDR_1_CAL_FAIL</td>
+<td class="signame">DDR_0_CAL_PASS</td>
+<td class="signame">DDR_0_CAL_FAIL</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>CTRL_RESET: Reset CTRL Module<br>
+Logic '1' = Reset Default: 0.</p>
+<p>CLD_RESET: Reset CLD Module<br>
+Logic '1' = Reset Default: 0.</p>
+<p>CONV_RESET: Reset CONV Module<br>
+Logic '1' = Reset Default: 0.</p>
+<p>HSUM_RESET: Reset HSUM Module<br>
+Logic '1' = Reset Default: 0.</p>
+<p>DDRIF_0_RESET: Reset DDRIF2 Module #0 system clock domain and DDR clock domain<br>
+Logic '1' = Reset Default: 0.</p>
+<p>DDRIF_1_RESET: Reset DDRIF2 Module #1 system clock domain and DDR clock domain<br>
+Logic '1' = Reset Default: 0.</p>
+<p>DDRIF_2_RESET: Reset DDRIF2 Module #2 system clock domain and DDR clock domain<br>
+Logic '1' = Reset Default: 0.</p>
+<p>DDRIF_3_RESET: Reset DDRIF2 Module #3 system clock domain and DD clock domain<br>
+Logic '1' = Reset Default: 0.</p>
+<p>DDRIF_PCIE_RESET: Resets DDRIF2 Modules #0, #1, #2  &amp; #3 PCIE clock domain, and also the MSIX module PCIE clock domain<br>
+Logic '1' = Reset Default: 0.</p>
+<p>DDR_0_RESET: Reset DDR Controller#0<br>
+Logic '1' = Reset Default: 0.</p>
+<p>DDR_1_RESET: Reset DDR Controller#1  <br>
+Logic '1' = Reset Default: 0.</p>
+<p>DDR_2_RESET: Reset DDR Controller#2  <br>
+Logic '1' = Reset Default: 0.</p>
+<p>DDR_3_RESET: Reset DDR Controller#3<br>
+Logic '1' = Reset Default: 0.</p>
+<p>MSIX_RESET: Reset MSIX Module system clock domain<br>
+Logic '1' = Reset Default: 0.</p>
+<p>DDR_0_CAL_FAIL: DDR Controller #0 has failed Calibration<br>
+Logic '1' = Fail</p>
+<p>DDR_0_CAL_PASS: DDR Controller #0 has passed Calibration<br>
+Logic '1' = Pass</p>
+<p>DDR_1_CAL_FAIL: DDR Controller #1 has failed Calibration <br>
+Logic '1' = Fail</p>
+<p>DDR_1_CAL_PASS: DDR Controller #1 has passed Calibration <br>
+Logic '1' = Pass</p>
+<p>DDR_2_CAL_FAIL: DDR Controller #2 has failed Calibration<br>
+Logic '1' = Fail</p>
+<p>DDR_2_CAL_PASS: DDR Controller #2 has passed Calibration<br>
+Logic '1' = Pass</p>
+<p>DDR_3_CAL_FAIL: DDR Controller #3 has failed Calibration<br>
+Logic '1' = Fail</p>
+<p>DDR_3_CAL_PASS: DDR Controller #3 has passed Calibration<br>
+Logic '1' = Pass</p>
+<p>DDR_0_RESET_DONE: DDR Controller #0 has reset<br>
+Logic '1' = Reset Done</p>
+<p>DDR_1_RESET_DONE: DDR Controller #1 has reset<br>
+Logic '1' = Reset Done</p>
+<p>DDR_2_RESET_DONE: DDR Controller #2 has reset<br>
+Logic '1' = Reset Done</p>
+<p>DDR_3_RESET_DONE: DDR Controller #3 has reset<br>
+Logic '1' = Reset Done</p>
+</div>
+<p>Reset procedure:<br>
+1) Apply all resets.<br>
+2) Remove DDR_0_RESETN,  DDR_1_RESETN,  DDR_2_RESETN and DDR_3_RESETN<br>
+3) Wait for DDR_0_RESET_DONE, DDR_1_RESET_DONE, DDR_2_RESET_DONE,  DDR_3_RESET_DONE, DDR_0_CAL_PASS,  DDR_1_CAL_PASS, DDR_2_CAL_PASS and <br>
+DDR_3_CAL_PASS to go high<br>
+4) Remove remaining resets.</p>
+</body>
+</html>

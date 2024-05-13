@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2023.02.28.09:43:13"
+ outputDirectory="C:/FDAS_PI17/FDAS_PI17_3_DDR_22_4/Projects/SKA/altera/quartus/22.2/ifft1024/ifft1024/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="AGFB014R24B2E2V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="rst" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="rst" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="sink" kind="avalon_streaming" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="rst" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="64" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="prSafe" value="false" />
+   <property name="readyAllowance" value="0" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port name="validIn" direction="input" role="valid" width="1" />
+   <port name="channelIn" direction="input" role="channel" width="8" />
+   <port name="d" direction="input" role="data" width="64" />
+  </interface>
+  <interface name="source" kind="avalon_streaming" start="1">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="rst" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="64" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="prSafe" value="false" />
+   <property name="readyAllowance" value="0" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port name="validOut" direction="output" role="valid" width="1" />
+   <port name="channelOut" direction="output" role="channel" width="8" />
+   <port name="q" direction="output" role="data" width="64" />
+  </interface>
+ </perimeter>
+ <entity kind="ifft1024" version="1.0" name="ifft1024">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="AGFB014R24B2E2V" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <generatedFiles>
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\synth\ifft1024.vhd"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\synth\ifft1024.vhd"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/FDAS_PI17/FDAS_PI17_3_DDR_22_4/Projects/SKA/altera/quartus/22.2/ifft1024/ifft1024.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file path="C:/intelfpga_pro/22.4/ip/altera/dsp/dsdk_fft/dsdk_fft_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="ifft1024">"Generating: ifft1024"</message>
+   <message level="Info" culprit="ifft1024">"Generating: ifft1024_intel_FPGA_unified_fft_104_caefqgq"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="intel_FPGA_unified_fft"
+   version="1.0.4"
+   name="ifft1024_intel_FPGA_unified_fft_104_caefqgq">
+  <parameter name="gen_enable" value="false" />
+  <parameter name="gen_hld_lib" value="false" />
+  <parameter name="fft_inverse" value="true" />
+  <parameter name="frequency_target" value="350" />
+  <parameter name="part" value="AGFB014R24B2E2V" />
+  <parameter name="input_type" value="single" />
+  <parameter name="fixed_or_float" value="floating_point" />
+  <parameter name="fft_N" value="10" />
+  <parameter name="speedgrade" value="2" />
+  <parameter name="input_bitreversed" value="true" />
+  <parameter name="input_width" value="16" />
+  <parameter name="output_width" value="32" />
+  <parameter name="gen_cmodel" value="false" />
+  <parameter name="reset_polarity" value="synthResetActiveLow" />
+  <parameter name="pruning_scheme" value="full_wordgrowth" />
+  <parameter name="gen_cycle_accurate_cmodel" value="false" />
+  <parameter name="twiddle_width" value="18" />
+  <parameter name="exponent_width" value="5" />
+  <parameter name="mantissa_width" value="10" />
+  <parameter name="pruning_width" value="19" />
+  <parameter name="family" value="Agilex" />
+  <generatedFiles>
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\ifft1024_intel_FPGA_unified_fft_104_caefqgq_fft_fftLight_FFTPipe_TwiddleBlock_1_twiddleRom_dualMem_x.hex"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\ifft1024_intel_FPGA_unified_fft_104_caefqgq.sdc"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\dspba_library_package.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\dspba_library.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_addBlock_typeSFloatIEEE_23_8_typ0000463b0c2463a0044c2abw.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_castBlock_typeSFloatIEEE_23_8_ty00000uq0dp0iuq0cp0ju5o0u.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_negateBlock_typeSFloatIEEE_23_8_00006c00uq0dp0iuq0cp1jzi.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_scalarProductBlock_typeSFloatIEE0000uq0dp0mvq0cd06o30qcz.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_scalarProductBlock_typeSFloatIEE0001uq0dp0mvq0cd06o30qcz.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\ifft1024_intel_FPGA_unified_fft_104_caefqgq.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\generation_report.txt"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\ifft1024_intel_FPGA_unified_fft_104_caefqgq_fft_fftLight_FFTPipe_TwiddleBlock_1_twiddleRom_dualMem_x.hex"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\ifft1024_intel_FPGA_unified_fft_104_caefqgq.sdc"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\dspba_library_package.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\dspba_library.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_addBlock_typeSFloatIEEE_23_8_typ0000463b0c2463a0044c2abw.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_castBlock_typeSFloatIEEE_23_8_ty00000uq0dp0iuq0cp0ju5o0u.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_negateBlock_typeSFloatIEEE_23_8_00006c00uq0dp0iuq0cp1jzi.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_scalarProductBlock_typeSFloatIEE0000uq0dp0mvq0cd06o30qcz.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\flt_ifft1024_intel_FPGA_unified_fft_104_caefqgq_scalarProductBlock_typeSFloatIEE0001uq0dp0mvq0cd06o30qcz.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\ifft1024_intel_FPGA_unified_fft_104_caefqgq.vhd"
+       attributes="" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\ifft1024\ifft1024\intel_FPGA_unified_fft_104\synth\generation_report.txt"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="C:/intelfpga_pro/22.4/ip/altera/dsp/dsdk_fft/dsdk_fft_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="ifft1024" as="intel_FPGA_unified_fft_0" />
+  <messages>
+   <message level="Info" culprit="ifft1024">"Generating: ifft1024_intel_FPGA_unified_fft_104_caefqgq"</message>
+  </messages>
+ </entity>
+</deploy>

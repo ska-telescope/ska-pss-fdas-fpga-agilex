@@ -1,0 +1,31 @@
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_TOOL_VERSION "22.4"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_TOOL_VENDOR_NAME "Altera Corporation"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_TOP_LEVEL_COMPONENT_NAME "mm_wr_transparent"
+set_global_assignment -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name SOPCINFO_FILE [file join $::quartus(qip_path) "PCIE_HIP_FDAS_mm_wr_transparent_2.sopcinfo"]
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name SLD_INFO "QSYS_NAME PCIE_HIP_FDAS_mm_wr_transparent_2 HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name MISC_FILE [file join $::quartus(qip_path) "PCIE_HIP_FDAS_mm_wr_transparent_2.cmp"]
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_TARGETED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_GENERATED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name MISC_FILE [file join $::quartus(qip_path) "../PCIE_HIP_FDAS_mm_wr_transparent_2.ip"]
+
+set_global_assignment -entity "mm_wr_transparent" -library "mm_wr_transparent_10" -name IP_COMPONENT_NAME "bW1fd3JfdHJhbnNwYXJlbnQ="
+set_global_assignment -entity "mm_wr_transparent" -library "mm_wr_transparent_10" -name IP_COMPONENT_DISPLAY_NAME "bW1fd3JfdHJhbnNwYXJlbnQ="
+set_global_assignment -entity "mm_wr_transparent" -library "mm_wr_transparent_10" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "mm_wr_transparent" -library "mm_wr_transparent_10" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "mm_wr_transparent" -library "mm_wr_transparent_10" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_COMPONENT_NAME "UENJRV9ISVBfRkRBU19tbV93cl90cmFuc3BhcmVudF8y"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "PCIE_HIP_FDAS_mm_wr_transparent_2" -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name IP_COMPONENT_VERSION "MS4w"
+
+
+set_global_assignment -library "mm_wr_transparent_10" -name VHDL_FILE [file join $::quartus(qip_path) "mm_wr_transparent_10/synth/mm_wr_transparent.vhd"]
+set_global_assignment -library "mm_wr_transparent_10" -name VHDL_FILE [file join $::quartus(qip_path) "mm_wr_transparent_10/synth/mm_wr_transparent_synth.vhd"]
+set_global_assignment -library "PCIE_HIP_FDAS_mm_wr_transparent_2" -name VHDL_FILE [file join $::quartus(qip_path) "synth/PCIE_HIP_FDAS_mm_wr_transparent_2.vhd"]
+

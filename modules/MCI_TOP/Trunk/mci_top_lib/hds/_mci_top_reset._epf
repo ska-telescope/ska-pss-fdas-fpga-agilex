@@ -1,0 +1,2 @@
+DEFAULT_ARCHITECTURE atom synth
+DEFAULT_FILE atom mci_top_reset_synth.vhd

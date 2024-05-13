@@ -1,0 +1,16 @@
+# system info PCIE_HIP_FDAS_clock_in on 2022.06.24.09:30:15
+system_info:
+name,value
+DEVICE,AGFB014R24A2E2VR0
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for PCIE_HIP_FDAS_clock_in on 2022.06.24.09:30:15
+files:
+filepath,kind,attributes,module,is_top
+sim/PCIE_HIP_FDAS_clock_in.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,PCIE_HIP_FDAS_clock_in,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module

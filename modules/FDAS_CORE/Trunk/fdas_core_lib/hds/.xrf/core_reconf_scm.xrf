@@ -1,0 +1,1244 @@
+DESIGN core_reconf
+VIEW scm.bd
+NO_GRAPHIC 0
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 56,0 24 0 
+DESIGN core_reconf
+VIEW scm.bd
+NO_GRAPHIC 28
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 0,0 37 2 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 6119,0 42 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1776,0 43 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1790,0 44 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1760,0 45 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1756,0 46 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 5418,0 47 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1826,0 48 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1786,0 49 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1778,0 50 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1812,0 51 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1822,0 52 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1782,0 53 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1768,0 54 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1824,0 55 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1792,0 56 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1766,0 57 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1736,0 58 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 5416,0 59 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1806,0 60 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1798,0 61 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1808,0 62 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1758,0 63 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4498,0 64 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4458,0 65 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4526,0 66 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4468,0 67 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4466,0 68 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4480,0 69 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1788,0 70 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4486,0 71 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10141,0 72 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4494,0 73 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4522,0 74 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4500,0 75 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4512,0 76 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4456,0 77 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4524,0 78 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4470,0 79 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4514,0 80 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10139,0 81 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10618,0 82 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10672,0 83 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10708,0 84 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10854,0 85 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13637,0 86 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13653,0 87 0 
+DESIGN core_reconf
+VIEW scm.bd
+NO_GRAPHIC 88
+DESIGN core_reconf
+VIEW scm.bd
+NO_GRAPHIC 89
+LIBRARY cld_lib
+DESIGN cld
+VIEW scm
+GRAPHIC 450,0 91 0 
+DESIGN cld
+VIEW symbol.sb
+GRAPHIC 14,0 92 1 
+DESIGN cld
+VIEW scm
+GRAPHIC 146,0 104 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 141,0 105 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 151,0 106 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 161,0 107 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 156,0 108 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 295,0 109 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 966,0 110 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 1339,0 111 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 1334,0 112 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 208,0 113 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 213,0 114 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 1279,0 115 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 136,0 116 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 305,0 117 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 300,0 118 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 218,0 119 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 126,0 120 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 131,0 121 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 228,0 122 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 238,0 123 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 223,0 124 0 
+DESIGN cld
+VIEW scm
+GRAPHIC 233,0 125 0 
+LIBRARY conv_lib
+DESIGN conv
+VIEW scm
+GRAPHIC 12030,0 128 0 
+DESIGN conv
+VIEW symbol.sb
+GRAPHIC 14,0 129 1 
+DESIGN conv
+VIEW scm
+GRAPHIC 63,0 140 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 68,0 141 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 73,0 142 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 2963,0 143 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 83,0 144 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 88,0 145 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 93,0 146 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 98,0 147 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 1280,0 148 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 1275,0 149 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 2738,0 150 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 113,0 151 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 118,0 152 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 1024,0 153 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 128,0 154 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 133,0 155 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 138,0 156 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 143,0 157 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 148,0 158 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 153,0 159 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 1029,0 160 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 168,0 161 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 173,0 162 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 2563,0 163 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 2306,0 164 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 2336,0 165 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 2816,0 166 0 
+DESIGN conv
+VIEW scm
+GRAPHIC 3087,0 167 0 
+LIBRARY ctrl_lib
+DESIGN ctrl
+VIEW scm
+GRAPHIC 13619,0 170 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 237,0 172 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 551,0 173 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 140,0 174 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 242,0 175 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 614,0 176 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 1223,0 177 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 1218,0 178 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 247,0 179 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 1228,0 180 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 1238,0 181 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 1233,0 182 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 120,0 183 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 125,0 184 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 135,0 185 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 130,0 186 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 556,0 187 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 561,0 188 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 308,0 189 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 293,0 190 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 323,0 191 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 313,0 192 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 298,0 193 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 328,0 194 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 193,0 195 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 318,0 196 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 303,0 197 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 333,0 198 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 203,0 199 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 183,0 200 0 
+DESIGN ctrl
+VIEW scm
+GRAPHIC 188,0 201 0 
+LIBRARY fdas_core_lib
+DESIGN reset_sync
+VIEW synth
+GRAPHIC 4054,0 204 0 
+DESIGN reset_sync
+VIEW symbol.sb
+GRAPHIC 63,0 206 0 
+DESIGN reset_sync
+VIEW symbol.sb
+GRAPHIC 68,0 207 0 
+DESIGN reset_sync
+VIEW symbol.sb
+GRAPHIC 73,0 208 0 
+LIBRARY hsum_lib
+DESIGN hsum
+VIEW scm
+GRAPHIC 9557,0 211 0 
+DESIGN hsum
+VIEW symbol.sb
+GRAPHIC 14,0 212 1 
+DESIGN hsum
+VIEW scm
+GRAPHIC 163,0 219 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 168,0 221 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 158,0 222 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 153,0 223 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 208,0 225 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 133,0 227 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 143,0 228 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 138,0 229 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 148,0 230 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 173,0 231 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 178,0 233 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 193,0 234 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 188,0 235 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 183,0 236 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 128,0 237 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 203,0 239 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 123,0 240 0 
+DESIGN hsum
+VIEW scm
+GRAPHIC 198,0 241 0 
+LIBRARY mci_top_lib
+DESIGN mci_top
+VIEW scm
+GRAPHIC 12660,0 244 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 63,0 246 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 68,0 247 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 73,0 248 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 78,0 249 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 83,0 250 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 88,0 251 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 93,0 252 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 98,0 253 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 103,0 254 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 108,0 255 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 113,0 256 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 118,0 257 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 123,0 258 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 128,0 259 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 138,0 260 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 133,0 261 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 143,0 262 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 353,0 263 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 358,0 264 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 148,0 265 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 153,0 266 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 158,0 267 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 163,0 268 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 168,0 269 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 173,0 270 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 178,0 271 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 183,0 272 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 188,0 273 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 193,0 274 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 198,0 275 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 203,0 276 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 513,0 277 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 518,0 278 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 523,0 279 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 528,0 280 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 675,0 281 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 680,0 282 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 927,0 283 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 932,0 284 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 937,0 285 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 942,0 286 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 947,0 287 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 952,0 288 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 1080,0 289 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 1085,0 290 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 1090,0 291 0 
+DESIGN mci_top
+VIEW scm
+GRAPHIC 1095,0 292 0 
+LIBRARY msix_lib
+DESIGN msix
+VIEW scm
+GRAPHIC 10802,0 295 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 136,0 297 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 176,0 298 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 201,0 299 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 151,0 300 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 141,0 301 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 156,0 302 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 181,0 303 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 191,0 304 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 161,0 305 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 166,0 306 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 171,0 307 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 196,0 308 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 146,0 309 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 235,0 310 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 186,0 311 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 240,0 312 0 
+DESIGN msix
+VIEW symbol.sb
+GRAPHIC 245,0 313 0 
+LIBRARY fdas_core_lib
+DESIGN core_reconf
+VIEW scm.bd
+NO_GRAPHIC 316
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 450,0 319 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12030,0 320 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13619,0 321 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 9557,0 322 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12660,0 323 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10802,0 324 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4054,0 325 0 
+DESIGN core_reconf
+VIEW scm.bd
+NO_GRAPHIC 328
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13639,0 331 0 
+DESIGN core_reconf
+VIEW scm.bd
+NO_GRAPHIC 336
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3840,0 337 0 
+DESIGN core_reconf
+VIEW scm.bd
+NO_GRAPHIC 342
+DESIGN core_reconf
+VIEW scm.bd
+NO_GRAPHIC 343
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 450,0 345 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 457,0 346 1 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3838,0 358 20 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3839,0 378 2 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12030,0 381 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12037,0 382 1 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1654,0 393 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1660,0 394 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1606,0 395 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1600,0 396 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1624,0 397 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1634,0 398 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1666,0 399 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1618,0 400 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1394,0 401 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1438,0 402 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1118,0 403 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1444,0 404 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1428,0 405 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3041,0 406 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1410,0 407 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1450,0 408 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1434,0 409 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1400,0 410 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3095,0 411 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3057,0 412 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13631,0 413 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1672,0 414 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1596,0 415 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1404,0 416 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1648,0 418 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1628,0 419 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1018,0 420 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13619,0 422 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 6125,0 424 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2318,0 425 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2414,0 426 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 6133,0 427 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2312,0 428 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13681,0 429 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13665,0 430 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 6141,0 431 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13673,0 432 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13697,0 433 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13689,0 434 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2456,0 435 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2444,0 436 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2426,0 437 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2420,0 438 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2324,0 439 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2432,0 440 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2360,0 441 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2348,0 442 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2402,0 443 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2366,0 444 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2396,0 445 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2342,0 446 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2372,0 447 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2384,0 448 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2378,0 449 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2354,0 450 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2390,0 451 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2336,0 452 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 2330,0 453 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4054,0 455 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4192,0 457 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4730,0 458 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4392,0 459 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3988,0 461 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4216,0 463 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4748,0 464 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4410,0 465 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4098,0 467 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4246,0 469 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4742,0 470 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4422,0 471 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4010,0 473 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4252,0 475 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4736,0 476 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4434,0 477 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10686,0 479 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10704,0 481 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10696,0 482 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10848,0 483 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 9557,0 485 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 9564,0 486 1 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1024,0 493 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1036,0 494 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1048,0 495 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1078,0 496 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3127,0 497 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3159,0 498 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3143,0 499 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 3175,0 500 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 13647,0 501 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1066,0 502 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1102,0 503 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1108,0 504 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1090,0 505 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1072,0 506 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1042,0 507 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1096,0 508 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1060,0 509 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1084,0 510 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12660,0 512 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4318,0 514 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4240,0 515 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4198,0 516 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12684,0 517 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12690,0 518 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4258,0 519 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4276,0 520 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4264,0 521 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4288,0 522 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4300,0 523 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4346,0 524 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4312,0 525 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4282,0 526 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4336,0 527 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4324,0 528 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4270,0 529 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4306,0 530 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 9786,0 531 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 9772,0 532 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4192,0 533 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4216,0 534 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4246,0 535 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4382,0 536 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4712,0 537 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12788,0 538 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4596,0 539 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4252,0 540 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4228,0 541 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4204,0 542 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4210,0 543 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4222,0 544 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10666,0 545 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10640,0 546 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12744,0 547 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10612,0 548 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12820,0 549 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10704,0 550 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4152,0 551 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4158,0 552 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12712,0 553 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12720,0 554 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10634,0 555 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12752,0 556 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12828,0 557 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10658,0 558 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 12796,0 559 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 4698,0 560 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10802,0 562 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1486,0 564 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10860,0 565 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 5438,0 566 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 5420,0 567 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1628,0 568 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 1078,0 569 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10814,0 570 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10822,0 571 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10830,0 572 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10838,0 573 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10930,0 574 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 5446,0 575 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 5428,0 576 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10906,0 577 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10880,0 578 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10888,0 579 0 
+DESIGN core_reconf
+VIEW scm.bd
+GRAPHIC 10894,0 580 0 
+DESIGN core_reconf
+VIEW scm.bd
+NO_GRAPHIC 583

@@ -1,0 +1,6 @@
+	component ed_synth_ninit_done is
+		port (
+			ninit_done : out std_logic   -- reset
+		);
+	end component ed_synth_ninit_done;
+

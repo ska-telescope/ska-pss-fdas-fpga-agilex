@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2023.02.28.09:44:10"
+ outputDirectory="C:/FDAS_PI17/FDAS_PI17_3_DDR_22_4/Projects/SKA/altera/quartus/22.2/reset_release/RESET_RELEASE/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="AGFB014R24B2E2V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="ninit_done" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="ninit_done" direction="output" role="ninit_done" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="RESET_RELEASE" version="1.0" name="RESET_RELEASE">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="AGFB014R24B2E2V" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <generatedFiles>
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\reset_release\RESET_RELEASE\synth\RESET_RELEASE.vhd"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\reset_release\RESET_RELEASE\synth\RESET_RELEASE.vhd"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/FDAS_PI17/FDAS_PI17_3_DDR_22_4/Projects/SKA/altera/quartus/22.2/reset_release/RESET_RELEASE.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_pro/22.4/ip/altera/pgm/altera_s10_user_rst_clkgate/altera_s10_user_rst_clkgate_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="RESET_RELEASE">"Generating: RESET_RELEASE"</message>
+   <message level="Info" culprit="RESET_RELEASE">"Generating: altera_s10_user_rst_clkgate"</message>
+   <message level="Info" culprit="s10_user_rst_clkgate_0">generating top-level entity altera_s10_user_rst_clkgate</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_s10_user_rst_clkgate"
+   version="19.4.1"
+   name="altera_s10_user_rst_clkgate">
+  <parameter name="DEVICE_FAMILY" value="Agilex" />
+  <parameter name="outputType" value="Conduit Interface" />
+  <generatedFiles>
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\reset_release\RESET_RELEASE\altera_s10_user_rst_clkgate_1941\synth\altera_s10_user_rst_clkgate.sv"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\reset_release\RESET_RELEASE\altera_s10_user_rst_clkgate_1941\synth\altera_s10_user_rst_clkgate_fm.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\reset_release\RESET_RELEASE\altera_s10_user_rst_clkgate_1941\synth\altera_s10_user_rst_clkgate.sv"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:\FDAS_PI17\FDAS_PI17_3_DDR_22_4\Projects\SKA\altera\quartus\22.2\reset_release\RESET_RELEASE\altera_s10_user_rst_clkgate_1941\synth\altera_s10_user_rst_clkgate_fm.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_pro/22.4/ip/altera/pgm/altera_s10_user_rst_clkgate/altera_s10_user_rst_clkgate_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="RESET_RELEASE" as="s10_user_rst_clkgate_0" />
+  <messages>
+   <message level="Info" culprit="RESET_RELEASE">"Generating: altera_s10_user_rst_clkgate"</message>
+   <message level="Info" culprit="s10_user_rst_clkgate_0">generating top-level entity altera_s10_user_rst_clkgate</message>
+  </messages>
+ </entity>
+</deploy>

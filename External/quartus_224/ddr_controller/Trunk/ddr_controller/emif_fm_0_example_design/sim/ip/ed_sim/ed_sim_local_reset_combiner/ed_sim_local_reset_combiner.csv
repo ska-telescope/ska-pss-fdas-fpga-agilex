@@ -1,0 +1,19 @@
+# system info ed_sim_local_reset_combiner on 2022.08.01.12:09:08
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for ed_sim_local_reset_combiner on 2022.08.01.12:09:08
+files:
+filepath,kind,attributes,module,is_top
+sim/ed_sim_local_reset_combiner.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,ed_sim_local_reset_combiner,true
+altera_emif_local_reset_combiner_191/sim/altera_emif_local_reset_combiner.sv,SYSTEM_VERILOG,,altera_emif_local_reset_combiner,false
+altera_emif_local_reset_combiner_191/sim/altera_std_synchronizer_nocut.v,VERILOG,,altera_emif_local_reset_combiner,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+ed_sim_local_reset_combiner.local_reset_combiner,altera_emif_local_reset_combiner

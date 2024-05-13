@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2022.08.01.12:07:49"
+ outputDirectory="C:/Users/taylorj/AppData/Local/Temp/alt9205_5721319087393712767.dir/0001_emif_fm_0_gen/qii/ip/ed_synth/ed_synth_ninit_done/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="AGFB014R24B2E2V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="ninit_done" kind="reset" start="1">
+   <property name="associatedClock" value="" />
+   <property name="associatedDirectReset" value="" />
+   <property name="associatedResetSinks" value="none" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="ninit_done" direction="output" role="reset" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="ed_synth_ninit_done" version="1.0" name="ed_synth_ninit_done">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="AGFB014R24B2E2V" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <generatedFiles>
+   <file
+       path="C:\Users\taylorj\AppData\Local\Temp\alt9205_5721319087393712767.dir\0001_emif_fm_0_gen\qii\ip\ed_synth\ed_synth_ninit_done\synth\ed_synth_ninit_done.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\taylorj\AppData\Local\Temp\alt9205_5721319087393712767.dir\0001_emif_fm_0_gen\qii\ip\ed_synth\ed_synth_ninit_done\synth\ed_synth_ninit_done.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/Users/taylorj/AppData/Local/Temp/alt9205_5721319087393712767.dir/0001_emif_fm_0_gen/qii/ip/ed_synth/ed_synth_ninit_done.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="E:/intelfpga_pro/22.2/ip/altera/pgm/altera_s10_user_rst_clkgate/altera_s10_user_rst_clkgate_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="ed_synth_ninit_done">"Generating: ed_synth_ninit_done"</message>
+   <message level="Info" culprit="ed_synth_ninit_done">"Generating: altera_s10_user_rst_clkgate"</message>
+   <message level="Info" culprit="ninit_done">generating top-level entity altera_s10_user_rst_clkgate</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_s10_user_rst_clkgate"
+   version="19.3.2"
+   name="altera_s10_user_rst_clkgate">
+  <parameter name="DEVICE_FAMILY" value="Agilex" />
+  <parameter name="outputType" value="Reset Interface" />
+  <generatedFiles>
+   <file
+       path="C:\Users\taylorj\AppData\Local\Temp\alt9205_5721319087393712767.dir\0001_emif_fm_0_gen\qii\ip\ed_synth\ed_synth_ninit_done\altera_s10_user_rst_clkgate_1932\synth\altera_s10_user_rst_clkgate.sv"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\taylorj\AppData\Local\Temp\alt9205_5721319087393712767.dir\0001_emif_fm_0_gen\qii\ip\ed_synth\ed_synth_ninit_done\altera_s10_user_rst_clkgate_1932\synth\altera_s10_user_rst_clkgate.sv"
+       attributes="TOP_LEVEL_FILE" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="E:/intelfpga_pro/22.2/ip/altera/pgm/altera_s10_user_rst_clkgate/altera_s10_user_rst_clkgate_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="ed_synth_ninit_done" as="ninit_done" />
+  <messages>
+   <message level="Info" culprit="ed_synth_ninit_done">"Generating: altera_s10_user_rst_clkgate"</message>
+   <message level="Info" culprit="ninit_done">generating top-level entity altera_s10_user_rst_clkgate</message>
+  </messages>
+ </entity>
+</deploy>

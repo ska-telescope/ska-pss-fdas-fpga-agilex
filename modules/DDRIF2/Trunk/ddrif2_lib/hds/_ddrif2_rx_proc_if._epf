@@ -1,0 +1,2 @@
+DEFAULT_ARCHITECTURE atom synth
+DEFAULT_FILE atom ddrif2_rx_proc_if_synth.vhd

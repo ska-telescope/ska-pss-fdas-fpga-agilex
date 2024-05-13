@@ -1,0 +1,75 @@
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_TOOL_VERSION "22.2"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_TOOL_VENDOR_NAME "Intel Corporation"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_TOP_LEVEL_COMPONENT_NAME "intel_FPGA_unified_fft"
+set_global_assignment -library "fft1024" -name SOPCINFO_FILE [file join $::quartus(qip_path) "fft1024.sopcinfo"]
+set_global_assignment -entity "fft1024" -library "fft1024" -name SLD_INFO "QSYS_NAME fft1024 HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "fft1024" -name MISC_FILE [file join $::quartus(qip_path) "fft1024.cmp"]
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_TARGETED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_GENERATED_DEVICE_FAMILY "Agilex"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "fft1024" -name MISC_FILE [file join $::quartus(qip_path) "../fft1024.ip"]
+
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_NAME "ZmZ0MTAyNF9pbnRlbF9GUEdBX3VuaWZpZWRfZmZ0XzEwM180YWh1dnhx"
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_DISPLAY_NAME "RkZUIEludGVsIEZQR0EgSVA="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_VERSION "MS4wLjM="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_DESCRIPTION "QmxvY2sgc3VwcG9ydGluZyBmaXhlZCBzaXplIHN0cmVhbWluZyBGRlQvSUZGVHM="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "ZmZ0X2ludmVyc2U=::ZmFsc2U=::SW52ZXJzZSBGRlQ="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "aW5wdXRfYml0cmV2ZXJzZWQ=::ZmFsc2U=::Qml0LXJldmVyc2VkIGlucHV0"
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "ZmZ0X04=::MTA=::TG9nMihTaXplKQ=="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "Zml4ZWRfb3JfZmxvYXQ=::ZmxvYXRpbmdfcG9pbnQ=::RGF0YXR5cGVz"
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "aW5wdXRfdHlwZQ==::c2luZ2xl::RmxvYXRpbmcgcG9pbnQgdHlwZQ=="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "cmVzZXRfcG9sYXJpdHk=::c3ludGhSZXNldEFjdGl2ZUxvdw==::UmVzZXQgcG9sYXJpdHk="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "aW5wdXRfd2lkdGg=::MTY=::SW5wdXQgd2lkdGg="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "dHdpZGRsZV93aWR0aA==::MTg=::VHdpZGRsZSB3aWR0aA=="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "ZXhwb25lbnRfd2lkdGg=::NQ==::RXhwb25lbnQgd2lkdGg="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "bWFudGlzc2Ffd2lkdGg=::MTA=::TWFudGlzc2Egd2lkdGg="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "cHJ1bmluZ19zY2hlbWU=::ZnVsbF93b3JkZ3Jvd3Ro::UHJ1bmluZyBzY2hlbWU="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "Z2VuX2VuYWJsZQ==::ZmFsc2U=::R2VuZXJhdGUgYSBnbG9iYWwgZW5hYmxlIHNpZ25hbA=="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "Z2VuX2Ntb2RlbA==::ZmFsc2U=::R2VuZXJhdGUgYSBzb2Z0d2FyZSBtb2RlbA=="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "Z2VuX2N5Y2xlX2FjY3VyYXRlX2Ntb2RlbA==::ZmFsc2U=::R2VuZXJhdGUgYSBjeWNsZS1hY2N1cmF0ZSBzb2Z0d2FyZSBtb2RlbA=="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "Z2VuX2hsZF9saWI=::ZmFsc2U=::R2VuZXJhdGUgSExEIGV4dGVybmFsIGZ1bmN0aW9uIHdyYXBwZXJz"
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "ZnJlcXVlbmN5X3RhcmdldA==::MzUw::RnJlcXVlbmN5IHRhcmdldA=="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "ZmFtaWx5::QWdpbGV4::RGV2aWNlIGZhbWlseQ=="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "c3BlZWRncmFkZQ==::Mg==::U3BlZWQgZ3JhZGU="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_PARAMETER "cGFydA==::QUdGQjAxNFIyNEIyRTJW::UGFydCBuYW1l"
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_GROUP "RFNQL1RyYW5zZm9ybXMvVW5pZmllZCBGRlQ="
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL2JjdTE1OTY2MjExODY2NTIuaHRtbA=="
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_NAME "ZmZ0MTAyNA=="
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::QWdpbGV4::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::QUdGQjAxNFIyNEIyRTJW::QXV0byBERVZJQ0U="
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Mg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "fft1024" -library "fft1024" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+
+
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name SOURCE_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/fft1024_intel_FPGA_unified_fft_103_4ahuvxq_fft_fftLight_FFTPipe_TwiddleBlock_1_twiddleRom_dualMem_x.hex"]
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name SDC_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/fft1024_intel_FPGA_unified_fft_103_4ahuvxq.sdc"]
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name VHDL_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/dspba_library_package.vhd"]
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name VHDL_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/dspba_library.vhd"]
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name VHDL_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/fft1024_intel_FPGA_unified_fft_103_4ahuvxq.vhd"]
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name VHDL_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/flt_fft1024_intel_FPGA_unified_fft_103_4ahuvxq_addBlock_typeSFloatIEEE_23_8_type0000463b0c2463a0044c2abw.vhd"]
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name VHDL_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/flt_fft1024_intel_FPGA_unified_fft_103_4ahuvxq_castBlock_typeSFloatIEEE_23_8_typ00000uq0dp0iuq0cp0ju5o0u.vhd"]
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name VHDL_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/flt_fft1024_intel_FPGA_unified_fft_103_4ahuvxq_negateBlock_typeSFloatIEEE_23_8_t00006c00uq0dp0iuq0cp1jzi.vhd"]
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name VHDL_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/flt_fft1024_intel_FPGA_unified_fft_103_4ahuvxq_scalarProductBlock_typeSFloatIEEE0000uq0dp0mvq0cd06o30qcz.vhd"]
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name VHDL_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/flt_fft1024_intel_FPGA_unified_fft_103_4ahuvxq_scalarProductBlock_typeSFloatIEEE0001uq0dp0mvq0cd06o30qcz.vhd"]
+set_global_assignment -library "intel_FPGA_unified_fft_103" -name SOURCE_FILE [file join $::quartus(qip_path) "intel_FPGA_unified_fft_103/synth/generation_report.txt"]
+set_global_assignment -library "fft1024" -name VHDL_FILE [file join $::quartus(qip_path) "synth/fft1024.vhd"]
+
+
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_TOOL_NAME "intel_FPGA_unified_fft"
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_TOOL_VERSION "1.0.3"
+set_global_assignment -entity "fft1024_intel_FPGA_unified_fft_103_4ahuvxq" -library "intel_FPGA_unified_fft_103" -name IP_TOOL_ENV "QsysPrimePro"
+

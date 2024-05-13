@@ -1,0 +1,2 @@
+DEFAULT_ARCHITECTURE atom scm
+DEFAULT_FILE atom fdas_core/scm.bd

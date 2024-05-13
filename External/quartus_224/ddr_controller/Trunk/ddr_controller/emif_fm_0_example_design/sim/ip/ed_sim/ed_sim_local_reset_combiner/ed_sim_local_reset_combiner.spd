@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_emif_local_reset_combiner_191/sim/altera_emif_local_reset_combiner.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_local_reset_combiner_191" />
+ <file
+   path="altera_emif_local_reset_combiner_191/sim/altera_std_synchronizer_nocut.v"
+   type="VERILOG"
+   library="altera_emif_local_reset_combiner_191" />
+ <file
+   path="sim/ed_sim_local_reset_combiner.vhd"
+   type="VHDL"
+   library="ed_sim_local_reset_combiner"
+   hasInlineConfiguration="true" />
+ <topLevel name="ed_sim_local_reset_combiner.ed_sim_local_reset_combiner" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

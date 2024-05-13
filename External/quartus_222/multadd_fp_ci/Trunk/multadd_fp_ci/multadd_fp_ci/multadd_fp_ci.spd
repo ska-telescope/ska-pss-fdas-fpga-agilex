@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="s20_native_floating_point_dsp_1910/sim/multadd_fp_ci_s20_native_floating_point_dsp_1910_sklxkaa.vhd"
+   type="VHDL"
+   library="s20_native_floating_point_dsp_1910" />
+ <file
+   path="sim/multadd_fp_ci.vhd"
+   type="VHDL"
+   library="multadd_fp_ci"
+   hasInlineConfiguration="true" />
+ <topLevel name="multadd_fp_ci.multadd_fp_ci" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

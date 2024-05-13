@@ -1,0 +1,14 @@
+set_global_assignment -name TOP_LEVEL_ENTITY ed_synth
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.2.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:08:09  AUGUST 01, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.2.0 Pro Edition"
+set_global_assignment -name FAMILY Agilex
+set_global_assignment -name DEVICE AGFB014R24B2E2V
+set_global_assignment -name QSYS_FILE ed_synth.qsys
+set_global_assignment -name VERILOG_MACRO "ALTERA_EMIF_ENABLE_ISSP=1"
+set_global_assignment -name IP_FILE ip/ed_synth/ed_synth_emif_cal.ip
+set_global_assignment -name IP_FILE ip/ed_synth/ed_synth_emif_fm_0.ip
+set_global_assignment -name IP_FILE ip/ed_synth/ed_synth_local_reset_combiner.ip
+set_global_assignment -name IP_FILE ip/ed_synth/ed_synth_ninit_done.ip
+set_global_assignment -name IP_FILE ip/ed_synth/ed_synth_tg.ip
+set_global_assignment -name SDC_FILE jtag_example.sdc

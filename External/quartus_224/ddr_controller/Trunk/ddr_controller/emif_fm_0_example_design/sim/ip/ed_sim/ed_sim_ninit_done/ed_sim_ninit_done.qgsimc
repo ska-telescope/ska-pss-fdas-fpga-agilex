@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<node xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:altera="http://www.altera.com/XMLSchema/Qsys/SystemTree">
+  <instanceKey xsi:type="xs:string">ed_sim_ninit_done</instanceKey>
+  <instanceData xsi:type="data">
+    <parameters></parameters>
+    <interconnectAssignments></interconnectAssignments>
+    <className>ed_sim_ninit_done</className>
+    <version>1.0</version>
+    <name>ed_sim_ninit_done</name>
+    <uniqueName>ed_sim_ninit_done</uniqueName>
+    <nonce>0</nonce>
+    <incidentConnections></incidentConnections>
+  </instanceData>
+  <children>
+    <node>
+      <instanceKey xsi:type="xs:string">ninit_done</instanceKey>
+      <instanceData xsi:type="data">
+        <parameters>
+          <parameter>
+            <name>DEVICE_FAMILY</name>
+            <value>Agilex</value>
+          </parameter>
+          <parameter>
+            <name>outputType</name>
+            <value>Reset Interface</value>
+          </parameter>
+        </parameters>
+        <interconnectAssignments></interconnectAssignments>
+        <className>altera_s10_user_rst_clkgate</className>
+        <version>19.3.2</version>
+        <name>ninit_done</name>
+        <uniqueName>altera_s10_user_rst_clkgate</uniqueName>
+        <fixedName>altera_s10_user_rst_clkgate</fixedName>
+        <nonce>0</nonce>
+        <incidentConnections></incidentConnections>
+        <path>ed_sim_ninit_done.ninit_done</path>
+      </instanceData>
+      <children></children>
+    </node>
+  </children>
+</node>

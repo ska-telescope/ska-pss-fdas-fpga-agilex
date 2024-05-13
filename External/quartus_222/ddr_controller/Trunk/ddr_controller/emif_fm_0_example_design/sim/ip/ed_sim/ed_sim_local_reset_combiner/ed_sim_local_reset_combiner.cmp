@@ -1,0 +1,11 @@
+	component ed_sim_local_reset_combiner is
+		port (
+			local_reset_req_out_0 : out std_logic;        -- local_reset_req
+			local_reset_done_in_0 : in  std_logic := 'X'; -- local_reset_done
+			clk                   : in  std_logic := 'X'; -- clk
+			reset_n               : in  std_logic := 'X'; -- pll_locked
+			local_reset_req       : in  std_logic := 'X'; -- local_reset_req
+			local_reset_done      : out std_logic         -- local_reset_done
+		);
+	end component ed_sim_local_reset_combiner;
+

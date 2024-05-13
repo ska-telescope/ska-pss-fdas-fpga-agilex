@@ -1,0 +1,1295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:w="urn:schemas-microsoft-com:office:word">
+<head>
+<title>Bitmap</title>
+<xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+</w:WordDocument>
+</xml>
+<style type="text/css">
+/*
+ * Default style rules for Bitmap document.
+ */
+body {
+  font-family: Arial;
+  font-size: 10pt;
+  color: black;
+  counter-reset: h1;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  word-wrap: break-word;
+}
+
+/* Headings 1 to 6, with auto-numbering. */
+h1:before {
+  counter-increment: h1;
+  content: counter(h1) ". ";
+}
+h1 {
+  font-size: 16pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.31em;
+  counter-reset: h2 h3 h4 h5 h6;
+}
+
+h2:before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) ". ";
+}
+h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.36em;
+  counter-reset: h3 h4 h5 h6;
+}
+
+h3:before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) ". ";
+}
+h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.38em;
+  counter-reset: h4 h5 h6;
+}
+
+h4:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". ";
+}
+h4 {
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+  counter-reset: h5 h6;
+}
+
+h5:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
+h5 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+  counter-reset: h6;
+}
+
+h6:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". ";
+}
+h6 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+
+/* Table defaults. */
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0px;
+  padding: 0px;
+  word-wrap: break-word;
+}
+
+th {
+  font-weight: normal;
+  background-color: #E0E0E0;
+  margin: 0px;
+  padding: 2px;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  text-align: center;
+  vertical-align: top;
+}
+
+td {
+  margin: 0px;
+  padding: 2px;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Div placed around each table to allow padding without affecting table widths. */
+div.table-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0.5em;
+}
+
+/* Instance memory-map table. */
+table.instances td {
+  padding-left:10px;
+  padding-right:10px;
+}
+table.instances th {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+/* Instance generic-map table. */
+table.generics td {
+  padding-left:10px;
+  padding-right:10px;
+}
+table.generics th {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+/* Bitmap register table. */
+table.bitmap {
+  width: 100%;
+  font-size: 9pt;
+  empty-cells: show;
+  word-break: break-all;
+  -ms-word-break: break-all;
+}
+
+/* Register table 'address' heading. */
+th.addr {
+  width: 10%;
+}
+
+/* Register table 'mode' heading. */
+th.mode {
+  width: 10%;
+}
+
+/* Register table bit-number heading. */
+th.bit {
+  width: 10%;
+}
+
+/* Register table 'address' cell. */
+td.addr {
+  width: 10%;
+}
+
+/* Register table 'mode' cell. */
+td.mode {
+  width: 10%;
+}
+
+/* Register table signal-name cell. */
+td.signame {
+  width: 10%;
+}
+
+/* Register table record-name cell. */
+td.recname {
+  width: 10%;
+}
+
+/* Register table empty cell. */
+td.empty {
+  width: 10%;
+  background-color: #C0C0C0;
+}
+
+/* Register table hidden cell. */
+td.hidden {
+  width: 10%;
+  border-style: none;
+}
+
+/* Array register table headings */
+/* Note: this must come before RAM table headings below to exclude arrays inside RAMs. */
+div.array-content table.bitmap th {
+  background-color: #FFFFC0;
+}
+
+/* RAM register table headings. */
+div.ram-content table.bitmap th {
+  background-color: #C0C0FF;
+}
+
+/* Alias register table headings. */
+div.alias-content table.bitmap th {
+  background-color: #C0FFC0;
+}
+
+/* Register address equations. */
+p.equation {
+  padding-left: 10px;
+}
+
+/* Div containing signal descriptions. */
+div.signals {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+/* Signal enum values table. */
+table.enums {
+  margin-left: 10px;
+}
+
+/* Record definition table. */
+table.recdef {
+  width: 20%;
+}
+
+table.recdef th.name {
+  width: 75%;
+}
+</style>
+</head>
+<body>
+<h1>Module CTRL</h1>
+<p>Control Module MCI</p>
+<h2>DM Trigger</h2>
+<p>DM Trigger</p>
+<p>Register: DM_TRIG (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x000000</td>
+<td class="mode">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">DM_TRIG</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>DM_TRIG: A 0&gt;1 transition of DM_TRIG causes FDAS to process a DM. All FDAS modules are simultaneously triggered. Default: 0.</p>
+</div>
+<h2>Page Selection</h2>
+<p>Page Selection</p>
+<p>Register: PAGE (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x000020</td>
+<td class="mode">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">PAGE</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>PAGE: Indication of which page the processing modules should use as the source of data.<br>
+CLD shall use PAGE<br>
+CONV shall use PAGE<br>
+HSUM shall use NOT(PAGE) Default: 0.</p>
+</div>
+<h2>Convolution Overlap</h2>
+<p>Convolution Overlap</p>
+<p>Register: OVERLAP_SIZE (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">15</th>
+<th class="bit">14</th>
+<th class="bit">13</th>
+<th class="bit">12</th>
+<th class="bit">11</th>
+<th class="bit">10</th>
+<th class="bit">9</th>
+<th class="bit">8</th>
+</tr>
+<tr>
+<td class="addr" rowspan="3">0x000040</td>
+<td class="mode" rowspan="3">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame" colspan="2">OVERLAP_SIZE[9:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">OVERLAP_SIZE[7:0]</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>OVERLAP_SIZE[9:0]: Size of the Convolution Overlap<br>
+&quot;0000000000&quot; = No overlap<br>
+&quot;0000000001&quot; = Overlap of 1 sample<br>
+etc Default: 0.</p>
+</div>
+<h2>FOP Dimensions</h2>
+<p>FOP Dimensions</p>
+<p>Register: FOP_SAMPLE_NUM (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">23</th>
+<th class="bit">22</th>
+<th class="bit">21</th>
+<th class="bit">20</th>
+<th class="bit">19</th>
+<th class="bit">18</th>
+<th class="bit">17</th>
+<th class="bit">16</th>
+</tr>
+<tr>
+<td class="addr" rowspan="5">0x000060</td>
+<td class="mode" rowspan="5">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="signame" colspan="7">FOP_SAMPLE_NUM[22:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FOP_SAMPLE_NUM[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">FOP_SAMPLE_NUM[7:0]</td>
+</tr>
+</table></div>
+<p>Register: IFFT_LOOP_NUM (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x000068</td>
+<td class="mode">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame" colspan="6">IFFT_LOOP_NUM</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>FOP_SAMPLE_NUM[22:0]: The number of 64-bit samples of the DM to be processed to form the FOP.<br>
+This determines the &quot;frequency&quot; dimension of the FOP (i.e. the x-axis).<br>
+<br>
+The number of samples processed is one more than the configuration value.<br>
+<br>
+FDAS processes an integral number of FFTs during the convolution process. <br>
+<br>
+To calculate the FOP_SAMPLE_NUMBER the size of the FFT and the OVERLAP_SIZE configuration must be taken into account.<br>
+<br>
+For example if the FFT size is 1,024 points and the OVERLAP_SIZE = 500, this means that 524 new samples are processed by each FFT. Hence if we wish to process 2,097,152 samples we will need to perform ROUNDUP(2097152/524) = 4003 FFTs, which equates to 4003 x 524 = 2,097,572 samples.<br>
+<br>
+Hence in this example the value entered into FOP_SAMPLE_NUMBER = 2,097,572 - 1 = 2,097,571 decimal = 0x2001A3 Default: 0.</p>
+<p>IFFT_LOOP_NUM[5:0]: The number of times the CONV module loops through its Inverse Fourier Transforms. <br>
+The number of Inverse Fourier Transforms (IFFTs) processed in each loop is set by the &quot;ifft_g&quot; generic. Each IFFT generates two rows of the FOP (i.e. the y-axis), -one for positive acceleration &quot;+[p]&quot; and the compliment for negative acceleration -&quot;[p]&quot;. The total number of rows of the FOP is given by:-<br>
+<br>
+Total FOP Rows = 1 + ifft_g* IFFT_LOOP_NUM<br>
+<br>
+  Default: 0.</p>
+</div>
+<h2>Manual Override</h2>
+<p>Manual Override</p>
+<p>Register: MAN_OVERRIDE (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x000080</td>
+<td class="mode">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">MAN_OVERRIDE</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>MAN_OVERRIDE: 1 = Enable individual manual control of the triggering of the FDAS modules. Default: 0.</p>
+</div>
+<p></p>
+<h2>Manual Trigger</h2>
+<p>Manual Trigger</p>
+<p>Register: MAN_CLD_TRIG (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x0000A0</td>
+<td class="mode">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">MAN_HSUM_TRIG</td>
+<td class="signame">MAN_CONV_TRIG</td>
+<td class="signame">MAN_CLD_TRIG</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>MAN_CLD_TRIG: If MAN_OVERRIDE = 1, then a 0&gt;1 transition on MAN_CLD_TRIG shall trigger the CLD module to commence processing a DM. Default: 0.</p>
+<p>MAN_CONV_TRIG: If MAN_OVERRIDE = 1, then a 0&gt;1 transition on MAN_CONV_TRIG shall trigger the CONV module to commence processing a DM. Default: 0.</p>
+<p>MAN_HSUM_TRIG: If MAN_OVERRIDE = 1, then a 0&gt;1 transition on MAN_HSUM_TRIG shall trigger the HSUM module to commence processing a DM. Default: 0.</p>
+</div>
+<h2>Manual Enable</h2>
+<p>Manual Enable</p>
+<p>Register: MAN_CLD_EN (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x0000C0</td>
+<td class="mode">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">MAN_HSUM_EN</td>
+<td class="signame">MAN_CONV_EN</td>
+<td class="signame">MAN_CLD_EN</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>MAN_CLD_EN: If MAN_OVERRIDE = 1, then if MAN_CLD_EN =1 the CLD module operates, however if  MAN_CLD_EN = 0 the CLD module halts at its current state. Default: 0.</p>
+<p>MAN_CONV_EN: If MAN_OVERRIDE = 1, then if MAN_CONV_EN =1 the CONV module operates, however if  MAN_CONV_EN = 0 the CONV module halts at its current state. Default: 0.</p>
+<p>MAN_HSUM_EN: If MAN_OVERRIDE = 1, then if MAN_HSUM_EN =1 the HSUM module operates, however if  MAN_HSUM_EN = 0 the HSUM module halts at its current state. Default: 0.</p>
+</div>
+<h2>Manual Pause Enable</h2>
+<p>Manual Pause Enable</p>
+<p>Register: MAN_CLD_PAUSE_EN (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x0000E0</td>
+<td class="mode">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">MAN_HSUM_PAUSE_EN</td>
+<td class="signame">MAN_CONV_PAUSE_EN</td>
+<td class="signame">MAN_CLD_PAUSE_EN</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>MAN_CLD_PAUSE_EN: If MAN_OVERRIDE = 1, then if MAN_CLD_PAUSE_EN =1 the CLD module automatic pause feature is enabled which will pause the CLD module after MAN_CLD_PAUSE_CNT clock cycles. Toggling MAN_CLD_PAUSE_RST from 0&gt;1 shall recommence CLD operation to the next pause. Default: 0.</p>
+<p>MAN_CONV_PAUSE_EN: If MAN_OVERRIDE = 1, then if MAN_CONV_PAUSE_EN =1 the CONV module automatic pause feature is enabled which will pause the CONV module after MAN_CONV_PAUSE_CNT clock cycles. Toggling MAN_CONV_PAUSE_RST from 0&gt;1 shall recommence CONV operation to the next pause. Default: 0.</p>
+<p>MAN_HSUM_PAUSE_EN: If MAN_OVERRIDE = 1, then if MAN_HSUM_PAUSE_EN =1 the HSUM module automatic pause feature is enabled which will pause the HSUM module after MAN_HSUM_PAUSE_CNT clock cycles. Toggling MAN_HSUM_PAUSE_RST from 0&gt;1 shall recommence HSUM operation to the next pause. Default: 0.</p>
+</div>
+<h2>Manual Pause Reset</h2>
+<p>Manual Pause Reset</p>
+<p>Register: MAN_CLD_PAUSE_RST (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x000100</td>
+<td class="mode">RW</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">MAN_HSUM_PAUSE_RST</td>
+<td class="signame">MAN_CONV_PAUSE_RST</td>
+<td class="signame">MAN_CLD_PAUSE_RST</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>MAN_CLD_PAUSE_RST: If MAN_OVERRIDE = 1  a 0&gt;1 transition of MAN_CLD_PAUSE_RST  shall recommence CLD operation if it is paused. Default: 0.</p>
+<p>MAN_CONV_PAUSE_RST: If MAN_OVERRIDE = 1   a 0&gt;1 transition of MAN_CONV_PAUSE_RST  shall recommence CONV operation if it is paused. Default: 0.</p>
+<p>MAN_HSUM_PAUSE_RST: If MAN_OVERRIDE = 1   a 0&gt;1 transition of MAN_HSUM_PAUSE_RST shall recommence HSUM operation if it is paused. Default: 0.</p>
+</div>
+<h2>Manual Pause Time</h2>
+<p>Manual Pause Time</p>
+<p>Register: MAN_CLD_PAUSE_CNT (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x000120</td>
+<td class="mode" rowspan="7">RW</td>
+<td class="signame" colspan="8">MAN_CLD_PAUSE_CNT[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">MAN_CLD_PAUSE_CNT[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">MAN_CLD_PAUSE_CNT[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">MAN_CLD_PAUSE_CNT[7:0]</td>
+</tr>
+</table></div>
+<p>Register: MAN_CONV_PAUSE_CNT (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x000124</td>
+<td class="mode" rowspan="7">RW</td>
+<td class="signame" colspan="8">MAN_CONV_PAUSE_CNT[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">MAN_CONV_PAUSE_CNT[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">MAN_CONV_PAUSE_CNT[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">MAN_CONV_PAUSE_CNT[7:0]</td>
+</tr>
+</table></div>
+<p>Register: MAN_HSUM_PAUSE_CNT (default: 0x00000000)</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x000128</td>
+<td class="mode" rowspan="7">RW</td>
+<td class="signame" colspan="8">MAN_HSUM_PAUSE_CNT[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">MAN_HSUM_PAUSE_CNT[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">MAN_HSUM_PAUSE_CNT[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">MAN_HSUM_PAUSE_CNT[7:0]</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>MAN_CLD_PAUSE_CNT[31:0]: If MAN_OVERRIDE = 1 and  MAN_CLD_PAUSE_EN =1 then the CLD module will pause after MAN_CLD_PAUSE_CNT clock cycles. Default: 0.</p>
+<p>MAN_CONV_PAUSE_CNT[31:0]: If MAN_OVERRIDE = 1 and  MAN_CONV_PAUSE_EN =1 then the CONV module will pause after MAN_CONV_PAUSE_CNT clock cycles. Default: 0.</p>
+<p>MAN_HSUM_PAUSE_CNT[31:0]: If MAN_OVERRIDE = 1 and  MAN_HSUM_PAUSE_EN =1 then the HSUM module will pause after MAN_HSUM_PAUSE_CNT clock cycles. Default: 0.</p>
+</div>
+<h2>Done Indications</h2>
+<p>Done Indications</p>
+<p>Register: LATCHED_CLD_DONE</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x000140</td>
+<td class="mode">RO</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">LATCHED_HSUM_DONE</td>
+<td class="signame">LATCHED_CONV_DONE</td>
+<td class="signame">LATCHED_CLD_DONE</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>LATCHED_CLD_DONE: Latched Indication that CLD has finished processing the DM. 1 = finished.</p>
+<p>LATCHED_CONV_DONE: Latched Indication that CONV has finished processing the DM. 1 = finished.</p>
+<p>LATCHED_HSUM_DONE: Latched Indication that HSUM has finished processing the DM. 1 = finished.</p>
+</div>
+<h2>Pause Indications</h2>
+<p>Pause Indications</p>
+<p>Register: CLD_PAUSED</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x000160</td>
+<td class="mode">RO</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">HSUM_PAUSED</td>
+<td class="signame">CONV_PAUSED</td>
+<td class="signame">CLD_PAUSED</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>CLD_PAUSED: '1' = Latched Indication CLD has paused. If MAN_OVERRIDE = 1 a 0&gt; 1 Transition of MAN_CLD_PAUSE_RST shall clear CLD_PAUSED.</p>
+<p>CONV_PAUSED: '1' = Latched Indication CONV has paused. If MAN_OVERRIDE = 1 a 0&gt; 1 Transition of MAN_CONV_PAUSE_RST shall clear CONV_PAUSED.</p>
+<p>HSUM_PAUSED: '1' = Latched Indication HSUM  has paused.  If MAN_OVERRIDE = 1 a 0&gt; 1 Transition of MAN_HSUM_PAUSE_RST shall clear HSUM_PAUSED.</p>
+</div>
+<h2>CONV FFT Ready Indication</h2>
+<p>CONV FFT Ready Indication</p>
+<p>Register: CONV_FFT_READY</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">7</th>
+<th class="bit">6</th>
+<th class="bit">5</th>
+<th class="bit">4</th>
+<th class="bit">3</th>
+<th class="bit">2</th>
+<th class="bit">1</th>
+<th class="bit">0</th>
+</tr>
+<tr>
+<td class="addr">0x000180</td>
+<td class="mode">RO</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="empty">&nbsp;</td>
+<td class="signame">CONV_FFT_READY</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>CONV_FFT_READY: '1' = Indication that the first FFT in the CONV module has completed its processing and is ready for the FFT output to be observed for diagnostic purposes. This signal is asserted when the enable to CONV has been de-asserted and the first FFT has completed its processing.</p>
+</div>
+<h2>Processing Times</h2>
+<p>Processing Times</p>
+<p>Register: CLD_PROC_TIME</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x000188</td>
+<td class="mode" rowspan="7">RO</td>
+<td class="signame" colspan="8">CLD_PROC_TIME[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CLD_PROC_TIME[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CLD_PROC_TIME[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CLD_PROC_TIME[7:0]</td>
+</tr>
+</table></div>
+<p>Register: CONV_PROC_TIME</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x00018C</td>
+<td class="mode" rowspan="7">RO</td>
+<td class="signame" colspan="8">CONV_PROC_TIME[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CONV_PROC_TIME[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CONV_PROC_TIME[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CONV_PROC_TIME[7:0]</td>
+</tr>
+</table></div>
+<p>Register: HSUM_PROC_TIME</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x000190</td>
+<td class="mode" rowspan="7">RO</td>
+<td class="signame" colspan="8">HSUM_PROC_TIME[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_PROC_TIME[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_PROC_TIME[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_PROC_TIME[7:0]</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>CLD_PROC_TIME[31:0]: CLD Processing Time.<br>
+The time from the triggering of CLD to CLD_DONE measured in CLK_SYS cycles.</p>
+<p>CONV_PROC_TIME[31:0]: CONV Processing Time.<br>
+The time from the triggering of CONV to CONV_DONE measured in CLK_SYS cycles.</p>
+<p>HSUM_PROC_TIME[31:0]: HSUM Processing Time.<br>
+The time from the triggering of HSUM to HSUM_DONE measured in CLK_SYS cycles.</p>
+</div>
+<h2>CONV  and HSUM DDR SDRAM Access Counts</h2>
+<p>Register: CONV_REQ_CNT</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x0001A0</td>
+<td class="mode" rowspan="7">RO</td>
+<td class="signame" colspan="8">CONV_REQ_CNT[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CONV_REQ_CNT[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CONV_REQ_CNT[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">CONV_REQ_CNT[7:0]</td>
+</tr>
+</table></div>
+<p>Register: HSUM_REQ_CNT</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x0001A4</td>
+<td class="mode" rowspan="7">RO</td>
+<td class="signame" colspan="8">HSUM_REQ_CNT[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_REQ_CNT[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_REQ_CNT[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_REQ_CNT[7:0]</td>
+</tr>
+</table></div>
+<p>Register: HSUM_REC_CNT</p>
+<div class="table-wrapper bitmap"><table class="bitmap">
+<tr>
+<th class="addr">Address</th>
+<th class="mode">Mode</th>
+<th class="bit">31</th>
+<th class="bit">30</th>
+<th class="bit">29</th>
+<th class="bit">28</th>
+<th class="bit">27</th>
+<th class="bit">26</th>
+<th class="bit">25</th>
+<th class="bit">24</th>
+</tr>
+<tr>
+<td class="addr" rowspan="7">0x0001A8</td>
+<td class="mode" rowspan="7">RO</td>
+<td class="signame" colspan="8">HSUM_REC_CNT[31:24]</td>
+</tr>
+<tr>
+<th>23</th>
+<th>22</th>
+<th>21</th>
+<th>20</th>
+<th>19</th>
+<th>18</th>
+<th>17</th>
+<th>16</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_REC_CNT[23:16]</td>
+</tr>
+<tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_REC_CNT[15:8]</td>
+</tr>
+<tr>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+<tr>
+<td class="signame" colspan="8">HSUM_REC_CNT[7:0]</td>
+</tr>
+</table></div>
+<div class="signals">
+<p>CONV_REQ_CNT[31:0]: Number of CONV DDR SDRAM Requests</p>
+<p>HSUM_REQ_CNT[31:0]: Number of HSUM DDR SDRAM Requests</p>
+<p>HSUM_REC_CNT[31:0]: Number of HSUM DDR SDRAM Received Words</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_emif_cal_iossm_261/sim/altera_emif_cal_iossm.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_cal_iossm_261" />
+ <file
+   path="altera_emif_cal_iossm_261/sim/altera_emif_f2c_gearbox.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_cal_iossm_261" />
+ <file
+   path="altera_emif_cal_iossm_261/sim/FDAS_EMIF_CALIBRATION_altera_emif_cal_iossm_261_4duqiuq_code.hex"
+   type="HEX"
+   library="altera_emif_cal_iossm_261" />
+ <file
+   path="altera_emif_cal_iossm_261/sim/FDAS_EMIF_CALIBRATION_altera_emif_cal_iossm_261_4duqiuq_sim_global_param_tbl.hex"
+   type="HEX"
+   library="altera_emif_cal_iossm_261" />
+ <file
+   path="altera_emif_cal_iossm_261/sim/FDAS_EMIF_CALIBRATION_altera_emif_cal_iossm_261_4duqiuq_sim_global_param_tbl.txt"
+   type="OTHER"
+   library="altera_emif_cal_iossm_261" />
+ <file
+   path="altera_emif_cal_iossm_261/sim/FDAS_EMIF_CALIBRATION_altera_emif_cal_iossm_261_4duqiuq_synth_global_param_tbl.hex"
+   type="HEX"
+   library="altera_emif_cal_iossm_261" />
+ <file
+   path="altera_emif_cal_iossm_261/sim/FDAS_EMIF_CALIBRATION_altera_emif_cal_iossm_261_4duqiuq_synth_global_param_tbl.txt"
+   type="OTHER"
+   library="altera_emif_cal_iossm_261" />
+ <file
+   path="altera_emif_cal_iossm_261/sim/FDAS_EMIF_CALIBRATION_altera_emif_cal_iossm_261_4duqiuq_arch.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_emif_cal_iossm_261" />
+ <file
+   path="altera_emif_cal_iossm_261/sim/FDAS_EMIF_CALIBRATION_altera_emif_cal_iossm_261_4duqiuq.vhd"
+   type="VHDL"
+   library="altera_emif_cal_iossm_261" />
+ <file
+   path="altera_emif_cal_261/sim/FDAS_EMIF_CALIBRATION_altera_emif_cal_261_by6xdyq.vhd"
+   type="VHDL"
+   library="altera_emif_cal_261"
+   hasInlineConfiguration="true" />
+ <file
+   path="sim/FDAS_EMIF_CALIBRATION.vhd"
+   type="VHDL"
+   library="FDAS_EMIF_CALIBRATION"
+   hasInlineConfiguration="true" />
+ <topLevel name="FDAS_EMIF_CALIBRATION.FDAS_EMIF_CALIBRATION" />
+ <deviceFamily name="agilex" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

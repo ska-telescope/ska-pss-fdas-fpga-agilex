@@ -1,0 +1,19 @@
+# system info PCIE_HIP_FDAS_mm_rd_transparent_3 on 2023.03.01.08:55:57
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for PCIE_HIP_FDAS_mm_rd_transparent_3 on 2023.03.01.08:55:57
+files:
+filepath,kind,attributes,module,is_top
+sim/PCIE_HIP_FDAS_mm_rd_transparent_3.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,PCIE_HIP_FDAS_mm_rd_transparent_3,true
+mm_rd_transparent_10/sim/mm_rd_transparent.vhd,VHDL,,mm_rd_transparent,false
+mm_rd_transparent_10/sim/mm_rd_transparent_synth.vhd,VHDL,,mm_rd_transparent,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+PCIE_HIP_FDAS_mm_rd_transparent_3.mm_rd_transparent_3,mm_rd_transparent

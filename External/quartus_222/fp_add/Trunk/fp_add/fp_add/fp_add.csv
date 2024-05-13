@@ -1,0 +1,18 @@
+# system info fp_add on 2022.07.19.13:15:59
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex
+GENERATION_ID,0
+#
+#
+# Files generated for fp_add on 2022.07.19.13:15:59
+files:
+filepath,kind,attributes,module,is_top
+sim/fp_add.vhd,VHDL,CONTAINS_INLINE_CONFIGURATION,fp_add,true
+s20_native_floating_point_dsp_1910/sim/fp_add_s20_native_floating_point_dsp_1910_646nw2y.vhd,VHDL,,fp_add_s20_native_floating_point_dsp_1910_646nw2y,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+fp_add.s20_native_floating_point_dsp_0,fp_add_s20_native_floating_point_dsp_1910_646nw2y

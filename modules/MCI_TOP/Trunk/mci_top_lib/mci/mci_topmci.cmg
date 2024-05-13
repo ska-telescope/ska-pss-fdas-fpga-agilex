@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Database version="1.2.598">
+    <Asic name="MCI_TOP_DECODE" address-width="22" data-width="32">
+        <doc>FDAS Address Decode</doc>
+        <Instance name="TOPMCI_1" address-width="20" module="MCI_TOP" base-address="0x0"/>
+        <Instance name="CTRL_1" address-width="19" module="CTRL" base-address="0x100000" source-file="../../CTRL/mci/ctrlmci.cmg"/>
+        <Instance name="MSIX_1" address-width="4" module="MSIX" base-address="0x180000" source-file="../../MSIX/mci/msixmci.cmg"/>
+        <Instance name="CONV_1" address-width="20" module="CONV" base-address="0x200000" source-file="../../CONV/mci/convmci.cmg"/>
+        <Instance name="HSUM_1" address-width="18" module="HSUM" generics="summer_g 1" base-address="0x300000"
+                source-file="../../HSUM/mci/hsummci.cmg"/>
+        <doc2>FDAS Address Decode</doc2>
+    </Asic>
+    <Module name="MCI_TOP" address-width="20" data-width="32" checksum="0xF84A">
+        <doc>Top Level MCI</doc>
+        <Table name="Inventory">
+            <Signal name="PRODUCT_ID" location="0x0.15:0" mode="RO">
+                <doc>FDAS FPGA Product Number. Hard Coded Value.</doc>
+            </Signal>
+            <Signal name="CORE_VERSION" location="0x1.15:0" mode="RO">
+                <doc>FDAS FPGA Core level version number. Hard Coded Value.</doc>
+            </Signal>
+            <Signal name="CORE_REVISION" location="0x2.15:0" mode="RO">
+                <doc>FDAS FPGA Core level revision number. Hard Coded Value.</doc>
+            </Signal>
+            <Signal name="TOP_VERSION" location="0x3.15:0" mode="RO">
+                <doc>FDAS FPGA Top level version number. Hard Coded Value.</doc>
+            </Signal>
+            <Signal name="TOP_REVISION" location="0x4.15:0" mode="RO">
+                <doc>FDAS FPGA Top level revision number. Hard Coded Value.</doc>
+            </Signal>
+            <doc2></doc2>
+        </Table>
+        <Table name="Monitor and Reset Control" base-address="0x10">
+            <Signal name="CTRL_RESET" location="0x0.0" mode="RW" default="0">
+                <doc>Reset CTRL Module
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="CLD_RESET" location="0x0.1" mode="RW" default="0">
+                <doc>Reset CLD Module
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="CONV_RESET" location="0x0.2" mode="RW" default="0">
+                <doc>Reset CONV Module
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="HSUM_RESET" location="0x0.3" mode="RW" default="0">
+                <doc>Reset HSUM Module
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="DDRIF_0_RESET" location="0x0.4" mode="RW" default="0">
+                <doc>Reset DDRIF2 Module #0 system clock domain and DDR clock domain
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="DDRIF_1_RESET" location="0x0.5" mode="RW" default="0">
+                <doc>Reset DDRIF2 Module #1 system clock domain and DDR clock domain
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="DDRIF_2_RESET" location="0x0.6" mode="RW" default="0">
+                <doc>Reset DDRIF2 Module #2 system clock domain and DDR clock domain
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="DDRIF_3_RESET" location="0x0.7" mode="RW" default="0">
+                <doc>Reset DDRIF2 Module #3 system clock domain and DD clock domain
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="DDRIF_PCIE_RESET" location="0x0.8" mode="RW" default="0">
+                <doc>Resets DDRIF2 Modules #0, #1, #2  &amp; #3 PCIE clock domain, and also the MSIX module PCIE clock domain
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="DDR_0_RESET" location="0x0.9" mode="RW" default="0">
+                <doc>Reset DDR Controller#0
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="DDR_1_RESET" location="0x0.10" mode="RW" default="0">
+                <doc>Reset DDR Controller#1  
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="DDR_2_RESET" location="0x0.11" mode="RW" default="0">
+                <doc>Reset DDR Controller#2  
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="DDR_3_RESET" location="0x0.12" mode="RW" default="0">
+                <doc>Reset DDR Controller#3
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="MSIX_RESET" location="0x0.13" mode="RW" default="0">
+                <doc>Reset MSIX Module system clock domain
+Logic '1' = Reset</doc>
+            </Signal>
+            <Signal name="DDR_0_CAL_FAIL" location="0x1.0" mode="RO" default="1">
+                <doc>DDR Controller #0 has failed Calibration
+Logic '1' = Fail</doc>
+            </Signal>
+            <Signal name="DDR_0_CAL_PASS" location="0x1.1" mode="RO">
+                <doc>DDR Controller #0 has passed Calibration
+Logic '1' = Pass</doc>
+            </Signal>
+            <Signal name="DDR_1_CAL_FAIL" location="0x1.2" mode="RO">
+                <doc>DDR Controller #1 has failed Calibration 
+Logic '1' = Fail</doc>
+            </Signal>
+            <Signal name="DDR_1_CAL_PASS" location="0x1.3" mode="RO">
+                <doc>DDR Controller #1 has passed Calibration 
+Logic '1' = Pass</doc>
+            </Signal>
+            <Signal name="DDR_2_CAL_FAIL" location="0x1.4" mode="RO">
+                <doc>DDR Controller #2 has failed Calibration
+Logic '1' = Fail</doc>
+            </Signal>
+            <Signal name="DDR_2_CAL_PASS" location="0x1.5" mode="RO">
+                <doc>DDR Controller #2 has passed Calibration
+Logic '1' = Pass</doc>
+            </Signal>
+            <Signal name="DDR_3_CAL_FAIL" location="0x1.6" mode="RO">
+                <doc>DDR Controller #3 has failed Calibration
+Logic '1' = Fail</doc>
+            </Signal>
+            <Signal name="DDR_3_CAL_PASS" location="0x1.7" mode="RO">
+                <doc>DDR Controller #3 has passed Calibration
+Logic '1' = Pass</doc>
+            </Signal>
+            <Signal name="DDR_0_RESET_DONE" location="0x1.8" mode="RO">
+                <doc>DDR Controller #0 has reset
+Logic '1' = Reset Done</doc>
+            </Signal>
+            <Signal name="DDR_1_RESET_DONE" location="0x1.9" mode="RO">
+                <doc>DDR Controller #1 has reset
+Logic '1' = Reset Done</doc>
+            </Signal>
+            <Signal name="DDR_2_RESET_DONE" location="0x1.10" mode="RO">
+                <doc>DDR Controller #2 has reset
+Logic '1' = Reset Done</doc>
+            </Signal>
+            <Signal name="DDR_3_RESET_DONE" location="0x1.11" mode="RO">
+                <doc>DDR Controller #3 has reset
+Logic '1' = Reset Done</doc>
+            </Signal>
+            <doc2>Reset procedure:
+1) Apply all resets.
+2) Remove DDR_0_RESETN,  DDR_1_RESETN,  DDR_2_RESETN and DDR_3_RESETN
+3) Wait for DDR_0_RESET_DONE, DDR_1_RESET_DONE, DDR_2_RESET_DONE,  DDR_3_RESET_DONE, DDR_0_CAL_PASS,  DDR_1_CAL_PASS, DDR_2_CAL_PASS and 
+DDR_3_CAL_PASS to go high
+4) Remove remaining resets.</doc2>
+        </Table>
+    </Module>
+</Database>

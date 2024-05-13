@@ -1,0 +1,2 @@
+DEFAULT_ARCHITECTURE atom struc
+DEFAULT_FILE atom fdas_ddr_controller_calibration_hps_struc.vhd

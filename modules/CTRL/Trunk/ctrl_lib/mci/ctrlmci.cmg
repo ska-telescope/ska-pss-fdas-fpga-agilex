@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Database version="1.2.598">
+    <Module name="CTRL" data-width="32" address-width="19" checksum="0x519B">
+        <doc>Control Module MCI</doc>
+        <Table name="DM Trigger">
+            <doc>DM Trigger</doc>
+            <Signal name="DM_TRIG" location="0x0.0" mode="RW">
+                <doc>A 0&gt;1 transition of DM_TRIG causes FDAS to process a DM. All FDAS modules are simultaneously triggered.</doc>
+            </Signal>
+        </Table>
+        <Table name="Page Selection" base-address="0x8">
+            <doc>Page Selection</doc>
+            <Signal name="PAGE" location="0x0.0" mode="RW">
+                <doc>Indication of which page the processing modules should use as the source of data.
+CLD shall use PAGE
+CONV shall use PAGE
+HSUM shall use NOT(PAGE)</doc>
+            </Signal>
+        </Table>
+        <Table name="Convolution Overlap" base-address="0x10">
+            <doc>Convolution Overlap</doc>
+            <Signal name="OVERLAP_SIZE" location="0x0.9:0" mode="RW">
+                <doc>Size of the Convolution Overlap
+&quot;0000000000&quot; = No overlap
+&quot;0000000001&quot; = Overlap of 1 sample
+etc</doc>
+            </Signal>
+        </Table>
+        <Table name="FOP Dimensions" base-address="0x18">
+            <doc>FOP Dimensions</doc>
+            <Signal name="FOP_SAMPLE_NUM" location="0x0.22:0" mode="RW">
+                <doc>The number of 64-bit samples of the DM to be processed to form the FOP.
+This determines the &quot;frequency&quot; dimension of the FOP (i.e. the x-axis).
+
+The number of samples processed is one more than the configuration value.
+
+FDAS processes an integral number of FFTs during the convolution process. 
+
+To calculate the FOP_SAMPLE_NUMBER the size of the FFT and the OVERLAP_SIZE configuration must be taken into account.
+
+For example if the FFT size is 1,024 points and the OVERLAP_SIZE = 500, this means that 524 new samples are processed by each FFT. Hence if we wish to process 2,097,152 samples we will need to perform ROUNDUP(2097152/524) = 4003 FFTs, which equates to 4003 x 524 = 2,097,572 samples.
+
+Hence in this example the value entered into FOP_SAMPLE_NUMBER = 2,097,572 - 1 = 2,097,571 decimal = 0x2001A3</doc>
+            </Signal>
+            <Signal name="IFFT_LOOP_NUM" location="0x2.5:0" mode="RW">
+                <doc>The number of times the CONV module loops through its Inverse Fourier Transforms. 
+The number of Inverse Fourier Transforms (IFFTs) processed in each loop is set by the &quot;ifft_g&quot; generic. Each IFFT generates two rows of the FOP (i.e. the y-axis), -one for positive acceleration &quot;+[p]&quot; and the compliment for negative acceleration -&quot;[p]&quot;. The total number of rows of the FOP is given by:-
+
+Total FOP Rows = 1 + ifft_g* IFFT_LOOP_NUM
+
+ </doc>
+            </Signal>
+        </Table>
+        <Table name="Manual Override" base-address="0x20">
+            <doc>Manual Override</doc>
+            <Signal name="MAN_OVERRIDE" location="0x0.0" mode="RW" reg-name="">
+                <doc>1 = Enable individual manual control of the triggering of the FDAS modules.</doc>
+            </Signal>
+            <doc2></doc2>
+        </Table>
+        <Table name="Manual Trigger" base-address="0x28">
+            <doc>Manual Trigger</doc>
+            <Signal name="MAN_CLD_TRIG" location="0x0.0" mode="RW">
+                <doc>If MAN_OVERRIDE = 1, then a 0&gt;1 transition on MAN_CLD_TRIG shall trigger the CLD module to commence processing a DM.</doc>
+            </Signal>
+            <Signal name="MAN_CONV_TRIG" location="0x0.1" mode="RW">
+                <doc>If MAN_OVERRIDE = 1, then a 0&gt;1 transition on MAN_CONV_TRIG shall trigger the CONV module to commence processing a DM.</doc>
+            </Signal>
+            <Signal name="MAN_HSUM_TRIG" location="0x0.2" mode="RW">
+                <doc>If MAN_OVERRIDE = 1, then a 0&gt;1 transition on MAN_HSUM_TRIG shall trigger the HSUM module to commence processing a DM.</doc>
+            </Signal>
+        </Table>
+        <Table name="Manual Enable" base-address="0x30">
+            <doc>Manual Enable</doc>
+            <Signal name="MAN_CLD_EN" location="0x0.0" mode="RW">
+                <doc>If MAN_OVERRIDE = 1, then if MAN_CLD_EN =1 the CLD module operates, however if  MAN_CLD_EN = 0 the CLD module halts at its current state.</doc>
+            </Signal>
+            <Signal name="MAN_CONV_EN" location="0x0.1" mode="RW">
+                <doc>If MAN_OVERRIDE = 1, then if MAN_CONV_EN =1 the CONV module operates, however if  MAN_CONV_EN = 0 the CONV module halts at its current state.</doc>
+            </Signal>
+            <Signal name="MAN_HSUM_EN" location="0x0.2" mode="RW">
+                <doc>If MAN_OVERRIDE = 1, then if MAN_HSUM_EN =1 the HSUM module operates, however if  MAN_HSUM_EN = 0 the HSUM module halts at its current state.</doc>
+            </Signal>
+        </Table>
+        <Table name="Manual Pause Enable" base-address="0x38">
+            <doc>Manual Pause Enable</doc>
+            <Signal name="MAN_CLD_PAUSE_EN" location="0x0.0" mode="RW">
+                <doc>If MAN_OVERRIDE = 1, then if MAN_CLD_PAUSE_EN =1 the CLD module automatic pause feature is enabled which will pause the CLD module after MAN_CLD_PAUSE_CNT clock cycles. Toggling MAN_CLD_PAUSE_RST from 0&gt;1 shall recommence CLD operation to the next pause.</doc>
+            </Signal>
+            <Signal name="MAN_CONV_PAUSE_EN" location="0x0.1" mode="RW">
+                <doc>If MAN_OVERRIDE = 1, then if MAN_CONV_PAUSE_EN =1 the CONV module automatic pause feature is enabled which will pause the CONV module after MAN_CONV_PAUSE_CNT clock cycles. Toggling MAN_CONV_PAUSE_RST from 0&gt;1 shall recommence CONV operation to the next pause.</doc>
+            </Signal>
+            <Signal name="MAN_HSUM_PAUSE_EN" location="0x0.2" mode="RW">
+                <doc>If MAN_OVERRIDE = 1, then if MAN_HSUM_PAUSE_EN =1 the HSUM module automatic pause feature is enabled which will pause the HSUM module after MAN_HSUM_PAUSE_CNT clock cycles. Toggling MAN_HSUM_PAUSE_RST from 0&gt;1 shall recommence HSUM operation to the next pause.</doc>
+            </Signal>
+        </Table>
+        <Table name="Manual Pause Reset" base-address="0x40">
+            <doc>Manual Pause Reset</doc>
+            <Signal name="MAN_CLD_PAUSE_RST" location="0x0.0" mode="RW">
+                <doc>If MAN_OVERRIDE = 1  a 0&gt;1 transition of MAN_CLD_PAUSE_RST  shall recommence CLD operation if it is paused.</doc>
+            </Signal>
+            <Signal name="MAN_CONV_PAUSE_RST" location="0x0.1" mode="RW">
+                <doc>If MAN_OVERRIDE = 1   a 0&gt;1 transition of MAN_CONV_PAUSE_RST  shall recommence CONV operation if it is paused.</doc>
+            </Signal>
+            <Signal name="MAN_HSUM_PAUSE_RST" location="0x0.2" mode="RW">
+                <doc>If MAN_OVERRIDE = 1   a 0&gt;1 transition of MAN_HSUM_PAUSE_RST shall recommence HSUM operation if it is paused.</doc>
+            </Signal>
+        </Table>
+        <Table name="Manual Pause Time" base-address="0x48">
+            <doc>Manual Pause Time</doc>
+            <Signal name="MAN_CLD_PAUSE_CNT" location="0x0.31:0" mode="RW">
+                <doc>If MAN_OVERRIDE = 1 and  MAN_CLD_PAUSE_EN =1 then the CLD module will pause after MAN_CLD_PAUSE_CNT clock cycles.</doc>
+            </Signal>
+            <Signal name="MAN_CONV_PAUSE_CNT" location="0x1.31:0" mode="RW">
+                <doc>If MAN_OVERRIDE = 1 and  MAN_CONV_PAUSE_EN =1 then the CONV module will pause after MAN_CONV_PAUSE_CNT clock cycles.</doc>
+            </Signal>
+            <Signal name="MAN_HSUM_PAUSE_CNT" location="0x2.31:0" mode="RW">
+                <doc>If MAN_OVERRIDE = 1 and  MAN_HSUM_PAUSE_EN =1 then the HSUM module will pause after MAN_HSUM_PAUSE_CNT clock cycles.</doc>
+            </Signal>
+        </Table>
+        <Table name="Done Indications" base-address="0x50">
+            <doc>Done Indications</doc>
+            <Signal name="LATCHED_CLD_DONE" location="0x0.0" mode="RO">
+                <doc>Latched Indication that CLD has finished processing the DM. 1 = finished.</doc>
+            </Signal>
+            <Signal name="LATCHED_CONV_DONE" location="0x0.1" mode="RO">
+                <doc>Latched Indication that CONV has finished processing the DM. 1 = finished.</doc>
+            </Signal>
+            <Signal name="LATCHED_HSUM_DONE" location="0x0.2" mode="RO">
+                <doc>Latched Indication that HSUM has finished processing the DM. 1 = finished.</doc>
+            </Signal>
+        </Table>
+        <Table name="Pause Indications" base-address="0x58">
+            <doc>Pause Indications</doc>
+            <Signal name="CLD_PAUSED" location="0x0.0" mode="RO">
+                <doc>'1' = Latched Indication CLD has paused. If MAN_OVERRIDE = 1 a 0&gt; 1 Transition of MAN_CLD_PAUSE_RST shall clear CLD_PAUSED.</doc>
+            </Signal>
+            <Signal name="CONV_PAUSED" location="0x0.1" mode="RO">
+                <doc>'1' = Latched Indication CONV has paused. If MAN_OVERRIDE = 1 a 0&gt; 1 Transition of MAN_CONV_PAUSE_RST shall clear CONV_PAUSED.</doc>
+            </Signal>
+            <Signal name="HSUM_PAUSED" location="0x0.2" mode="RO">
+                <doc>'1' = Latched Indication HSUM  has paused.  If MAN_OVERRIDE = 1 a 0&gt; 1 Transition of MAN_HSUM_PAUSE_RST shall clear HSUM_PAUSED.</doc>
+            </Signal>
+        </Table>
+        <Table name="CONV FFT Ready Indication" base-address="0x60">
+            <doc>CONV FFT Ready Indication</doc>
+            <Signal name="CONV_FFT_READY" location="0x0.0" mode="RO">
+                <doc>'1' = Indication that the first FFT in the CONV module has completed its processing and is ready for the FFT output to be observed for diagnostic purposes. This signal is asserted when the enable to CONV has been de-asserted and the first FFT has completed its processing.</doc>
+            </Signal>
+        </Table>
+        <Table name="Processing Times" base-address="0x62">
+            <doc>Processing Times</doc>
+            <Signal name="CLD_PROC_TIME" location="0x0.31:0" mode="RO">
+                <doc>CLD Processing Time.
+The time from the triggering of CLD to CLD_DONE measured in CLK_SYS cycles.</doc>
+            </Signal>
+            <Signal name="CONV_PROC_TIME" location="0x1.31:0" mode="RO">
+                <doc>CONV Processing Time.
+The time from the triggering of CONV to CONV_DONE measured in CLK_SYS cycles.</doc>
+            </Signal>
+            <Signal name="HSUM_PROC_TIME" location="0x2.31:0" mode="RO">
+                <doc>HSUM Processing Time.
+The time from the triggering of HSUM to HSUM_DONE measured in CLK_SYS cycles.</doc>
+            </Signal>
+        </Table>
+        <Table name="CONV  and HSUM DDR SDRAM Access Counts" base-address="0x68">
+            <Signal name="CONV_REQ_CNT" location="0x0.31:0" mode="RO">
+                <doc>Number of CONV DDR SDRAM Requests</doc>
+            </Signal>
+            <Signal name="HSUM_REQ_CNT" location="0x1.31:0" mode="RO">
+                <doc>Number of HSUM DDR SDRAM Requests</doc>
+            </Signal>
+            <Signal name="HSUM_REC_CNT" location="0x2.31:0" mode="RO">
+                <doc>Number of HSUM DDR SDRAM Received Words</doc>
+            </Signal>
+        </Table>
+    </Module>
+</Database>
