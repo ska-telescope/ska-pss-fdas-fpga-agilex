@@ -10,13 +10,17 @@ vhdl-unit-tests:
   stage: vhdl-unit-tests
   tags:
     - ubuntu-22.04
-  script: # TODO
+  script:  
+    - echo "vhdl-unit-tests"
+    # TODO
 
 shell:
   stage: build
   tags:
     - ubuntu-22.04
-  script: # TODO
+  script:
+    - echo "shell"
+    # TODO
 
 synthesis:
   stage: build
@@ -24,24 +28,32 @@ synthesis:
     - shell
   tags:
     - ubuntu-22.04
-  script: # TODO
+  script:
+   - echo "synthesis"
+   # TODO
 
 fitting:
   stage: build
   needs: synthesis
   tags:
     - ubuntu-22.04
-  script: # TODO
+  script:
+   - echo "fitting"
+   - # TODO
 
 assemble:
   stage: build
   needs: fitting
   tags:
     - ubuntu-22.04
-  script: # TODO
+  script:
+   - echo "assemble"
+   # TODO
 
 publish:
   stage: publish
   tags:
     - ubuntu-22.04
-  script: # TODO
+  script:
+   - echo "publish"
+   - # TODO
