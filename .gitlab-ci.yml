@@ -12,7 +12,7 @@ vhdl-unit-tests:
     - ubuntu-22.04
   script:  
     - echo "vhdl-unit-tests"
-#    - # TODO
+    # TODO
 
 shell:
   stage: build
@@ -20,7 +20,7 @@ shell:
     - ubuntu-22.04
   script:
     - echo "shell"
-#    - # TODO
+    # TODO
 
 synthesis:
   stage: build
@@ -30,25 +30,27 @@ synthesis:
     - ubuntu-22.04
   script:
     - echo "synthesis"
-#    - # TODO
+    # TODO
 
 fitting:
   stage: build
-  needs: synthesis
+  needs:
+    - synthesis
   tags:
     - ubuntu-22.04
   script:
     - echo "fitting"
- #   - # TODO
+    # TODO
 
 assemble:
   stage: build
-  needs: fitting
+  needs:
+    - fitting
   tags:
     - ubuntu-22.04
   script:
     - echo "assemble"
- #   - # TODO
+    # TODO
 
 publish:
   stage: publish
@@ -56,4 +58,4 @@ publish:
     - ubuntu-22.04
   script:
    - echo "publish"
-#   - # TODO
+   # TODO
