@@ -18,6 +18,7 @@ vhdl-unit-tests:
     - pss-tengu-docker
   script:  
     - echo "vhdl-unit-tests"
+    - cat /test.txt
     # TODO
     #- sudo docker images
 
