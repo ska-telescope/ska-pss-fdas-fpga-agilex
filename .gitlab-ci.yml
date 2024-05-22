@@ -13,7 +13,9 @@ stages:
 vhdl-unit-tests:
   stage: vhdl-unit-tests
   extends: .common
-  #image: simple_image
+  image:
+    name: simple_image
+    pull_policy: if-not-present
   tags:
     - pss-tengu-docker
   script:  
