@@ -19,7 +19,7 @@ vhdl-unit-tests:
   script:  
     - echo "vhdl-unit-tests"
     # TODO
-    - docker images
+    - sudo docker images
 
 shell:
   stage: build
