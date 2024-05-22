@@ -13,6 +13,7 @@ stages:
 vhdl-unit-tests:
   stage: vhdl-unit-tests
   extends: .common
+  image: simple_image
   tags:
     - ubuntu-18.04
   script:  
