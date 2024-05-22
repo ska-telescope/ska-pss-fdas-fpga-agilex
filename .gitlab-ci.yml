@@ -15,7 +15,7 @@ vhdl-unit-tests:
   extends: .common
   image:
     name: simple_image
-    pull_policy: if-not-present
+    pull_policy: 'if-not-present'
   tags:
     - pss-tengu-docker
   script:  
