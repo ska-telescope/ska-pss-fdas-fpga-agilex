@@ -10,12 +10,17 @@ stages:
   rules:
     - if: $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "api" || $CI_PIPELINE_SOURCE == 'merge_request_event'
 
+# add jobs here to support the creation of the quartus and questa docker images. These should only run on schedule.
+
+before_script:
+docker login -u gitlab-runner
+
 vhdl-unit-tests:
   stage: vhdl-unit-tests
   extends: .common
   image:
     name: simple_image
-    pull_policy: always
+   # pull_policy: always
   tags:
     - pss-tengu-docker
   script:  
