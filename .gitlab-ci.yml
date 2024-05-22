@@ -15,7 +15,7 @@ vhdl-unit-tests:
   extends: .common
   #image: simple_image
   tags:
-    - pss-tengu-docker
+    - ubuntu-18.04
   script:  
     - echo "vhdl-unit-tests"
     # TODO
