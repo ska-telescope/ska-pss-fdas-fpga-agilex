@@ -14,7 +14,7 @@ vhdl-unit-tests:
   stage: vhdl-unit-tests
   extends: .common
   tags:
-    - ubuntu-22.04
+    - ubuntu-18.04
   script:  
     - echo "vhdl-unit-tests"
     # TODO
@@ -23,7 +23,7 @@ shell:
   stage: build
   extends: .common
   tags:
-    - ubuntu-22.04
+    - ubuntu-18.04
   script:
     - echo "shell"
     # TODO
@@ -34,7 +34,7 @@ synthesis:
   needs:
     - shell
   tags:
-    - ubuntu-22.04
+    - ubuntu-18.04
   script:
     - echo "synthesis"
     # TODO
@@ -45,7 +45,7 @@ fitting:
   needs:
     - synthesis
   tags:
-    - ubuntu-22.04
+    - ubuntu-18.04
   script:
     - echo "fitting"
     # TODO
@@ -56,7 +56,7 @@ assemble:
   needs:
     - fitting
   tags:
-    - ubuntu-22.04
+    - ubuntu-18.04
   script:
     - echo "assemble"
     # TODO
@@ -65,7 +65,7 @@ publish:
   stage: publish
   extends: .common
   tags:
-    - ubuntu-22.04
+    - ubuntu-18.04
   script:
    - echo "publish"
    # TODO
