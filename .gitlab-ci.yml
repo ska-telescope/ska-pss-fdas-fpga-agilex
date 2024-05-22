@@ -13,12 +13,13 @@ stages:
 vhdl-unit-tests:
   stage: vhdl-unit-tests
   extends: .common
-  image: simple_image
+  #image: simple_image
   tags:
     - pss-tengu-docker
   script:  
     - echo "vhdl-unit-tests"
     # TODO
+    - docker images
 
 shell:
   stage: build
