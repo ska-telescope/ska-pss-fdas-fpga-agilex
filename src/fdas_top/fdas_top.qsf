@@ -34,246 +34,246 @@ set_parameter -name res_pages_g 3
 
 # CLD
 set_global_assignment -name SEARCH_PATH cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/cld_ddr_rag_entity.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/cld_ddr_rag_synth.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/cld_fifo_entity.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/cld_fifo_rag_entity.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/cld_fifo_rag_synth.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/cld_fifo_wag_entity.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/cld_fifo_wag_synth.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/dual_port_ram_entity.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/dual_port_ram_synth.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/ram_mux_entity.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/ram_mux_synth.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/cld_fifo_scm.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/cld_entity.vhd -library cld_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CLD/hdl/cld_scm.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/cld_ddr_rag_entity.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/cld_ddr_rag_synth.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/cld_fifo_entity.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/cld_fifo_rag_entity.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/cld_fifo_rag_synth.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/cld_fifo_wag_entity.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/cld_fifo_wag_synth.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/dual_port_ram_entity.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/dual_port_ram_synth.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/ram_mux_entity.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/ram_mux_synth.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/cld_fifo_scm.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/cld_entity.vhd -library cld_lib
+set_global_assignment -name VHDL_FILE ../modules/CLD/hdl/cld_scm.vhd -library cld_lib
 
 # CONV
 set_global_assignment -name SEARCH_PATH conv_lib
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/ifft1024/ifft1024.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/fft1024/fft1024.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/mult_fp_co/mult_fp_co.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/multadd_fp_ci/multadd_fp_ci.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/multsub_fp_ci/multsub_fp_ci.ip
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DSP_PRIM/hdl/cmplxmult_fp.vhd
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DSP_PRIM/hdl/cmplxmult_fp_scm.vhd
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/cmplx_pkg.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/convmci_pkg.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/convmci.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/convmci_synth.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/convreset_sync.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/convreset_sync_synth.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_fft.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_fft_synth.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_fft_str.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_fft_str_synth.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_ifft.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_ifft_synth.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/retime.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/retime_synth.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_coef_str.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_coef_str_synth.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_mult.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_mult_scm.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_result_str.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_result_str_synth.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_pwr.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_pwr_scm.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_ifft_ctrl.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_ifft_ctrl_synth.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/conv_scm.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/fop_str.vhd -library conv_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CONV/hdl/fop_str_synth.vhd -library conv_lib
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/ifft1024/ifft1024.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/fft1024/fft1024.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/mult_fp_co/mult_fp_co.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/multadd_fp_ci/multadd_fp_ci.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/multsub_fp_ci/multsub_fp_ci.ip
+set_global_assignment -name VHDL_FILE ../modules/DSP_PRIM/hdl/cmplxmult_fp.vhd
+set_global_assignment -name VHDL_FILE ../modules/DSP_PRIM/hdl/cmplxmult_fp_scm.vhd
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/cmplx_pkg.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/convmci_pkg.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/convmci.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/convmci_synth.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/convreset_sync.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/convreset_sync_synth.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_fft.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_fft_synth.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_fft_str.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_fft_str_synth.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_ifft.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_ifft_synth.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/retime.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/retime_synth.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_coef_str.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_coef_str_synth.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_mult.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_mult_scm.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_result_str.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_result_str_synth.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_pwr.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_pwr_scm.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_ifft_ctrl.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_ifft_ctrl_synth.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/conv_scm.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/fop_str.vhd -library conv_lib
+set_global_assignment -name VHDL_FILE ../modules/CONV/hdl/fop_str_synth.vhd -library conv_lib
 
 # DDRIF2
 set_global_assignment -name SEARCH_PATH ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_combine.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_combine_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_ddr_mux.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_ddr_mux_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_if_sel.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_if_sel_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_muxin.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_muxin_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rag_in.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rag_in_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rag_out_512.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rag_out_512_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rag_out_3_512.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rag_out_3_512_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rx_mux.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rx_mux_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rx_pcie_if.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rx_pcie_if_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rx_proc_if.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rx_proc_if_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rx_ram_en.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rx_ram_en_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_tx_pcie_if.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_tx_pcie_if_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_tx_proc_if.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_tx_proc_if_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_wag_in.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_wag_in_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_wag_out.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_wag_out_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/dual_port_ram_dual_clock.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/dual_port_ram_dual_clock_synth.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rx_fifo.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_rx_fifo_scm.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_data_fifo_512.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_data_fifo_512_scm.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2.vhd -library ddrif2_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/DDRIF2/hdl/ddrif2_scm.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_combine.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_combine_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_ddr_mux.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_ddr_mux_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_if_sel.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_if_sel_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_muxin.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_muxin_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rag_in.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rag_in_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rag_out_512.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rag_out_512_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rag_out_3_512.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rag_out_3_512_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rx_mux.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rx_mux_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rx_pcie_if.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rx_pcie_if_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rx_proc_if.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rx_proc_if_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rx_ram_en.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rx_ram_en_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_tx_pcie_if.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_tx_pcie_if_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_tx_proc_if.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_tx_proc_if_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_wag_in.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_wag_in_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_wag_out.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_wag_out_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/dual_port_ram_dual_clock.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/dual_port_ram_dual_clock_synth.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rx_fifo.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_rx_fifo_scm.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_data_fifo_512.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_data_fifo_512_scm.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2.vhd -library ddrif2_lib
+set_global_assignment -name VHDL_FILE ../modules/DDRIF2/hdl/ddrif2_scm.vhd -library ddrif2_lib
 
 # CTRL
 set_global_assignment -name SEARCH_PATH ctrl_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CTRL/hdl/ctrl_func.vhd -library ctrl_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CTRL/hdl/ctrl_func_synth.vhd -library ctrl_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CTRL/hdl/ctrlmci.vhd -library ctrl_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CTRL/hdl/ctrlmci_synth.vhd -library ctrl_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CTRL/hdl/ctrl.vhd -library ctrl_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/CTRL/hdl/ctrl_scm.vhd -library ctrl_top_lib
+set_global_assignment -name VHDL_FILE ../modules/CTRL/hdl/ctrl_func.vhd -library ctrl_lib
+set_global_assignment -name VHDL_FILE ../modules/CTRL/hdl/ctrl_func_synth.vhd -library ctrl_lib
+set_global_assignment -name VHDL_FILE ../modules/CTRL/hdl/ctrlmci.vhd -library ctrl_lib
+set_global_assignment -name VHDL_FILE ../modules/CTRL/hdl/ctrlmci_synth.vhd -library ctrl_lib
+set_global_assignment -name VHDL_FILE ../modules/CTRL/hdl/ctrl.vhd -library ctrl_top_lib
+set_global_assignment -name VHDL_FILE ../modules/CTRL/hdl/ctrl_scm.vhd -library ctrl_top_lib
 
 # MCI_TOP
 set_global_assignment -name SEARCH_PATH mci_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MCI_TOP/hdl/mci_top_dataor.vhd -library mci_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MCI_TOP/hdl/mci_top_dataor_synth.vhd -library mci_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MCI_TOP/hdl/mci_top_decodemci.vhd -library mci_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MCI_TOP/hdl/mci_top_decodemci_synth.vhd -library mci_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MCI_TOP/hdl/mci_top_reset.vhd -library mci_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MCI_TOP/hdl/mci_top_reset_synth.vhd -library mci_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MCI_TOP/hdl/mci_topmci.vhd -library mci_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MCI_TOP/hdl/mci_topmci_synth.vhd -library mci_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MCI_TOP/hdl/mci_top.vhd -library mci_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MCI_TOP/hdl/mci_top_scm.vhd -library mci_top_lib
+set_global_assignment -name VHDL_FILE ../modules/MCI_TOP/hdl/mci_top_dataor.vhd -library mci_top_lib
+set_global_assignment -name VHDL_FILE ../modules/MCI_TOP/hdl/mci_top_dataor_synth.vhd -library mci_top_lib
+set_global_assignment -name VHDL_FILE ../modules/MCI_TOP/hdl/mci_top_decodemci.vhd -library mci_top_lib
+set_global_assignment -name VHDL_FILE ../modules/MCI_TOP/hdl/mci_top_decodemci_synth.vhd -library mci_top_lib
+set_global_assignment -name VHDL_FILE ../modules/MCI_TOP/hdl/mci_top_reset.vhd -library mci_top_lib
+set_global_assignment -name VHDL_FILE ../modules/MCI_TOP/hdl/mci_top_reset_synth.vhd -library mci_top_lib
+set_global_assignment -name VHDL_FILE ../modules/MCI_TOP/hdl/mci_topmci.vhd -library mci_top_lib
+set_global_assignment -name VHDL_FILE ../modules/MCI_TOP/hdl/mci_topmci_synth.vhd -library mci_top_lib
+set_global_assignment -name VHDL_FILE ../modules/MCI_TOP/hdl/mci_top.vhd -library mci_top_lib
+set_global_assignment -name VHDL_FILE ../modules/MCI_TOP/hdl/mci_top_scm.vhd -library mci_top_lib
 
 # PCIF
 set_global_assignment -name SEARCH_PATH pcif_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/PCIF/hdl/pcif_mcif.vhd -library pcif_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/PCIF/hdl/pcif_mcif_synth.vhd -library pcif_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/PCIF/hdl/pcif.vhd -library pcif_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/PCIF/hdl/pcif_scm.vhd -library pcif_lib
+set_global_assignment -name VHDL_FILE ../modules/PCIF/hdl/pcif_mcif.vhd -library pcif_lib
+set_global_assignment -name VHDL_FILE ../modules/PCIF/hdl/pcif_mcif_synth.vhd -library pcif_lib
+set_global_assignment -name VHDL_FILE ../modules/PCIF/hdl/pcif.vhd -library pcif_lib
+set_global_assignment -name VHDL_FILE ../modules/PCIF/hdl/pcif_scm.vhd -library pcif_lib
 
 # HSUM
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/fp_add/fp_add.ip
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsum_pkg.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumreset_sync_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumreset_sync.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumtselram_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumtselram.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumtsel_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumtsel.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumtrep.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumtrep_scm.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumtree_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumtree.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumtgen_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumtgen.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumsummer.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumsummer_scm.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumretime_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumretime.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsummax_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsummax.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsummins_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsummins.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsummci_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsummci_pkg.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsummci.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumhresram_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumhresram.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumhres_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumhres.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumhpselram_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumhpselram.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumhpsel_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumhpsel.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumfiltram_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumfiltram.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumfilt_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumfilt.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumdmcount_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumdmcount.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumddrinram_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumddrinram.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumddrin_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumddrin.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumadder_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumadder.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumselseed.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsumselseed_synth.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsum.vhd -library hsum_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/HSUM/hdl/hsum_scm.vhd -library hsum_lib
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/fp_add/fp_add.ip
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsum_pkg.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumreset_sync_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumreset_sync.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumtselram_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumtselram.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumtsel_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumtsel.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumtrep.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumtrep_scm.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumtree_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumtree.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumtgen_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumtgen.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumsummer.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumsummer_scm.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumretime_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumretime.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsummax_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsummax.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsummins_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsummins.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsummci_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsummci_pkg.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsummci.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumhresram_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumhresram.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumhres_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumhres.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumhpselram_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumhpselram.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumhpsel_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumhpsel.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumfiltram_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumfiltram.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumfilt_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumfilt.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumdmcount_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumdmcount.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumddrinram_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumddrinram.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumddrin_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumddrin.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumadder_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumadder.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumselseed.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsumselseed_synth.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsum.vhd -library hsum_lib
+set_global_assignment -name VHDL_FILE ../modules/HSUM/hdl/hsum_scm.vhd -library hsum_lib
 
 # MSIX
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MSIX/hdl/msixpulsedet.vhd -library msix_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MSIX/hdl/msixpulsedet_synth.vhd -library msix_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MSIX/hdl/msixtxint.vhd -library msix_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MSIX/hdl/msixtxint_synth.vhd -library msix_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MSIX/hdl/msixmci.vhd -library msix_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MSIX/hdl/msixmci_synth.vhd -library msix_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MSIX/hdl/msix.vhd -library msix_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/MSIX/hdl/msix_scm.vhd -library msix_lib
+set_global_assignment -name VHDL_FILE ../modules/MSIX/hdl/msixpulsedet.vhd -library msix_lib
+set_global_assignment -name VHDL_FILE ../modules/MSIX/hdl/msixpulsedet_synth.vhd -library msix_lib
+set_global_assignment -name VHDL_FILE ../modules/MSIX/hdl/msixtxint.vhd -library msix_lib
+set_global_assignment -name VHDL_FILE ../modules/MSIX/hdl/msixtxint_synth.vhd -library msix_lib
+set_global_assignment -name VHDL_FILE ../modules/MSIX/hdl/msixmci.vhd -library msix_lib
+set_global_assignment -name VHDL_FILE ../modules/MSIX/hdl/msixmci_synth.vhd -library msix_lib
+set_global_assignment -name VHDL_FILE ../modules/MSIX/hdl/msix.vhd -library msix_lib
+set_global_assignment -name VHDL_FILE ../modules/MSIX/hdl/msix_scm.vhd -library msix_lib
 
 # FDAS_CORE
 set_global_assignment -name SEARCH_PATH fdas_core_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_CORE/hdl/reset_sync.vhd -library fdas_core_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_CORE/hdl/reset_sync_synth.vhd -library fdas_core_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_CORE/hdl/fdas_core.vhd -library fdas_core_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_CORE/hdl/fdas_core_scm.vhd -library fdas_core_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_CORE/hdl/core_reconf.vhd -library fdas_core_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_CORE/hdl/core_reconf_scm.vhd -library fdas_core_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_CORE/hdl/reset_sync.vhd -library fdas_core_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_CORE/hdl/reset_sync_synth.vhd -library fdas_core_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_CORE/hdl/fdas_core.vhd -library fdas_core_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_CORE/hdl/fdas_core_scm.vhd -library fdas_core_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_CORE/hdl/core_reconf.vhd -library fdas_core_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_CORE/hdl/core_reconf_scm.vhd -library fdas_core_lib
 
 # DDR_CONTROLLER
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/ddr_controller/FDAS_DDR_CONTROLLER.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/ddr_controller/FDAS_DDR_CONTROLLER_HPS.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/ddr_controller/FDAS_EMIF_CALIBRATION.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/ddr_controller/FDAS_DDR_CONTROLLER.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/ddr_controller/FDAS_DDR_CONTROLLER_HPS.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/ddr_controller/FDAS_EMIF_CALIBRATION.ip
 
 # PCIE_HIP
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_clock_bridge_0.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_reset_bridge_0.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_rd_transparent_0.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_rd_transparent_1.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_wr_transparent_0.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_wr_transparent_1.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_rd_transparent_2.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_rd_transparent_3.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_wr_transparent_2.ip
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_wr_transparent_3.ip
-set_global_assignment -name QIP_FILE ../Projects/SKA/altera/quartus/22.4/pcie_hip/PCIE_HIP_FDAS/PCIE_HIP_FDAS.qip
-set_global_assignment -name VHDL_FILE ../Projects/SKA/PCIE_HIP/hdl/mm_wr_transparent_synth.vhd
-set_global_assignment -name VHDL_FILE ../Projects/SKA/PCIE_HIP/hdl/mm_wr_transparent.vhd
-set_global_assignment -name VHDL_FILE ../Projects/SKA/PCIE_HIP/hdl/mm_transparent_no_burst_pio_synth.vhd
-set_global_assignment -name VHDL_FILE ../Projects/SKA/PCIE_HIP/hdl/mm_transparent_no_burst_pio.vhd
-set_global_assignment -name VHDL_FILE ../Projects/SKA/PCIE_HIP/hdl/mm_rd_transparent_synth.vhd
-set_global_assignment -name VHDL_FILE ../Projects/SKA/PCIE_HIP/hdl/mm_rd_transparent.vhd
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_intel_pcie_ptile_mcdma_0.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_clock_bridge_0.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_reset_bridge_0.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_transparent_no_burst_pio_0.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_rd_transparent_0.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_rd_transparent_1.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_wr_transparent_0.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_wr_transparent_1.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_rd_transparent_2.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_rd_transparent_3.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_wr_transparent_2.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/pcie_hip/ip/PCIE_HIP_FDAS/PCIE_HIP_FDAS_mm_wr_transparent_3.ip
+set_global_assignment -name QIP_FILE ../altera/quartus/22.4/pcie_hip/PCIE_HIP_FDAS/PCIE_HIP_FDAS.qip
+set_global_assignment -name VHDL_FILE ../modules/PCIE_HIP/hdl/mm_wr_transparent_synth.vhd
+set_global_assignment -name VHDL_FILE ../modules/PCIE_HIP/hdl/mm_wr_transparent.vhd
+set_global_assignment -name VHDL_FILE ../modules/PCIE_HIP/hdl/mm_transparent_no_burst_pio_synth.vhd
+set_global_assignment -name VHDL_FILE ../modules/PCIE_HIP/hdl/mm_transparent_no_burst_pio.vhd
+set_global_assignment -name VHDL_FILE ../modules/PCIE_HIP/hdl/mm_rd_transparent_synth.vhd
+set_global_assignment -name VHDL_FILE ../modules/PCIE_HIP/hdl/mm_rd_transparent.vhd
 
 # CLKGEN
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/CLKGEN/CLKGEN.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/CLKGEN/CLKGEN.ip
 
 # RESET_RELEASE
-set_global_assignment -name IP_FILE ../Projects/SKA/altera/quartus/22.4/reset_release/RESET_RELEASE.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22.4/reset_release/RESET_RELEASE.ip
 
 
 # FDAS_TOP
 set_global_assignment -name SEARCH_PATH fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_pcie.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_pcie_struc.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_ddr_controller_calibration.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_ddr_controller_calibration_struc.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_ddr_controller_calibration_hps.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_ddr_controller_calibration_hps_struc.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_clkgen.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_clkgen_struc.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_reset_release.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_reset_release_struc.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_top.vhd -library fdas_top_lib
-set_global_assignment -name VHDL_FILE ../Projects/SKA/FDAS_TOP/hdl/fdas_top_scm.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_pcie.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_pcie_struc.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_ddr_controller_calibration.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_ddr_controller_calibration_struc.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_ddr_controller_calibration_hps.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_ddr_controller_calibration_hps_struc.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_clkgen.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_clkgen_struc.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_reset_release.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_reset_release_struc.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_top.vhd -library fdas_top_lib
+set_global_assignment -name VHDL_FILE ../modules/FDAS_TOP/hdl/fdas_top_scm.vhd -library fdas_top_lib
 
 
 set_instance_assignment -name PARTITION_COLOUR 4294933759 -to fdas_top -entity FDAS_TOP
