@@ -15,21 +15,22 @@ set_global_assignment -name BOARD "Intel Agilex F-Series FPGA Development Kit DK
 # Generics set for two DDR Interfaces supporting CONV/HSUM 
 # CONV Convoluting 14 +ve and 14 -ve acceleration Filters Simultaneously
 # HSUM Processing 8 Harmonics
-# Two Summer trees
+# One Summer Tree
 set_parameter -name ddr_g 2
 set_parameter -name fft_g 1024
 set_parameter -name fft_abits_g 10
 set_parameter -name ifft_g 14
 set_parameter -name ifft_loop_g 3
 set_parameter -name ifft_loop_bits_g 2
-set_parameter -name summer_g 2
+set_parameter -name summer_g 1
 set_parameter -name harmonic_g 8
 set_parameter -name product_id_g 64933
-set_parameter -name core_version_g 4622
-set_parameter -name core_revision_g 6
+set_parameter -name core_version_g 2574
+set_parameter -name core_revision_g 5
 set_parameter -name top_version_g 290
 set_parameter -name top_revision_g 1
 set_parameter -name res_pages_g 3
+
 
 
 
@@ -298,7 +299,7 @@ set_global_assignment -name FAST_PRESERVE OFF -entity FDAS_TOP
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 4
 
 
-set_global_assignment -name SEED 30
+set_global_assignment -name SEED 4
 
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 # set_global_assignment -name STRATIXII_CONFIGURATION_DEVICE EPCQL512

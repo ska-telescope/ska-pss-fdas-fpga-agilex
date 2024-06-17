@@ -13,7 +13,10 @@
 -- 0.2  RMD  15/09/2017   Added  ANDing of individual MC configurable resets
 --                        with the main system reset
 -- 0.3  RMD  03/11/2017   Address width reduced to 22 bits
--- 0.3  RMD  06/05/2022   Added MSIX Module MCI Support and DDR Controller Reset Done
+-- 0.4  RMD  06/05/2022   Added MSIX Module MCI Support and DDR Controller Reset Done
+-- 0.5  RMD  06/06/2023   Updated for extra reset signals and inverting the reset sense
+--                        This was done in PI18, but was accidentally overwritten in
+--                        SVN. Hence it is now being re-released to SVN
 ---------------------------------------------------------------------------
 --       __
 --    ,/'__`\                             _     _
@@ -22,7 +25,7 @@
 --   '\ \__) )( (_) )\ ' / | ( ) |(  ___/| |_, | |( (___ \__, \
 --    '\___,/  \___/  \_/  (_) (_)`\____)(___,)(_)`\___,)(____/
 --
--- Copyright (c) Covnetics Limited 2022 All Rights Reserved. The information
+-- Copyright (c) Covnetics Limited 2024 All Rights Reserved. The information
 -- contained herein remains the property of Covnetics Limited and may not be
 -- copied or reproduced in any format or medium without the written consent
 -- of Covnetics Limited.
@@ -71,12 +74,18 @@ architecture stim of mci_top_tb is
   signal conv_resetn_s                   : std_logic;
   signal hsum_resetn_s                   : std_logic;
   signal msix_resetn_s                   : std_logic;
+  signal ddrif_0_resetn_s                : std_logic; 
   signal ddrif_1_resetn_s                : std_logic; 
   signal ddrif_2_resetn_s                : std_logic; 
-  signal ddr_1_resetn_s                  : std_logic; 
+  signal ddrif_3_resetn_s                : std_logic;   
+  signal ddr_0_resetn_s                  : std_logic; 
+  signal ddr_1_resetn_s                  : std_logic;   
   signal ddr_2_resetn_s                  : std_logic; 
-  signal ddr_1_reset_done_s              : std_logic; 
-  signal ddr_2_reset_done_s              : std_logic;   
+  signal ddr_3_resetn_s                  : std_logic; 
+  signal ddr_0_reset_done_s              : std_logic; 
+  signal ddr_1_reset_done_s              : std_logic;   
+  signal ddr_2_reset_done_s              : std_logic; 
+  signal ddr_3_reset_done_s              : std_logic;       
   signal ddrif_pcie_resetn_s             : std_logic;   
   
   -- MCI_TOP Module Inventory
@@ -87,10 +96,14 @@ architecture stim of mci_top_tb is
   signal top_revision_s                  : std_logic_vector(15 downto 0);   
   
   -- MCI_TOP DDR Pass/Fail
+  signal ddr_0_cal_fail_s                : std_logic; 
+  signal ddr_0_cal_pass_s                : std_logic;   
   signal ddr_1_cal_fail_s                : std_logic; 
   signal ddr_1_cal_pass_s                : std_logic; 
   signal ddr_2_cal_fail_s                : std_logic;   
   signal ddr_2_cal_pass_s                : std_logic; 
+  signal ddr_3_cal_fail_s                : std_logic;   
+  signal ddr_3_cal_pass_s                : std_logic;     
   
   -- MCI_TOP Data from CTRL, CONV, HSUM
   signal mcdataout_ctrl_s                : std_logic_vector(31 downto 0);
@@ -130,43 +143,55 @@ architecture stim of mci_top_tb is
   -- Component Declarations
   component mci_top
   PORT( 
-      clk_mc            : IN     std_logic;
-      ddr_1_cal_fail    : IN     std_logic;
-      ddr_1_cal_pass    : IN     std_logic;
-      ddr_2_cal_fail    : IN     std_logic;
-      ddr_2_cal_pass    : IN     std_logic;
-      mcaddr_pcif       : IN     std_logic_vector (21 DOWNTO 0);
-      mccs_pcif         : IN     std_logic;
-      mcdatain_pcif     : IN     std_logic_vector (31 DOWNTO 0);
-      mcdataout_conv    : IN     std_logic_vector (31 DOWNTO 0);
-      mcdataout_ctrl    : IN     std_logic_vector (31 DOWNTO 0);
-      mcdataout_hsum    : IN     std_logic_vector (31 DOWNTO 0);
-      mcrwn_pcif        : IN     std_logic;
-      product_id        : IN     std_logic_vector (15 DOWNTO 0);
-      resetn            : IN     std_logic;
-      rst_mc_n          : IN     std_logic;
-      core_revision     : IN     std_logic_vector (15 DOWNTO 0);
-      core_version      : IN     std_logic_vector (15 DOWNTO 0);
-      top_revision      : IN     std_logic_vector (15 DOWNTO 0);
-      top_version       : IN     std_logic_vector (15 DOWNTO 0);
-      cld_resetn        : OUT    std_logic;
-      conv_resetn       : OUT    std_logic;
-      ctrl_resetn       : OUT    std_logic;
-      ddr_1_resetn      : OUT    std_logic;
-      ddrif_1_resetn    : OUT    std_logic;
-      ddrif_2_resetn    : OUT    std_logic;
-      ddrif_pcie_resetn : OUT    std_logic;
-      hsum_resetn       : OUT    std_logic;
-      mcdataout_pcif    : OUT    std_logic_vector (31 DOWNTO 0);
-      mcms_conv         : OUT    std_logic;
-      mcms_ctrl         : OUT    std_logic;
-      mcms_hsum         : OUT    std_logic;
-      mcms_msix         : OUT    std_logic;
-      ddr_1_reset_done  : IN     std_logic;
-      ddr_2_reset_done  : IN     std_logic;
-      mcdataout_msix    : IN     std_logic_vector (31 DOWNTO 0);
-      ddr_2_resetn      : OUT    std_logic;
-      msix_resetn       : OUT    std_logic  
+      clk_mc            : in     std_logic;
+      ddr_1_cal_fail    : in     std_logic;
+      ddr_1_cal_pass    : in     std_logic;
+      ddr_2_cal_fail    : in     std_logic;
+      ddr_2_cal_pass    : in     std_logic;
+      mcaddr_pcif       : in     std_logic_vector (21 downto 0);
+      mccs_pcif         : in     std_logic;
+      mcdatain_pcif     : in     std_logic_vector (31 downto 0);
+      mcdataout_conv    : in     std_logic_vector (31 downto 0);
+      mcdataout_ctrl    : in     std_logic_vector (31 downto 0);
+      mcdataout_hsum    : in     std_logic_vector (31 downto 0);
+      mcrwn_pcif        : in     std_logic;
+      product_id        : in     std_logic_vector (15 downto 0);
+      resetn            : in     std_logic;
+      rst_mc_n          : in     std_logic;
+      core_revision     : in     std_logic_vector (15 downto 0);
+      core_version      : in     std_logic_vector (15 downto 0);
+      top_revision      : in     std_logic_vector (15 downto 0);
+      top_version       : in     std_logic_vector (15 downto 0);
+      cld_resetn        : out    std_logic;
+      conv_resetn       : out    std_logic;
+      ctrl_resetn       : out    std_logic;
+      ddr_1_resetn      : out    std_logic;
+      ddrif_1_resetn    : out    std_logic;
+      ddrif_2_resetn    : out    std_logic;
+      ddrif_pcie_resetn : out    std_logic;
+      hsum_resetn       : out    std_logic;
+      mcdataout_pcif    : out    std_logic_vector (31 downto 0);
+      mcms_conv         : out    std_logic;
+      mcms_ctrl         : out    std_logic;
+      mcms_hsum         : out    std_logic;
+      mcms_msix         : out    std_logic;
+      ddr_1_reset_done  : in     std_logic;
+      ddr_2_reset_done  : in     std_logic;
+      mcdataout_msix    : in     std_logic_vector (31 downto 0);
+      ddr_2_resetn      : out    std_logic;
+      msix_resetn       : out    std_logic;
+      
+      ddr_0_cal_fail    : in     std_logic;
+      ddr_0_cal_pass    : in     std_logic;
+      ddr_3_cal_fail    : in     std_logic;
+      ddr_3_cal_pass    : in     std_logic;
+      ddr_0_reset_done  : in     std_logic;
+      ddr_3_reset_done  : in     std_logic;
+      ddr_3_resetn      : out    std_logic;
+      ddr_0_resetn      : out    std_logic;
+      ddrif_3_resetn    : out    std_logic;
+      ddrif_0_resetn    : out    std_logic  
+      
   ); 
   end component;
 
@@ -210,7 +235,20 @@ architecture stim of mci_top_tb is
         ddr_2_reset_done   =>     ddr_2_reset_done_s,
         mcdataout_msix     =>     mcdataout_msix_s,
         ddr_2_resetn       =>     ddr_2_resetn_s,
-        msix_resetn        =>     msix_resetn_s     
+        msix_resetn        =>     msix_resetn_s,     
+        ddr_0_cal_fail     =>     ddr_0_cal_fail_s,  
+        ddr_0_cal_pass     =>     ddr_0_cal_pass_s,  
+        ddr_3_cal_fail     =>     ddr_3_cal_fail_s,  
+        ddr_3_cal_pass     =>     ddr_3_cal_pass_s,  
+        ddr_0_reset_done   =>     ddr_0_reset_done_s,
+        ddr_3_reset_done   =>     ddr_3_reset_done_s,
+        ddr_3_resetn       =>     ddr_3_resetn_s,    
+        ddr_0_resetn       =>     ddr_0_resetn_s,    
+        ddrif_3_resetn     =>     ddrif_3_resetn_s,  
+        ddrif_0_resetn     =>     ddrif_0_resetn_s           
+        
+        
+        
      );
 
  
@@ -463,12 +501,18 @@ begin
   core_revision_s      <= "0111011001010100"; -- 0x7654
   top_version_s        <= "0011001000010000"; -- 0x3210
   top_revision_s       <= "1010101111001101"; -- 0xABCB 
+  ddr_0_cal_fail_s     <= '0';
+  ddr_0_cal_pass_s     <= '0';
   ddr_1_cal_fail_s     <= '0';
   ddr_1_cal_pass_s     <= '0';
   ddr_2_cal_fail_s     <= '0';
   ddr_2_cal_pass_s     <= '0';
+  ddr_3_cal_fail_s     <= '0';
+  ddr_3_cal_pass_s     <= '0';  
+  ddr_0_reset_done_s   <= '0';
   ddr_1_reset_done_s   <= '0';
   ddr_2_reset_done_s   <= '0';   
+  ddr_3_reset_done_s   <= '0';   
   resetn_s             <= '1';
 
   
@@ -547,9 +591,10 @@ if test_1_v = '1' then
     testbench_passed_v := false;
 	  puts("CTRL_RESET readback is 0");
 	end if;	
-	if ctrl_resetn_s = '0' or cld_resetn_s = '1' or conv_resetn_s = '1' or hsum_resetn_s = '1' or msix_resetn_s = '1' or
-	   ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '1' or ddrif_pcie_resetn_s = '1' or ddr_1_resetn_s = '1' 
-	   or ddr_2_resetn_s = '1' then
+	if ctrl_resetn_s = '1' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
       testbench_passed_v := false;
 	  puts("CTRL_RESET is 0");	
 	end if;
@@ -560,9 +605,10 @@ if test_1_v = '1' then
     testbench_passed_v := false;
 	  puts("CLD_RESET readback is 0");
 	end if;	
-	if ctrl_resetn_s = '1' or cld_resetn_s = '0' or conv_resetn_s = '1' or hsum_resetn_s = '1' or  msix_resetn_s = '1' or
-	   ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '1' or ddrif_pcie_resetn_s = '1' or ddr_1_resetn_s = '1' 
-	   or ddr_2_resetn_s = '1' then
+	if ctrl_resetn_s = '0' or cld_resetn_s = '1' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
     testbench_passed_v := false;
 	  puts("CLD_RESET is 0");	
 	end if;	
@@ -574,9 +620,10 @@ if test_1_v = '1' then
     testbench_passed_v := false;
 	  puts("CONV_RESET readback is 0");
 	end if;	
-	if ctrl_resetn_s = '1' or cld_resetn_s = '1' or conv_resetn_s = '0' or hsum_resetn_s = '1' or  msix_resetn_s = '1' or
-	   ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '1' or ddrif_pcie_resetn_s = '1' or ddr_1_resetn_s = '1' 
-	   or ddr_2_resetn_s = '1' then
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '1' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
     testbench_passed_v := false;
 	  puts("CONV_RESET is 0");	
 	end if;	
@@ -588,93 +635,160 @@ if test_1_v = '1' then
     testbench_passed_v := false;
 	  puts("HSUM_RESET readback is 0");
 	end if;	
-	if ctrl_resetn_s = '1' or cld_resetn_s = '1' or conv_resetn_s = '1' or hsum_resetn_s = '0' or  msix_resetn_s = '1' or
-	   ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '1' or ddrif_pcie_resetn_s = '1' or ddr_1_resetn_s = '1' 
-	   or ddr_2_resetn_s = '1' then
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '1' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
     testbench_passed_v := false;
 	  puts("HSUM_RESET is 0");	
 	end if;	
 
 	
-  mcwrite("0000000000000000010000", 16); -- DDRIF_1 Reset
+  mcwrite("0000000000000000010000", 16); -- DDRIF_0 Reset
   mcread("0000000000000000010000", readdata_v);
   if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(16,32)) then
     testbench_passed_v := false;
-	  puts("DDRIF_1_RESET readback is 0");
+	  puts("DDRIF_0_RESET readback is 0");
 	end if;	
-	if ctrl_resetn_s = '1' or cld_resetn_s = '1' or conv_resetn_s = '1' or hsum_resetn_s = '1' or  msix_resetn_s = '1' or
-	   ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '1' or ddrif_pcie_resetn_s = '1' or ddr_1_resetn_s = '1' 
-	   or ddr_2_resetn_s = '1' then
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '1' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
     testbench_passed_v := false;
 	  puts("DDRIF_1_RESET is 0");	
 	end if;	
 
 	
- mcwrite("0000000000000000010000", 32); -- DDRIF_2 Reset
+ mcwrite("0000000000000000010000", 32); -- DDRIF_1 Reset
   mcread("0000000000000000010000", readdata_v);
   if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(32,32)) then
     testbench_passed_v := false;
-	  puts("DDRIF_2_RESET readback is 0");
+	  puts("DDRIF_1_RESET readback is 0");
 	end if;	
-	if ctrl_resetn_s = '1' or cld_resetn_s = '1' or conv_resetn_s = '1' or hsum_resetn_s = '1' or msix_resetn_s = '1' or
-	   ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '0' or ddrif_pcie_resetn_s = '1' or ddr_1_resetn_s = '1' 
-	   or ddr_2_resetn_s = '1' then
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
     testbench_passed_v := false;
 	  puts("DDRIF_2_RESET is 0");	
 	end if;	
 
 
-  mcwrite("0000000000000000010000", 64); -- DDRIF_PCIE Reset
+  mcwrite("0000000000000000010000", 64); -- DDRIF_2 Reset
   mcread("0000000000000000010000", readdata_v);
   if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(64,32)) then
     testbench_passed_v := false;
-	  puts("DDRIF_PCIE_RESETN readback is 0");
+	  puts("DDRIF_2_RESET readback is 0");
 	end if;	
-	if ctrl_resetn_s = '1' or cld_resetn_s = '1' or conv_resetn_s = '1' or hsum_resetn_s = '1' or msix_resetn_s = '1' or
-	   ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '1' or ddrif_pcie_resetn_s = '0' or ddr_1_resetn_s = '1' 
-	   or ddr_2_resetn_s = '1' then
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '1' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
     testbench_passed_v := false;
 	  puts("DDRIF_PCIE_RESETN is 0");	
 	end if;	
 
 
-  mcwrite("0000000000000000010000", 128); -- DDR_1 Reset
+  mcwrite("0000000000000000010000", 128); -- DDRIF_3 Reset
   mcread("0000000000000000010000", readdata_v);
   if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(128,32)) then
     testbench_passed_v := false;
-	  puts("DDR_1_RESET readback is 0");
+	  puts("DDRIF_3_RESET readback is 0");
 	end if;	
-	if ctrl_resetn_s = '1' or cld_resetn_s = '1' or conv_resetn_s = '1' or hsum_resetn_s = '1' or msix_resetn_s = '1' or
-	   ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '1' or ddrif_pcie_resetn_s = '1' or ddr_1_resetn_s = '0' 
-	   or ddr_2_resetn_s = '1' then
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '1' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
     testbench_passed_v := false;
 	  puts("DDR_1_RESET is 0");	
 	end if;
 	
 	
-  mcwrite("0000000000000000010000", 256); -- DDR_2 Reset
+  mcwrite("0000000000000000010000", 256); -- DDRIF_PCIE Reset
   mcread("0000000000000000010000", readdata_v);
   if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(256,32)) then
     testbench_passed_v := false;
-	  puts("DDR_2_RESET readback is 0");
+	  puts("DDRIF_PCIE_RESET readback is 0");
 	end if;	
-	if ctrl_resetn_s = '1' or cld_resetn_s = '1' or conv_resetn_s = '1' or hsum_resetn_s = '1' or msix_resetn_s = '1' or
-	   ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '1' or ddrif_pcie_resetn_s = '1' or ddr_1_resetn_s = '1' 
-	   or ddr_2_resetn_s = '0' then
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '1' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
       testbench_passed_v := false;
 	  puts("DDR_2_RESET is 0");	
 	end if;	
 	
-	
-  mcwrite("0000000000000000010000", 512); --MSIX Reset
+
+  mcwrite("0000000000000000010000", 512); -- DDR_0_RESET Reset
   mcread("0000000000000000010000", readdata_v);
   if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(512,32)) then
     testbench_passed_v := false;
+	  puts("DDR_0_RESET readback is 0");
+	end if;	
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '1' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
+      testbench_passed_v := false;
+	  puts("DDR_2_RESET is 0");	
+	end if;		
+	
+
+  mcwrite("0000000000000000010000", 1024); -- DDR_1_RESET Reset
+  mcread("0000000000000000010000", readdata_v);
+  if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(1024,32)) then
+    testbench_passed_v := false;
+	  puts("DDR_1_RESET readback is 0");
+	end if;	
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '1' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
+      testbench_passed_v := false;
+	  puts("DDR_2_RESET is 0");	
+	end if;			
+	
+	
+  mcwrite("0000000000000000010000", 2048); -- DDR_2_RESET Reset
+  mcread("0000000000000000010000", readdata_v);
+  if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(2048,32)) then
+    testbench_passed_v := false;
+	  puts("DDR_2_RESET readback is 0");
+	end if;	
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '1' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
+      testbench_passed_v := false;
+	  puts("DDR_2_RESET is 0");	
+	end if;				
+	
+	
+  mcwrite("0000000000000000010000", 4096); -- DDR_3_RESET Reset
+  mcread("0000000000000000010000", readdata_v);
+  if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(4096,32)) then
+    testbench_passed_v := false;
+	  puts("DDR_3_RESET readback is 0");
+	end if;	
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '1' or msix_resetn_s = '0' then
+      testbench_passed_v := false;
+	  puts("DDR_2_RESET is 0");	
+	end if;				
+	
+		
+  mcwrite("0000000000000000010000", 8192); --MSIX Reset
+  mcread("0000000000000000010000", readdata_v);
+  if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(8192,32)) then
+    testbench_passed_v := false;
 	  puts("MSIX readback is 0");
 	end if;	
-	if ctrl_resetn_s = '1' or cld_resetn_s = '1' or conv_resetn_s = '1' or hsum_resetn_s = '1' or msix_resetn_s = '0' or
-	   ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '1' or ddrif_pcie_resetn_s = '1' or ddr_1_resetn_s = '1' 
-	   or ddr_2_resetn_s = '1' then
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0'or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '1' then
       testbench_passed_v := false;
 	  puts("MSIX is 0");	
 	end if;		
@@ -682,10 +796,26 @@ if test_1_v = '1' then
 	
 	
 	mcwrite("0000000000000000010000", 0); -- Return resets to 0
+
+	ddr_0_cal_fail_s <= '1';
+	mcread("0000000000000000010001", readdata_v); -- DDR Controller Pass/Fail
+    if readdata_v(11 downto 0) /= "000000000001" then
+      testbench_passed_v := false;
+	  puts("DDR Controller 0 Fail is not correct");
+	end if;		
+
+	ddr_0_cal_fail_s <= '0';
+	ddr_0_cal_pass_s <= '1';
+	mcread("0000000000000000010001", readdata_v); -- DDR Controller Pass/Fail
+    if readdata_v(11 downto 0) /= "000000000010" then
+      testbench_passed_v := false;
+	  puts("DDR Controller 0 Pass is not correct");
+	end if;		
 	
+	ddr_0_cal_pass_s <= '0';		
 	ddr_1_cal_fail_s <= '1';
 	mcread("0000000000000000010001", readdata_v); -- DDR Controller Pass/Fail
-    if readdata_v(5 downto 0) /= "000001" then
+    if readdata_v(11 downto 0) /= "000000000100" then
       testbench_passed_v := false;
 	  puts("DDR Controller 1 Fail is not correct");
 	end if;	
@@ -693,47 +823,76 @@ if test_1_v = '1' then
 	ddr_1_cal_fail_s <= '0';
 	ddr_1_cal_pass_s <= '1';
 	mcread("0000000000000000010001", readdata_v); -- DDR Controller Pass/Fail
-    if readdata_v(5 downto 0) /= "000010" then
+    if readdata_v(11 downto 0) /= "000000001000" then
       testbench_passed_v := false;
 	  puts("DDR Controller 1 Pass is not correct");
 	end if;	
 
-
 	ddr_1_cal_pass_s <= '0';
 	ddr_2_cal_fail_s <= '1';
 	mcread("0000000000000000010001", readdata_v); -- DDR Controller Pass/Fail
-    if readdata_v(5 downto 0) /= "000100" then
+    if readdata_v(11 downto 0) /= "000000010000" then
       testbench_passed_v := false;
 	  puts("DDR Controller 2 Fail is not correct");
 	end if;	
-
 
 	ddr_2_cal_fail_s <= '0';
 	ddr_2_cal_pass_s <= '1';
 	mcread("0000000000000000010001", readdata_v); -- DDR Controller Pass/Fail
-    if readdata_v(5 downto 0) /= "001000" then
+    if readdata_v(11 downto 0) /= "000000100000" then
       testbench_passed_v := false;
-	  puts("DDR Controller 2 Fail is not correct");
+	  puts("DDR Controller 2 Pass is not correct");
+	end if;	
+	
+	ddr_2_cal_pass_s <= '0';
+	ddr_3_cal_fail_s <= '1';
+	mcread("0000000000000000010001", readdata_v); -- DDR Controller Pass/Fail
+    if readdata_v(11 downto 0) /= "000001000000" then
+      testbench_passed_v := false;
+	  puts("DDR Controller 3 Fail is not correct");
 	end if;	
 
-	ddr_2_cal_pass_s <= '0';
-	ddr_1_reset_done_s <= '1';
-	mcread("0000000000000000010001", readdata_v); -- DDR Controller Reset Done
-    if readdata_v(5 downto 0) /= "010000" then
+	ddr_3_cal_fail_s <= '0';
+	ddr_3_cal_pass_s <= '1';
+	mcread("0000000000000000010001", readdata_v); -- DDR Controller Pass/Fail
+    if readdata_v(11 downto 0) /= "000010000000" then
       testbench_passed_v := false;
-	  puts("DDR Controller 1 Reset Done is not correct");
+	  puts("DDR Controller 3 Pass is not correct");
+	end if;	
+	
+	ddr_3_cal_pass_s <= '0';
+	ddr_0_reset_done_s <= '1';
+	mcread("0000000000000000010001", readdata_v); -- DDR Controller Reset Done
+    if readdata_v(11 downto 0) /= "000100000000" then
+      testbench_passed_v := false;
+	  puts("DDR Controller 0 Reset Done is not correct");
 	end if;		
 
+	ddr_0_reset_done_s <= '0';
+	ddr_1_reset_done_s <= '1';
+	mcread("0000000000000000010001", readdata_v); -- DDR Controller Reset Done
+    if readdata_v(11 downto 0) /= "001000000000" then
+      testbench_passed_v := false;
+	  puts("DDR Controller 1 Reset Done is not correct");
+	end if;			
+	
 	ddr_1_reset_done_s <= '0';
 	ddr_2_reset_done_s <= '1';
 	mcread("0000000000000000010001", readdata_v); -- DDR Controller Reset Done
-    if readdata_v(5 downto 0) /= "100000" then
+    if readdata_v(11 downto 0) /= "010000000000" then
       testbench_passed_v := false;
 	  puts("DDR Controller 2 Reset Done is not correct");
+	end if;		
+
+	ddr_2_reset_done_s <= '0';
+	ddr_3_reset_done_s <= '1';
+	mcread("0000000000000000010001", readdata_v); -- DDR Controller Reset Done
+    if readdata_v(11 downto 0) /= "100000000000" then
+      testbench_passed_v := false;
+	  puts("DDR Controller 3 Reset Done is not correct");
 	end if;			
 	
-	
-	ddr_2_reset_done_s <= '0';
+	ddr_3_reset_done_s <= '0';
   
   run(100);
  
@@ -847,16 +1006,17 @@ end if;
 if test_3_v = '1' then  
   puts("Test 3: TC.MCI_TOP.DM.03: Check Main System Reset");
   
-  mcwrite("0000000000000000010000", 1023); -- Disable all MC Configured resets
+  mcwrite("0000000000000000010000", 0); -- Disable all MC Configured resets
   mcread("0000000000000000010000", readdata_v);
-  if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(1023,32)) then
+  if readdata_v(31 downto 0) /= STD_LOGIC_VECTOR(TO_UNSIGNED(0,32)) then
     testbench_passed_v := false;
-	  puts("Module RESET readback is not all 1's");
+	  puts("Module RESET readback is not all 0's");
 	end if;	
 	
-	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or msix_resetn_s = '0' or
-	   ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_pcie_resetn_s = '0' or ddr_1_resetn_s = '0' 
-	   or ddr_2_resetn_s = '0' then
+	if ctrl_resetn_s = '0' or cld_resetn_s = '0' or conv_resetn_s = '0' or hsum_resetn_s = '0' or 
+	   ddrif_0_resetn_s = '0' or ddrif_1_resetn_s = '0' or ddrif_2_resetn_s = '0' or ddrif_3_resetn_s = '0' or
+	   ddrif_pcie_resetn_s = '0' or ddr_0_resetn_s = '0' or ddr_1_resetn_s = '0' or ddr_2_resetn_s = '0' or
+	   ddr_3_resetn_s = '0' or msix_resetn_s = '0' then
       testbench_passed_v := false;
 	  puts("Module resets are not logic '1'");	
 	end if;
@@ -867,9 +1027,10 @@ if test_3_v = '1' then
 	
 	run(1);
 	
-	if ctrl_resetn_s = '1' or cld_resetn_s = '1' or conv_resetn_s = '1' or hsum_resetn_s = '1' or msix_resetn_s = '1' or
-	   ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '1' or ddrif_pcie_resetn_s = '1' or ddr_1_resetn_s = '1' 
-	   or ddr_2_resetn_s = '1' then
+	if ctrl_resetn_s = '1' or cld_resetn_s = '1' or conv_resetn_s = '1' or hsum_resetn_s = '1' or 
+	   ddrif_0_resetn_s = '1' or ddrif_1_resetn_s = '1' or ddrif_2_resetn_s = '1' or ddrif_3_resetn_s = '1' or
+	   ddrif_pcie_resetn_s = '1' or ddr_0_resetn_s = '1' or ddr_1_resetn_s = '1' or ddr_2_resetn_s = '1' or
+	   ddr_3_resetn_s = '1' or msix_resetn_s = '1' then
       testbench_passed_v := false;
 	  puts("Module resets are not logic '0'");	
 	end if;	

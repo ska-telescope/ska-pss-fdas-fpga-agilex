@@ -1,7 +1,0 @@
-Device family: Agilex
-
-Speed grade: 2
-
-Target frequency: 350
-
-latency 79 LUT 4458 frequency 350 RAMBits 130048 RAMBlocks 17 DSP 36
