@@ -1,6 +1,0 @@
-	component RESET_RELEASE is
-		port (
-			ninit_done : out std_logic   -- ninit_done
-		);
-	end component RESET_RELEASE;
-
