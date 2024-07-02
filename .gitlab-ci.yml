@@ -20,7 +20,7 @@ vhdl-unit-tests:
     # TODO
 
 #Runs a full workflow in quartus and generates a .sof image file
-build-fdas-fpga-image
+build-fdas-fpga-image:
   stage: build
     extends: .common
   image:
