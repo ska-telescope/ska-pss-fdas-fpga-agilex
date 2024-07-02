@@ -22,7 +22,7 @@ vhdl-unit-tests:
 #Runs a full workflow in quartus and generates a .sof image file
 build-fdas-fpga-image:
   stage: build
-    extends: .common
+  extends: .common
   image:
     name: quartus_docker_image
   tags:
