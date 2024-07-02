@@ -19,47 +19,16 @@ vhdl-unit-tests:
     - echo "vhdl-unit-tests"
     # TODO
 
-shell:
+#Runs a full workflow in quartus and generates a .sof image file
+build-fdas-fpga-image
   stage: build
-  extends: .common
+    extends: .common
+  image:
+    name: quartus_docker_image
   tags:
-    - ubuntu-22.04
+    - pss-tengu-docker
   script:
-    - echo "shell"
-    # TODO
-
-synthesis:
-  stage: build
-  extends: .common
-  needs:
-    - shell
-  tags:
-    - ubuntu-22.04
-  script:
-    - echo "synthesis"
-    # TODO
-
-fitting:
-  stage: build
-  extends: .common
-  needs:
-    - synthesis
-  tags:
-    - ubuntu-22.04
-  script:
-    - echo "fitting"
-    # TODO
-
-assemble:
-  stage: build
-  extends: .common
-  needs:
-    - fitting
-  tags:
-    - ubuntu-22.04
-  script:
-    - echo "assemble"
-    # TODO
+    - cd src/fdas_top && quartus_sh --flow compile fdas_top
 
 publish:
   stage: publish

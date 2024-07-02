@@ -255,7 +255,7 @@ set_global_assignment -name VHDL_FILE ../modules/PCIE_HIP/pcie_hip_lib/hdl/mm_rd
 set_global_assignment -name VHDL_FILE ../modules/PCIE_HIP/pcie_hip_lib/hdl/mm_rd_transparent.vhd
 
 # CLKGEN
-set_global_assignment -name IP_FILE ../altera/quartus/22_4/CLKGEN/CLKGEN.ip
+set_global_assignment -name IP_FILE ../altera/quartus/22_4/clkgen/CLKGEN.ip
 
 # RESET_RELEASE
 set_global_assignment -name IP_FILE ../altera/quartus/22_4/reset_release/RESET_RELEASE.ip
