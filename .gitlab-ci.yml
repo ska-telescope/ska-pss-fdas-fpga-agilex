@@ -32,7 +32,7 @@ build-fdas-fpga-image:
     - echo $PATH
     - echo $LM_LICENSE_FILE
     - cd src/fdas_top 
-    #- sudo quartus_sh --flow compile fdas_top
+    - quartus_sh --flow compile fdas_top
 
 publish:
   stage: publish
