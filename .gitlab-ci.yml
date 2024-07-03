@@ -28,7 +28,7 @@ build-fdas-fpga-image:
   tags:
     - pss-tengu-docker
   script:
-    - cd src/fdas_top && quartus_sh --flow compile fdas_top
+    - cd sudo src/fdas_top && quartus_sh --flow compile fdas_top
 
 publish:
   stage: publish
