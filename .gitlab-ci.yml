@@ -34,7 +34,7 @@ build-fdas-fpga-image:
     - cd /quartus/22.4/quartus/bin && ls -l
     - echo $PATH
     - echo $LM_LICENSE_FILE
-    - cd $CI_BUILDS_DIR/src/fdas_top 
+    - cd $CI_PROJECT_DIR/src/fdas_top 
     - quartus_sh --flow compile fdas_top
 
 publish:
