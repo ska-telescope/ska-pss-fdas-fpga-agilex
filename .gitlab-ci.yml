@@ -29,6 +29,7 @@ build-fdas-fpga-image:
     - pss-tengu-docker
   script:
     - whoami
+    - ls -l
     - echo $PATH
     - echo $LM_LICENSE_FILE
     - cd src/fdas_top 
