@@ -30,11 +30,12 @@ build-fdas-fpga-image:
   script:
     - whoami
     - ls -l
+    - cd /quartus/22.4/quartus & ls -l
     - cd /quartus/22.4/quartus/bin && ls -l
     - echo $PATH
     - echo $LM_LICENSE_FILE
-    - cd src/fdas_top 
-    - quartus_sh --flow compile fdas_top
+    #- cd src/fdas_top 
+    #- quartus_sh --flow compile fdas_top
 
 publish:
   stage: publish
