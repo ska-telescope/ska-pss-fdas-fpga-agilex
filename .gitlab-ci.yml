@@ -28,8 +28,11 @@ build-fdas-fpga-image:
   tags:
     - pss-tengu-docker
   script:
+    - whoami
+    - echo $PATH
+    - echo $LM_LICENSE_FILE
     - cd src/fdas_top 
-    - sudo quartus_sh --flow compile fdas_top
+    #- sudo quartus_sh --flow compile fdas_top
 
 publish:
   stage: publish
