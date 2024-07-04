@@ -37,6 +37,7 @@ build-fdas-fpga-image:
     # - cd /quartus/22.4/quartus/bin && ls -l
     - echo $PATH
     - echo $LM_LICENSE_FILE
+    - echo $INTEL_LICENSE_FILE
     # - cd $CI_PROJECT_DIR/src/fdas_top 
     # # - quartus_syn --read_settings_files=on --write_settings_files=off fdas_top -c fdas_top
     # #- quartus_ipgenerate fdas_top -c fdas_top --run_default_mode_op
