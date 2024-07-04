@@ -2,7 +2,7 @@ variables:
   GIT_STRATEGY: clone
 
 stages:
-  - vhdl-unit-tests
+#  - vhdl-unit-tests
   - build
   - publish
 
@@ -10,13 +10,13 @@ stages:
   rules:
     - if: $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "api" || $CI_PIPELINE_SOURCE == 'merge_request_event'
 
-vhdl-unit-tests:
-  stage: vhdl-unit-tests
-  extends: .common
-  tags:
-    - ubuntu-22.04
-  script:  
-    - echo "vhdl-unit-tests"
+# vhdl-unit-tests:
+#   stage: vhdl-unit-tests
+#   extends: .common
+#   tags:
+#     - ubuntu-22.04
+#   script:  
+#     - echo "vhdl-unit-tests"
     # TODO
 
 #Runs a full workflow in quartus and generates a .sof image file
@@ -29,7 +29,7 @@ build-fdas-fpga-image:
    # - pss-tengu-docker
      - ubuntu-18.04
   script:
-    # - whoami
+    - whoami
     - ls -l
     # - cd /quartus/22.4/quartus/../qsys/bin/ && ls -l
     # - cd /quartus/22.4/quartus && ls -l
