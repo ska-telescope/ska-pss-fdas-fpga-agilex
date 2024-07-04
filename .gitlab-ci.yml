@@ -23,22 +23,23 @@ vhdl-unit-tests:
 build-fdas-fpga-image:
   stage: build
   extends: .common
-  image:
-    name: quartus_docker_image2
+  # image:
+  #   name: quartus_docker_image2
   tags:
-    - pss-tengu-docker
-    # - ubuntu-18.04
+   # - pss-tengu-docker
+     - ubuntu-18.04
   script:
     # - whoami
     # - ls -l
     # - cd /quartus/22.4/quartus/../qsys/bin/ && ls -l
     # - cd /quartus/22.4/quartus && ls -l
     # - cd /quartus/22.4/quartus/bin && ls -l
-    - echo $PATH
-    - echo $LM_LICENSE_FILE
-    - cd $CI_PROJECT_DIR/src/fdas_top 
-    # - quartus_syn --read_settings_files=on --write_settings_files=off fdas_top -c fdas_top
-    #- quartus_ipgenerate fdas_top -c fdas_top --run_default_mode_op
+    # - echo $PATH
+    # - echo $LM_LICENSE_FILE
+    # - cd $CI_PROJECT_DIR/src/fdas_top 
+    # # - quartus_syn --read_settings_files=on --write_settings_files=off fdas_top -c fdas_top
+    # #- quartus_ipgenerate fdas_top -c fdas_top --run_default_mode_op
+    - cd src/fdas_top 
     - quartus_sh --flow compile fdas_top
 
 publish:
