@@ -23,14 +23,15 @@ stages:
 build-fdas-fpga-image:
   stage: build
   extends: .common
-  image:
-    name: quartus_docker_image2
+  #image:
+  #  name: quartus_docker_image2
   tags:
-    - pss-tengu-docker
-   #  - ubuntu-18.04
+   # - pss-tengu-docker
+    - ubuntu-18.04
   script:
     - whoami
     - ls -l
+    - env
     # - cd /quartus/22.4/quartus/../qsys/bin/ && ls -l
     # - cd /quartus/22.4/quartus && ls -l
     # - cd /quartus/22.4/quartus/bin && ls -l
