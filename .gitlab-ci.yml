@@ -37,6 +37,7 @@ build-fdas-fpga-image:
     # - cd /quartus/22.4/quartus/bin && ls -l
     - echo $PATH
     - export LM_LICENSE_FILE=/mnt/synvol1/gitlab-runner/quartus/22.4/trialLicense/LR-173882_License.dat
+    - cd /mnt/synvol1/gitlab-runner/quartus/22.4/trialLicense/ && ls -l
     - echo $LM_LICENSE_FILE
     - echo $INTEL_LICENSE_FILE
     # - cd $CI_PROJECT_DIR/src/fdas_top 
