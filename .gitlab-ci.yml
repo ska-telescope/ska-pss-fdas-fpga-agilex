@@ -45,7 +45,7 @@ build-fdas-fpga-image:
     # #- quartus_ipgenerate fdas_top -c fdas_top --run_default_mode_op
     #- cd src/fdas_top 
     #- cd /mnt/synvol1/gitlab-runner/quartus/22.4/quartus3/quartus/bin && ls -l
-     - sudo .//mnt/synvol1/gitlab-runner/quartus/22.4/quartus3/quartus/bin/quartus_sh --flow compile fdas-top 
+    - sudo .//mnt/synvol1/gitlab-runner/quartus/22.4/quartus3/quartus/bin/quartus_sh --flow compile fdas-top 
     #- sudo ./quartus_sh --flow compile fdas_top
 
 publish:
