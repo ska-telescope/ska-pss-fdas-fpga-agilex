@@ -30,6 +30,7 @@ build-fdas-fpga-image:
     - ubuntu-18.04
   script:
     - whoami
+    - ip addr
     - ls -l
     - env
     # - cd /quartus/22.4/quartus/../qsys/bin/ && ls -l
