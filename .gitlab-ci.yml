@@ -47,7 +47,7 @@ build-fdas-fpga-image:
     #- cd src/fdas_top 
    # - cd /mnt/synvol1/gitlab-runner/quartus/22.4/quartus3/quartus/bin && ls -l
     #- ls -l
-     - ./mnt/synvol1/gitlab-runner/quartus/22.4/quartus3/quartus/bin/quartus_sh --flow compile fdas-top.qsf 
+    - ./mnt/synvol1/gitlab-runner/quartus/22.4/quartus3/quartus/bin/quartus_sh --flow compile fdas-top.qsf 
    # - quartus_sh --flow compile fdas_top
 
 publish:
