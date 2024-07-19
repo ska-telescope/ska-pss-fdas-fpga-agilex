@@ -17,7 +17,7 @@ vhdl-unit-tests:
     - ubuntu-22.04
   script:  
     - echo "vhdl-unit-tests"
-    TODO
+    # TODO
 
 #Runs a full workflow in quartus and generates a .sof image file
 build-fdas-fpga-image:
