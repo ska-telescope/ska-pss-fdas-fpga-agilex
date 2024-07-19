@@ -46,13 +46,13 @@ build-fdas-fpga-image:
    # - cd $CI_PROJECT_DIR/src/fdas_top 
     # # - quartus_syn --read_settings_files=on --write_settings_files=off fdas_top -c fdas_top
     # #- quartus_ipgenerate fdas_top -c fdas_top --run_default_mode_op
-    #- cd src/fdas_top 
+    - cd src/fdas_top 
    # - cd /mnt/synvol1/gitlab-runner/quartus/22.4/quartus3/quartus/bin && ls -l
     #- ls -l
     #- ./mnt/synvol1/gitlab-runner/quartus/22.4/quartus3/quartus/bin/quartus_sh --flow compile fdas-top.qsf
     #- export PATH=/mnt/synvol1/gitlab-runner/quartus/22.4/quartus3/quartus/bin:$PATH
     #- echo $PATH
-   # - quartus_sh --flow compile fdas_top
+    - quartus_sh --flow compile fdas_top
 
 publish:
   stage: publish
