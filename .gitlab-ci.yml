@@ -24,7 +24,7 @@ build-fdas-fpga-image:
   stage: build
   extends: .common
   image:
-    name: quartus_docker_image2
+    name: quartus_docker_image
   tags:
     - pss-tengu-docker
   script:
