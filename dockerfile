@@ -8,7 +8,7 @@ WORKDIR /quartus/22.4
 
 #COPY /src src
 
-COPY //mnt/synvol1/test
+COPY //mnt/synvol1/test .
 COPY .//mnt/synvol1/gitlab-runner/quartus/22.4/components/QuartusProSetup-22.4.0.94-linux.run .
 COPY .//mnt/synvol1/gitlab-runner/quartus/22.4/components/quartus_part2-22.4.0.94-linux.qdz .
 COPY .//mnt/synvol1/gitlab-runner/quartus/22.4/components/agilex-22.4.0.94.qdz .
