@@ -27,7 +27,7 @@ create-docker-image:
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/QuartusProSetup-22.4.0.94-linux.run .
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/quartus_part2-22.4.0.94-linux.qdz .
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/agilex-22.4.0.94.qdz .
-    - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/trialLicense .
+    - sudo cp -r /mnt/synvol1/gitlab-runner/quartus/22.4/trialLicense .
    # - sudo chown gitlab-runner QuartusProSetup-22.4.0.94-linux.run 
    # - sudo chown gitlab-runner quartus_part2-22.4.0.94-linux.qdz
    # - sudo chown gitlab-runner agilex-22.4.0.94.qdz
