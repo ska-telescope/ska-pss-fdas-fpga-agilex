@@ -2,6 +2,7 @@ variables:
   GIT_STRATEGY: clone
 
 stages:
+  - create-docker-image
   - vhdl-unit-tests
   - build
   - publish
@@ -10,6 +11,15 @@ stages:
   rules:
     - if: $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "api" || $CI_PIPELINE_SOURCE == 'merge_request_event'
 
+create-docker-image:
+  stage: create-docker-image
+  extends: .common
+  tags:
+    - ubuntu-18.04
+  script:
+    - whoami
+    - sudo docker build -t test_image -f dockerfile .
+
 vhdl-unit-tests:
   stage: vhdl-unit-tests
   extends: .common
@@ -17,7 +27,7 @@ vhdl-unit-tests:
     - ubuntu-22.04
   script:  
     - echo "vhdl-unit-tests"
-    # TODO
+    # TODO  
 
 #Runs a full workflow in quartus and generates a .sof image file
 build-fdas-fpga-image:
