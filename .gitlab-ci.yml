@@ -18,6 +18,9 @@ create-docker-image:
     - ubuntu-18.04
   script:
     - whoami
+    - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/QuartusProSetup-22.4.0.94-linux.run .
+    - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/quartus_part2-22.4.0.94-linux.qdz .
+    - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/agilex-22.4.0.94.qdz .
     - sudo docker build -t test_image -f dockerfile .
 
 vhdl-unit-tests:
