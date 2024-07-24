@@ -11,16 +11,19 @@ stages:
   rules:
     - if: $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "api" || $CI_PIPELINE_SOURCE == 'merge_request_event'
 
+#Generate the docker image for use in subsequent jobs. This job is run currently run on Tengu directly in a shell gitlab runner but utilising 
+#docker which is directly installed on Tengu. This job assumes that Quartus has been downloaded and unzipped to the location  
+#/mnt/synvol1/gitlab-runner/quartus/22.4/ and therefore the installable components are available in a directory called 'components'.
 create-docker-image:
   stage: create-docker-image
   extends: .common
   tags:
     - ubuntu-18.04
   script:
-    - whoami
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/QuartusProSetup-22.4.0.94-linux.run .
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/quartus_part2-22.4.0.94-linux.qdz .
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/agilex-22.4.0.94.qdz .
+    - sudo cp /mnt/sunvol1/gitlab-runner/quartus/22.4/trialLicense .
     - sudo docker build -t test_image -f dockerfile .
 
 vhdl-unit-tests:
@@ -37,7 +40,7 @@ build-fdas-fpga-image:
   stage: build
   extends: .common
   image:
-    name: quartus_docker_image
+    name: test_image
   tags:
     - pss-tengu-docker
   script:
