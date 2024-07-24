@@ -19,6 +19,10 @@ create-docker-image:
   extends: .common
   tags:
     - ubuntu-18.04
+  before_script:
+    - sudo rm -r /mnt/synvol1/gitlab-runner/quartus/22.4/components/QuartusProSetup-22.4.0.94-linux.run
+    - sudo rm -r /mnt/synvol1/gitlab-runner/quartus/22.4/components/quartus_part2-22.4.0.94-linux.qdz .
+    - sudo rm -r /mnt/synvol1/gitlab-runner/quartus/22.4/components/agilex-22.4.0.94.qdz
   script:
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/QuartusProSetup-22.4.0.94-linux.run .
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/quartus_part2-22.4.0.94-linux.qdz .
