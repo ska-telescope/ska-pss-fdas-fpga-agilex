@@ -33,7 +33,7 @@ COPY --from=init quartus/22.4/quartus/../qsys qsys
 COPY --from=init quartus/22.4/quartus/readme.txt quartus
 COPY --from=init quartus/22.4/quartus/sopc_builder quartus/sopc_builder
 COPY --from=init quartus/22.4/quartus/version.txt quartus
-COPY /quartus_packages/trialLicense trialLicense
+COPY /trialLicense trialLicense
 
 RUN apt-get install -y libglib2.0-0 libncurses5
 
