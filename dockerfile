@@ -4,9 +4,9 @@ RUN apt-get -y update
 
 WORKDIR /quartus/22.4
 
-COPY /QuartusProSetup-22.4.0.94-linux.run .
-COPY /quartus_part2-22.4.0.94-linux.qdz .
-COPY /agilex-22.4.0.94.qdz .
+COPY /quartus_packages/QuartusProSetup-22.4.0.94-linux.run .
+COPY /quartus_packages/quartus_part2-22.4.0.94-linux.qdz .
+COPY /quartus_packages/agilex-22.4.0.94.qdz .
 
 RUN ./QuartusProSetup-22.4.0.94-linux.run --mode unattended --installdir . --accept_eula 1
 
@@ -33,7 +33,7 @@ COPY --from=init quartus/22.4/quartus/../qsys qsys
 COPY --from=init quartus/22.4/quartus/readme.txt quartus
 COPY --from=init quartus/22.4/quartus/sopc_builder quartus/sopc_builder
 COPY --from=init quartus/22.4/quartus/version.txt quartus
-COPY /trialLicense trialLicense
+COPY /quartus_packages/trialLicense trialLicense
 
 RUN apt-get install -y libglib2.0-0 libncurses5
 

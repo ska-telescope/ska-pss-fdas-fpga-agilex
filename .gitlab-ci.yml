@@ -21,19 +21,20 @@ create-docker-image:
     - ubuntu-18.04
   # before_script:
   script:
-    - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/QuartusProSetup-22.4.0.94-linux.run .
-    - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/quartus_part2-22.4.0.94-linux.qdz .
-    - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/agilex-22.4.0.94.qdz .
-    - sudo cp -r /mnt/synvol1/gitlab-runner/quartus/22.4/trialLicense .
-   # - sudo chown gitlab-runner QuartusProSetup-22.4.0.94-linux.run 
-   # - sudo chown gitlab-runner quartus_part2-22.4.0.94-linux.qdz
-   # - sudo chown gitlab-runner agilex-22.4.0.94.qdz
-   # - sudo chown -r gitlab-runner trialLicense
+   # - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/QuartusProSetup-22.4.0.94-linux.run .
+   # - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/quartus_part2-22.4.0.94-linux.qdz .
+   # - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/agilex-22.4.0.94.qdz .
+   # - sudo cp -r /mnt/synvol1/gitlab-runner/quartus/22.4/trialLicense .
+
+   # use symlink instead of copy
+    #- mkdir quartus_packages
+    - ln -s /mnt/synvol1/gitlab-runner/quartus/22.4/components/ quartus_packages
+
     - sudo docker build -t test_image -f dockerfile .
     # clean up
-    - sudo rm -r QuartusProSetup-22.4.0.94-linux.run
-    - sudo rm -r quartus_part2-22.4.0.94-linux.qdz .
-    - sudo rm -r agilex-22.4.0.94.qdz
+   # - sudo rm -r QuartusProSetup-22.4.0.94-linux.run
+   # - sudo rm -r quartus_part2-22.4.0.94-linux.qdz .
+   # - sudo rm -r agilex-22.4.0.94.qdz
 
 vhdl-unit-tests:
   stage: vhdl-unit-tests
