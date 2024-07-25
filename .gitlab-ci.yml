@@ -35,7 +35,7 @@ create-docker-image:
     - sudo docker build -t test_image -f dockerfile .
     # clean up
     - sudo rm -r QuartusProSetup-22.4.0.94-linux.run
-    - sudo rm -r quartus_part2-22.4.0.94-linux.qdz .
+    - sudo rm -r quartus_part2-22.4.0.94-linux.qdz
     - sudo rm -r agilex-22.4.0.94.qdz
 
 vhdl-unit-tests:
