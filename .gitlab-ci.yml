@@ -29,6 +29,7 @@ create-docker-image:
    # use symlink instead of copy
     #- mkdir quartus_packages
     - ln -s /mnt/synvol1/gitlab-runner/quartus/22.4/components/ quartus_packages
+    - ls
 
     - sudo docker build -t test_image -f dockerfile .
     # clean up
