@@ -4,9 +4,9 @@ RUN apt-get -y update
 
 WORKDIR /quartus/22.4
 
-COPY /quartus_packages/QuartusProSetup-22.4.0.94-linux.run .
-COPY /quartus_packages/quartus_part2-22.4.0.94-linux.qdz .
-COPY /quartus_packages/agilex-22.4.0.94.qdz .
+COPY /QuartusProSetup-22.4.0.94-linux.run .
+COPY /quartus_part2-22.4.0.94-linux.qdz .
+COPY /agilex-22.4.0.94.qdz .
 
 RUN ./QuartusProSetup-22.4.0.94-linux.run --mode unattended --installdir . --accept_eula 1
 
