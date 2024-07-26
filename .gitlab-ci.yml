@@ -16,7 +16,21 @@ stages:
 
 .common:
   rules:
-    - if: $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "api" || $CI_PIPELINE_SOURCE == 'merge_request_event'
+    # Execute pipeline automatically if commit is made to dev or main
+    # (this should only happen when code is merged to dev or main)
+  - if: $CI_COMMIT_BRANCH == "main"
+
+    # Create but do not execute pipeline for feature branches on commit,
+    # or if created via the gitlab GUI
+  - if: ($CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "api")
+    when: manual
+    allow_failure: false
+
+    # Execute pipeline if triggered by a schedule
+  - if: $CI_PIPELINE_SOURCE == "schedule"
+
+    # Execute pipeline automatically if triggered by a MR
+  - if: $CI_PIPELINE_SOURCE == "merge_request_event"
 
 # Generate the docker image for use in subsequent jobs. This job is run currently run on Tengu directly in a shell gitlab runner but utilising 
 # docker which is directly installed on Tengu. This job assumes that Quartus has been downloaded and unzipped to the location  
