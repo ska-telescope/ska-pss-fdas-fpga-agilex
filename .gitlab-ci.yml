@@ -5,41 +5,44 @@ variables:
   QUARTUS_PRO_RUNFILE: QuartusProSetup-22.4.0.94-linux.run
   QUARTUS_PART2_ZIP: quartus_part2-22.4.0.94-linux.qdz
   AGILEX_SUPPORT_ZIP: agilex-22.4.0.94.qdz
+  QUARTUS_DOCKER_IMAGE: quartus_docker_image
 
 stages:
   - create-docker-image
   - vhdl-unit-tests
   - build
   - publish
+  - clean-up
 
 .common:
   rules:
     - if: $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "api" || $CI_PIPELINE_SOURCE == 'merge_request_event'
 
-#Generate the docker image for use in subsequent jobs. This job is run currently run on Tengu directly in a shell gitlab runner but utilising 
-#docker which is directly installed on Tengu. This job assumes that Quartus has been downloaded and unzipped to the location  
-#/mnt/synvol1/gitlab-runner/quartus/22.4/ and therefore the installable components are available in a directory called 'components' as this 
-#is part of Quartus's directory structure.
+# Generate the docker image for use in subsequent jobs. This job is run currently run on Tengu directly in a shell gitlab runner but utilising 
+# docker which is directly installed on Tengu. This job assumes that Quartus has been downloaded and unzipped to the location  
+# /mnt/synvol1/gitlab-runner/quartus/22.4/ and therefore the installable components are available in a directory called 'components' as this 
+# is part of Quartus's directory structure.
 create-docker-image:
   stage: create-docker-image
   extends: .common
   tags:
+    # This tag is associated with the Tengu shell runner. Tag name is the OS for legacy reasons.
     - ubuntu-18.04
   before_script:
-    #Check if image exists and if it does remove it
-    - if [ "$(docker images -q test_image:latest 2> /dev/null)" ]; then sudo docker rmi test_image; fi
+    # Check if image exists and if it does remove it
+    - if [ "$(docker images -q $QUARTUS_DOCKER_IMAGE:latest 2> /dev/null)" ]; then sudo docker rmi $QUARTUS_DOCKER_IMAGE; fi
   script:
-    #Copy the Quartus components that we want to install in the container local to this gitlab job. This needs to be done because docker can
-    #only 'see' files below the directory it is in. This is temporary solution and in future we should be keeping these files elsewhere suchas
-    #the Central Artifact Repository (CAR).
+    # Copy the Quartus components that we want to install in the container local to this gitlab job. This needs to be done because docker can
+    # only 'see' files below the directory it is in. This is temporary solution and in future we should be keeping these files elsewhere suchas
+    # the Central Artifact Repository (CAR).
     - sudo cp $QUARTUS_COMPONEMENTS_PATH/$QUARTUS_PRO_RUNFILE .
     - sudo cp $QUARTUS_COMPONEMENTS_PATH/$QUARTUS_PART2_ZIP .
     - sudo cp $QUARTUS_COMPONEMENTS_PATH/$AGILEX_SUPPORT_ZIP .
-    #Copy the license file from the local machine. 
+    # Copy the license file from the local machine. 
     - sudo cp -r $QUARTUS_LICENSE_PATH .
-    - sudo docker build -t test_image -f dockerfile .
+    - sudo docker build -t $QUARTUS_DOCKER_IMAGE -f dockerfile .
   after_script:
-    #Clean up
+    # Clean up
     - if [ -f $QUARTUS_PRO_RUNFILE ]; then sudo rm $QUARTUS_PRO_RUNFILE; fi
     - if [ -f $QUARTUS_PART2_ZIP ]; then sudo rm $QUARTUS_PART2_ZIP; fi
     - if [ -f $AGILEX_SUPPORT_ZIP ]; then sudo rm $AGILEX_SUPPORT_ZIP; fi
@@ -49,17 +52,17 @@ vhdl-unit-tests:
   stage: vhdl-unit-tests
   extends: .common
   tags:
-    - ubuntu-22.04
+    - ubuntu-18.04
   script:  
     - echo "vhdl-unit-tests"
     # TODO  
 
-#Runs a full workflow in quartus and generates a .sof image file
+# Runs a full workflow in quartus and generates a .sof image file
 build-fdas-fpga-image:
   stage: build
   extends: .common
   image:
-    name: test_image
+    name: $QUARTUS_DOCKER_IMAGE
   tags:
     - pss-tengu-docker
   script:
@@ -77,8 +80,16 @@ publish:
   needs:
     - build-fdas-fpga-image
   tags:
-    - ubuntu-22.04
+    - ubuntu-18.04
   script:
    - cd src/fdas_top/output_files && ls
    - echo "publish"
    # TODO
+
+Clean-Up:
+  stage: clean-up
+  extends: .common
+  tags:
+  script: 
+    # Check if image exists and if it does remove it
+    - if [ "$(docker images -q $QUARTUS_DOCKER_IMAGE:latest 2> /dev/null)" ]; then sudo docker rmi $QUARTUS_DOCKER_IMAGE; fi
