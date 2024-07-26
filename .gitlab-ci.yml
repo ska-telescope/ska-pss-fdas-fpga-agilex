@@ -46,7 +46,7 @@ create-docker-image:
     - if [ -f $QUARTUS_PRO_RUNFILE ]; then sudo rm $QUARTUS_PRO_RUNFILE; fi
     - if [ -f $QUARTUS_PART2_ZIP ]; then sudo rm $QUARTUS_PART2_ZIP; fi
     - if [ -f $AGILEX_SUPPORT_ZIP ]; then sudo rm $AGILEX_SUPPORT_ZIP; fi
-    - if [ -f trialLicense ]; then sudo rm trialLicense; fi
+    - if [ -f trialLicense ]; then sudo rm -r trialLicense; fi
 
 vhdl-unit-tests:
   stage: vhdl-unit-tests
