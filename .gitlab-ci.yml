@@ -1,5 +1,10 @@
 variables:
   GIT_STRATEGY: clone
+  QUARTUS_LICENSE_PATH: /mnt/synvol1/gitlab-runner/quartus/22.4/trialLicense
+  QUARTUS_COMPONEMENTS_PATH: /mnt/synvol1/gitlab-runner/quartus/22.4/components
+  QUARTUS_PRO_RUNFILE: QuartusProSetup-22.4.0.94-linux.run
+  QUARTUS_PART2_ZIP: quartus_part2-22.4.0.94-linux.qdz
+  AGILEX_SUPPORT_ZIP: agilex-22.4.0.94.qdz
 
 stages:
   - create-docker-image
@@ -27,18 +32,18 @@ create-docker-image:
     #Copy the Quartus components that we want to install in the container local to this gitlab job. This needs to be done because docker can
     #only 'see' files below the directory it is in. This is temporary solution and in future we should be keeping these files elsewhere suchas
     #the Central Artifact Repository (CAR).
-    - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/QuartusProSetup-22.4.0.94-linux.run .
-    - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/quartus_part2-22.4.0.94-linux.qdz .
-    - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/agilex-22.4.0.94.qdz .
+    - sudo cp $QUARTUS_COMPONEMENTS_PATH/$QUARTUS_PRO_RUNFILE .
+    - sudo cp $QUARTUS_COMPONEMENTS_PATH/$QUARTUS_PART2_ZIP .
+    - sudo cp $QUARTUS_COMPONEMENTS_PATH/$AGILEX_SUPPORT_ZIP .
     #Copy the license file from the local machine. 
-    - sudo cp -r /mnt/synvol1/gitlab-runner/quartus/22.4/trialLicense .
+    - sudo cp -r $QUARTUS_LICENSE_PATH .
     - sudo docker build -t test_image -f dockerfile .
   after_script:
     #Clean up
-    - sudo rm QuartusProSetup-22.4.0.94-linux.run
-    - sudo rm quartus_part2-22.4.0.94-linux.qdz
-    - sudo rm agilex-22.4.0.94.qdz
-    - sudo rm -r trialLicense
+    - if [ -f $QUARTUS_PRO_RUNFILE ]; then sudo rm $QUARTUS_PRO_RUNFILE
+    - if [ -f $QUARTUS_PART2_ZIP ]; then sudo rm $QUARTUS_PART2_ZIP
+    - if [ -f $AGILEX_SUPPORT_ZIP ]; then sudo rm $AGILEX_SUPPORT_ZIP
+    - if [ -f trialLicense ]; then sudo rm trialLicense
 
 vhdl-unit-tests:
   stage: vhdl-unit-tests
