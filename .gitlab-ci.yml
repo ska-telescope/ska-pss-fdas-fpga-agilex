@@ -100,7 +100,7 @@ publish:
    - echo "publish"
    # TODO
 
-Clean-Up:
+clean-up:
   stage: clean-up
   extends: .common
   tags:
