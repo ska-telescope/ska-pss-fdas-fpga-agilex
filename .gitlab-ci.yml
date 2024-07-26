@@ -13,30 +13,32 @@ stages:
 
 #Generate the docker image for use in subsequent jobs. This job is run currently run on Tengu directly in a shell gitlab runner but utilising 
 #docker which is directly installed on Tengu. This job assumes that Quartus has been downloaded and unzipped to the location  
-#/mnt/synvol1/gitlab-runner/quartus/22.4/ and therefore the installable components are available in a directory called 'components'.
+#/mnt/synvol1/gitlab-runner/quartus/22.4/ and therefore the installable components are available in a directory called 'components' as this 
+#is part of Quartus's directory structure.
 create-docker-image:
   stage: create-docker-image
   extends: .common
   tags:
     - ubuntu-18.04
-  # before_script:
+  before_script:
+    #Check if image exists and if it does remove it
+    - if [ -z "$(docker images -q test_image:latest 2> /dev/null)" ]; then sudo docker rmi test_image; fi
   script:
+    #Copy the Quartus components that we want to install in the container local to this gitlab job. This needs to be done because docker can
+    #only 'see' files below the directory it is in. This is temporary solution and in future we should be keeping these files elsewhere suchas
+    #the Central Artifact Repository (CAR).
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/QuartusProSetup-22.4.0.94-linux.run .
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/quartus_part2-22.4.0.94-linux.qdz .
     - sudo cp /mnt/synvol1/gitlab-runner/quartus/22.4/components/agilex-22.4.0.94.qdz .
+    #Copy the license file from the local machine. 
     - sudo cp -r /mnt/synvol1/gitlab-runner/quartus/22.4/trialLicense .
-
-   # use symlink instead of copy
-    #- mkdir quartus_packages
-   # - ln -s /mnt/synvol1/gitlab-runner/quartus/22.4/components/ quartus_packages
-    #- ls
-    #- cd quartus_packages && ls
-
     - sudo docker build -t test_image -f dockerfile .
-    # clean up
-    - sudo rm -r QuartusProSetup-22.4.0.94-linux.run
-    - sudo rm -r quartus_part2-22.4.0.94-linux.qdz
-    - sudo rm -r agilex-22.4.0.94.qdz
+  after_script:
+    #Clean up
+    - sudo rm QuartusProSetup-22.4.0.94-linux.run
+    - sudo rm quartus_part2-22.4.0.94-linux.qdz
+    - sudo rm agilex-22.4.0.94.qdz
+    - sudo rm -r trialLicense
 
 vhdl-unit-tests:
   stage: vhdl-unit-tests
@@ -72,5 +74,6 @@ publish:
   tags:
     - ubuntu-22.04
   script:
+   - cd src/fdas_top/output_files && ls
    - echo "publish"
    # TODO
