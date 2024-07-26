@@ -27,7 +27,7 @@ create-docker-image:
     - ubuntu-18.04
   before_script:
     #Check if image exists and if it does remove it
-    - if [ -z "$(docker images -q test_image:latest 2> /dev/null)" ]; then sudo docker rmi test_image; fi
+    - if [ "$(docker images -q test_image:latest 2> /dev/null)" ]; then sudo docker rmi test_image; fi
   script:
     #Copy the Quartus components that we want to install in the container local to this gitlab job. This needs to be done because docker can
     #only 'see' files below the directory it is in. This is temporary solution and in future we should be keeping these files elsewhere suchas
@@ -40,10 +40,10 @@ create-docker-image:
     - sudo docker build -t test_image -f dockerfile .
   after_script:
     #Clean up
-    - if [ -f $QUARTUS_PRO_RUNFILE ]; then sudo rm $QUARTUS_PRO_RUNFILE
-    - if [ -f $QUARTUS_PART2_ZIP ]; then sudo rm $QUARTUS_PART2_ZIP
-    - if [ -f $AGILEX_SUPPORT_ZIP ]; then sudo rm $AGILEX_SUPPORT_ZIP
-    - if [ -f trialLicense ]; then sudo rm trialLicense
+    - if [ -f $QUARTUS_PRO_RUNFILE ]; then sudo rm $QUARTUS_PRO_RUNFILE; fi
+    - if [ -f $QUARTUS_PART2_ZIP ]; then sudo rm $QUARTUS_PART2_ZIP; fi
+    - if [ -f $AGILEX_SUPPORT_ZIP ]; then sudo rm $AGILEX_SUPPORT_ZIP; fi
+    - if [ -f trialLicense ]; then sudo rm trialLicense; fi
 
 vhdl-unit-tests:
   stage: vhdl-unit-tests
