@@ -11,6 +11,7 @@ stages:
   - create-docker-image
   - vhdl-unit-tests
   - build
+  - generate_periphery_design
   - publish
   - clean-up
 
@@ -88,11 +89,29 @@ build-fdas-fpga-image:
       - src/fdas_top/output_files*
     expire_in: 14 d
 
+generate-periphery-design:
+  stage: generate_periphery_design
+  extends: .common
+  needs:
+    - build-fdas-fpga-image
+  image:
+    name: $QUARTUS_DOCKER_IMAGE
+  tags:
+    - pss-tengu-docker
+  script:
+    - cd src/fdas_top 
+    - quartus_pfg -c fdas_top_cvp.pfg
+  artifacts:
+    name: "$CI_COMMIT_REF_NAME-periphery-design"
+    paths:
+      - src/fdas_top/output_files*
+    expire_in: 14 d
+
 publish:
   stage: publish
   extends: .common
   needs:
-    - build-fdas-fpga-image
+    - generate-periphery-design
   tags:
     - ubuntu-18.04
   script:
