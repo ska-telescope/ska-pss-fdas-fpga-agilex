@@ -11,7 +11,7 @@ stages:
   - create-docker-image
   - vhdl-unit-tests
   - build
-  - generate_periphery_design
+  - generate-periphery-design
   - publish
   - clean-up
 
@@ -90,7 +90,7 @@ build-fdas-fpga-image:
     expire_in: 14 d
 
 generate-periphery-design:
-  stage: generate_periphery_design
+  stage: generate-periphery-design
   extends: .common
   needs:
     - build-fdas-fpga-image
